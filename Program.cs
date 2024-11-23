@@ -1,6 +1,5 @@
 ﻿using Shang4Gu3In1;
 using Aspose.Cells;
-using System.Text;
 using System.Drawing;
 
 namespace zhongguliin
@@ -9,6 +8,8 @@ namespace zhongguliin
     {
         private static Dictionary<string, string> uin4bu4 = new Dictionary<string, string>() {
                 { "魚", "a" },
+                { "鐸", "ak" },
+                { "蒸", "əŋ" },
                 { "脂", "el" },
             };
 
@@ -16,15 +17,13 @@ namespace zhongguliin
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             
-            string uin1 = "魚";
-            string uin2 = "魚";
+            string uin1 = "蒸";
+            string uin2 = "蒸";
             var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + uin1 + "&y=" + uin2 + "&mode=yunbu");
             var content = await httpResponseMessage.Content.ReadAsStringAsync();
 
             Workbook wk = new Workbook("./shang4gu3li3in1.xlsx");
             Worksheet ws = wk.Worksheets[0];
-            //var dt = ws.Cells.ExportDataTable(0, 0, 10000, 15);
-            //var shangguin = ws.Cells["D1"].Value.ToString();
             ProcessTable(content, ws, uin1, uin2);
         }
 
@@ -48,10 +47,10 @@ namespace zhongguliin
                         string zy = rythms[i].Substring(rythms[i].Length - 1);
                         Console.Write(zy);
                         vals.Add(zy);
-                        for (int j = 1; j < 9915; j++)
+                        for (int j = 1; j < 9915; j++)              
                         {
-                            if (ws.Cells["L" + j.ToString()].Value.ToString().Contains(zy))
-                            {
+                            if (ws.Cells["L" + j.ToString()].Value.ToString().Contains(zy) && ws.Cells["L" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))
+                            {                                
                                 var du5in1 = ws.Cells["D" + j.ToString()].Value.ToString();
                                 if (!du5in1.Contains(uin4bu4[uin1]))
                                 {
@@ -77,7 +76,7 @@ namespace zhongguliin
                     }
                     hang2++;
                 }
-            }
+            }           
             wb2.Save(@"D:\"+ uin1 + uin2 + ".xlsx");
         }
     }    
