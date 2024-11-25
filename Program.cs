@@ -12,9 +12,11 @@ namespace zhongguliin
                 { "陽", "aŋ" },
                 { "之", "ə" },
                 { "職", "ək" },
-                { "微", "əl" },
                 { "蒸", "əŋ" },
                 { "支", "ɛ" },
+                { "錫", "ɛk" },
+                { "耕", "ɛŋ" },
+                { "微", "əl" },
                 { "幽", "o" },
                 { "脂", "el" },
             };
@@ -23,8 +25,8 @@ namespace zhongguliin
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             
-            string uin1 = "職";
-            string uin2 = "職";
+            string uin1 = "鐸";
+            string uin2 = "鐸";
             var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + uin1 + "&y=" + uin2 + "&mode=yunbu");
             var content = await httpResponseMessage.Content.ReadAsStringAsync();
 
@@ -43,6 +45,8 @@ namespace zhongguliin
             lines = table.Split(new string[] { "<tr><td>" }, StringSplitOptions.None);
             int hang2 = 0;
             int miou4su4 = 0;
+            int chu5vin4zy4su4 = 0;
+            string chu5vin4zy4 = "";
             foreach (string line in lines)
             {
                 var rythms = line.Split(new string[] { "<b style=\"" }, StringSplitOptions.None);
@@ -52,13 +56,21 @@ namespace zhongguliin
                     for (int i = 0; i < rythms.Length - 1; i++)
                     {
                         string zy = rythms[i].Substring(rythms[i].Length - 1);
+                        if (zy == "A" || zy == "B")
+                            zy = rythms[i].Substring(rythms[i].Length - 2, 1);
+                        if (zy.Contains("\ude62"))
+                        {
+                            zy = rythms[i].Substring(rythms[i].Length - 2, 2);
+                        }
                         Console.Write(zy);
                         vals.Add(zy);
+                        List<string> do1in1 = new List<string>();
                         for (int j = 1; j < 9915; j++)              
                         {
                             if (ws.Cells["L" + j.ToString()].Value.ToString().Contains(zy) && ws.Cells["L" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))
                             {                                
                                 var du5in1 = ws.Cells["D" + j.ToString()].Value.ToString();
+                                do1in1.Add(du5in1);
                                 if (!du5in1.Contains(uin4bu4[uin1])
                                     || (uin1 == "之" && du5in1.Contains("əl"))
                                     || (uin1 == "幽" && (du5in1.EndsWith("l") ||  du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
@@ -69,6 +81,15 @@ namespace zhongguliin
                                 Console.Write(du5in1 + "/");
                                 vals.Add(du5in1);
                             }
+                        }
+                        if (do1in1.All(x => !x.Contains(uin4bu4[uin1])))
+                        {
+                            if (!chu5vin4zy4.Contains(zy)) 
+                            { 
+                                chu5vin4zy4su4++;
+                                chu5vin4zy4 += zy;
+                            }
+                            vals[vals.IndexOf(zy)] += "謬";
                         }
                     }
                     Console.WriteLine();
@@ -88,7 +109,8 @@ namespace zhongguliin
                 }
             }
 
-            ws2.Cells[hang2, 0].Value = "出韻" + miou4su4.ToString() + "個";
+            ws2.Cells[hang2, 0].Value = "紅色出韻音" + miou4su4.ToString() + "個";
+            ws2.Cells[hang2, 8].Value = "紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
             wb2.Save(@"D:\"+ uin1 + uin2 + ".xlsx");
         }
     }    
