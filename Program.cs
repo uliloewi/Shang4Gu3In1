@@ -7,15 +7,10 @@ namespace zhongguliin
     class Program
     {
         private static Dictionary<string, string> uin4bu4 = new Dictionary<string, string>() {
-                { "魚", "a" },
-                { "鐸", "ak" },
-                { "陽", "aŋ" },
-                { "之", "ə" },
-                { "職", "ək" },
-                { "蒸", "əŋ" },
-                { "支", "ɛ" },
-                { "錫", "ɛk" },
-                { "耕", "ɛŋ" },
+                { "魚", "a" }, { "鐸", "ak" }, { "陽", "aŋ" },
+                { "之", "ə" }, { "職", "ək" }, { "蒸", "əŋ" },
+                { "支", "ɛ" }, { "錫", "ɛk" }, { "耕", "ɛŋ" },
+                { "侯", "ɔ" }, { "屋", "ɔk" }, { "東", "ɔŋ" },
                 { "微", "əl" },
                 { "幽", "o" },
                 { "脂", "el" },
@@ -25,8 +20,8 @@ namespace zhongguliin
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             
-            string uin1 = "鐸";
-            string uin2 = "鐸";
+            string uin1 = "侯";
+            string uin2 = "侯";
             var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + uin1 + "&y=" + uin2 + "&mode=yunbu");
             var content = await httpResponseMessage.Content.ReadAsStringAsync();
 
@@ -62,6 +57,22 @@ namespace zhongguliin
                         {
                             zy = rythms[i].Substring(rythms[i].Length - 2, 2);
                         }
+                        if (zy.Contains("}"))
+                        {
+                            zy = rythms[i].Substring(rythms[i].Length - 3, 3);
+                        }
+                        if (zy.Contains("\udf1a"))
+                        {
+                            zy = "盧"; //白公父簠金文是盧
+                        }
+                        if (zy.Contains("𫭠"))
+                        {
+                            zy = "筐"; //史免簠金文是⿷匚𫭠
+                        }
+                        //if (zy == "瑚")
+                        //{
+                        //    int x=0;
+                        //}
                         Console.Write(zy);
                         vals.Add(zy);
                         List<string> do1in1 = new List<string>();
@@ -108,9 +119,10 @@ namespace zhongguliin
                     hang2++;
                 }
             }
-
+            string chu5vin4zy4tong3ji4 = "紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
             ws2.Cells[hang2, 0].Value = "紅色出韻音" + miou4su4.ToString() + "個";
-            ws2.Cells[hang2, 8].Value = "紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
+            ws2.Cells[hang2, 8].Value = chu5vin4zy4tong3ji4;
+            Console.Write(chu5vin4zy4tong3ji4);
             wb2.Save(@"D:\"+ uin1 + uin2 + ".xlsx");
         }
     }    
