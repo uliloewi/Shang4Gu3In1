@@ -7,23 +7,23 @@ namespace zhongguliin
     class Program
     {
         private static Dictionary<string, string> uin4bu4 = new Dictionary<string, string>() {
-                /*{ "魚", "a" }, { "鐸", "ak" }, { "陽", "aŋ" },
-                { "之", "ə" }, { "職", "ək" }, { "蒸", "əŋ" },
-                { "支", "ɛ" },  { "錫", "ɛk" }, { "耕", "ɛŋ" },
-                { "侯", "ɔ" }, { "屋", "ɔk" }, { "東", "ɔŋ" },
-                { "幽", "o" }, { "覺", "ok" }, { "冬", "oŋ" },*/
-                { "宵", "ɔl" }, { "藥", "ɔlk" },
-             /*   { "宵", "ø" }, { "藥", "øk" }, 
-            /*  { "微", "əl" },
-                { "脂", "el" },
-                
-                */
-            };
+            /*{ "魚", "a" }, { "鐸", "ak" }, { "陽", "aŋ" },
+            { "之", "ə" }, { "職", "ək" }, { "蒸", "əŋ" },
+            { "支", "ɛ" },  { "錫", "ɛk" }, { "耕", "ɛŋ" },
+            { "侯", "ɔ" }, { "屋", "ɔk" }, { "東", "ɔŋ" },
+            { "幽", "o" }, { "覺", "ok" }, { "冬", "oŋ" },
+            { "宵", "ɔl" }, { "藥", "ɔlk" },*/
+               { "宵", "ø" }, { "藥", "øk" }, 
+           /*  { "微", "əl" },
+               { "脂", "el" },
+
+               */
+        };
 
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Workbook wk = new Workbook("D:/shang4gu3li3in1.xlsx");
+            Workbook wk = new Workbook("D:/shang4gu3li3in1oe.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
@@ -97,14 +97,14 @@ namespace zhongguliin
                                 {                                
                                     var du5in1 = ws.Cells["D" + j.ToString()].Value.ToString();
                                     do1in1.Add(du5in1);
-                                  /*  if (!du5in1.Contains(uin4bu4[uin1])
+                                    if (!du5in1.Contains(uin4bu4[uin1])
                                      || (uin1 == "之" && du5in1.Contains("əl"))
-                                     || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))*/
-                                   if ((uin1 == "藥" && !du5in1.Contains("olk") && !du5in1.Contains("ɔlk"))
-                                        || (uin1 == "宵" && !du5in1.Contains("ol") && !du5in1.Contains("ɔl"))
-                                        || (!"宵藥".Contains(uin1) && !du5in1.Contains(uin4bu4[uin1]))
-                                        || (uin1 == "之" && du5in1.Contains("əl"))
-                                        || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
+                                     || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
+                                   //if ((uin1 == "藥" && !du5in1.Contains("olk") && !du5in1.Contains("ɔlk"))
+                                   //     || (uin1 == "宵" && !du5in1.Contains("ol") && !du5in1.Contains("ɔl"))
+                                   //     || (!"宵藥".Contains(uin1) && !du5in1.Contains(uin4bu4[uin1]))
+                                   //     || (uin1 == "之" && du5in1.Contains("əl"))
+                                   //     || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
                                     {
                                         du5in1 += "謬";
                                         miou4su4++;
@@ -113,10 +113,10 @@ namespace zhongguliin
                                     vals.Add(du5in1);
                                 }
                             }
-                           // if (do1in1.All(x => !x.Contains(uin4bu4[uin1])))
-                            if ((uin1 == "藥" & do1in1.All(x => !x.Contains("olk") && !x.Contains("ɔlk"))) ||
-                                (uin1 == "宵" && do1in1.All(x => !x.Contains("ol") && !x.Contains("ɔl"))) ||
-                                (!"宵藥".Contains(uin1) && do1in1.All(x => !x.Contains(uin4bu4[uin1]))))
+                            if (do1in1.All(x => !x.Contains(uin4bu4[uin1])))
+                            //if ((uin1 == "藥" & do1in1.All(x => !x.Contains("olk") && !x.Contains("ɔlk"))) ||
+                            //    (uin1 == "宵" && do1in1.All(x => !x.Contains("ol") && !x.Contains("ɔl"))) ||
+                            //    (!"宵藥".Contains(uin1) && do1in1.All(x => !x.Contains(uin4bu4[uin1]))))
                             {
                                 StaticNumer(zy, ref chu5vin4zy4, ref chu5vin4zy4su4);
                                 vals[vals.IndexOf(zy)] += "謬";
