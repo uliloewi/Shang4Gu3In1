@@ -6,27 +6,31 @@ namespace zhongguliin
 {
     class Program
     {
-        private static Dictionary<string, string> uin4bu4 = new Dictionary<string, string>() {
-            /*{ "魚", "a" }, { "鐸", "ak" }, { "陽", "aŋ" },
-            { "之", "ə" }, { "職", "ək" }, { "蒸", "əŋ" },
-            { "支", "ɛ" },  { "錫", "ɛk" }, { "耕", "ɛŋ" },
-            { "侯", "ɔ" }, { "屋", "ɔk" }, { "東", "ɔŋ" },
-            { "幽", "o" }, { "覺", "ok" }, { "冬", "oŋ" },
-            { "宵", "ɔl" }, { "藥", "ɔlk" },*/
-               { "宵", "ø" }, { "藥", "øk" }, 
-           /*  { "微", "əl" },
-               { "脂", "el" },
+        private static Dictionary<string, string[]> uin4bu4 = new Dictionary<string, string[]>() {
+           /* { "魚", ["a"]}, { "鐸", ["ak"]}, { "陽", ["aŋ"]},
+            { "之", ["ə"]}, { "職", ["ək"]}, { "蒸", ["əŋ"]},
+            { "支", ["ɛ"]}, { "錫", ["ɛk"]}, { "耕", ["ɛŋ"]},
+            { "侯", ["ɔ"]}, { "屋", ["ɔk"]}, { "東", ["ɔŋ"]},
+            { "幽", ["o"]}, { "覺", ["ok"]}, { "冬", ["oŋ"]},
+            { "宵", ["ø"]}, { "藥", ["øk"]}, 
+            { "歌", ["al", "ɛl"]},*/ 
+            { "月", ["at"]}, { "質", ["ɛt"]}, 
+            /*  { "微", ["əl"]},
+                { "脂", ["el"]},
 
-               */
+                */
         };
 
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Workbook wk = new Workbook("D:/shang4gu3li3in1oe.xlsx");
+            Workbook wk = new Workbook("D:/shang4gu3li3in1.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
+
+            Workbook wbForSave = new Workbook();
+            int sheetNr = 0;
             foreach (var k in uin4bu4.Keys)
             {
                 string uin1 = k;
@@ -34,17 +38,20 @@ namespace zhongguliin
                 System.Threading.Thread.Sleep(5000);
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + uin1 + "&y=" + uin2 + "&mode=yunbu");
                 var content = await httpResponseMessage.Content.ReadAsStringAsync();
-                ProcessTable(content, ws, length, uin1, uin2);
+                ProcessTable(content, ws, wbForSave, sheetNr, length, uin1, uin2);
+                wbForSave.Worksheets.Add();
+                sheetNr ++;
             }
+            string fn = uin4bu4.Keys.Count>3 ? "shang4gu3vin4jo5" : string.Concat(uin4bu4.Keys.AsEnumerable());
+            wbForSave.Save(@"D:\" + fn + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
         }
 
-        private static void ProcessTable(string theText, Worksheet ws, int length, string uin1, string uin2)
+        private static void ProcessTable(string theText, Worksheet ws, Workbook wbForSave, int sheetNr, int length, string uin1, string uin2)
         {
-            string siao1io5 = "宵藥";
-            Workbook wb2 = new Workbook();
-            Worksheet ws2 = wb2.Worksheets[0];
+            try { 
+            Worksheet ws2 = wbForSave.Worksheets[sheetNr];
             var dt2 = ws2.Cells.ExportDataTable(0, 0, 1600, 9);
-            string[] lines = theText.Split(    new string[] { Environment.NewLine },    StringSplitOptions.None);
+            string[] lines = theText.Split( new string[] { Environment.NewLine },    StringSplitOptions.None);
             string table = lines.Where(x=>x.StartsWith("<table><tr><th")).FirstOrDefault();
             if (table != null) { 
                 lines = table.Split(new string[] { "<tr><td>" }, StringSplitOptions.None);
@@ -63,7 +70,7 @@ namespace zhongguliin
                             string zy = rythms[i].Substring(rythms[i].Length - 1);
                             if (zy == "A" || zy == "B")
                                 zy = rythms[i].Substring(rythms[i].Length - 2, 1);
-                            if (zy.Contains("\ude62"))
+                            if (zy.Contains("\ude62") || zy.Contains("\udfae"))
                             {
                                 zy = rythms[i].Substring(rythms[i].Length - 2, 2);
                             }
@@ -83,7 +90,7 @@ namespace zhongguliin
                             {
                                 zy = "九"; //叔卣金文是⿰宮九
                             }
-                            //if (zy == "沃")
+                            //if (zy == "埒")
                             //{
                             //    int x = 0;
                             //}
@@ -93,30 +100,25 @@ namespace zhongguliin
                             List<string> do1in1 = new List<string>();
                             for (int j = 1; j < length; j++)              
                             {
-                                if (ws.Cells["L" + j.ToString()].Value.ToString().Contains(zy) && ws.Cells["L" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))
-                                {                                
-                                    var du5in1 = ws.Cells["D" + j.ToString()].Value.ToString();
-                                    do1in1.Add(du5in1);
-                                    if (!du5in1.Contains(uin4bu4[uin1])
-                                     || (uin1 == "之" && du5in1.Contains("əl"))
-                                     || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
-                                   //if ((uin1 == "藥" && !du5in1.Contains("olk") && !du5in1.Contains("ɔlk"))
-                                   //     || (uin1 == "宵" && !du5in1.Contains("ol") && !du5in1.Contains("ɔl"))
-                                   //     || (!"宵藥".Contains(uin1) && !du5in1.Contains(uin4bu4[uin1]))
-                                   //     || (uin1 == "之" && du5in1.Contains("əl"))
-                                   //     || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
-                                    {
-                                        du5in1 += "謬";
-                                        miou4su4++;
+                                if (ws.Cells["O" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)
+                                        continue;
+                                else if (ws.Cells["O" + j.ToString()].Value.ToString().Contains(zy) && 
+                                    ws.Cells["O" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))
+                                    {                                
+                                        var du5in1 = ws.Cells["G" + j.ToString()].Value.ToString();
+                                        do1in1.Add(du5in1);
+                                        if (uin4bu4[uin1].All(d => !du5in1.Contains(d))
+                                         || (uin1 == "之" && du5in1.Contains("əl"))
+                                         || (uin1 == "幽" && (du5in1.EndsWith("l") || du5in1.EndsWith("lh") || du5in1.EndsWith("lɣ"))))
+                                        {
+                                            du5in1 += "謬";
+                                            miou4su4++;
+                                        }
+                                        Console.Write(du5in1 + "/");
+                                        vals.Add(du5in1);
                                     }
-                                    Console.Write(du5in1 + "/");
-                                    vals.Add(du5in1);
-                                }
                             }
-                            if (do1in1.All(x => !x.Contains(uin4bu4[uin1])))
-                            //if ((uin1 == "藥" & do1in1.All(x => !x.Contains("olk") && !x.Contains("ɔlk"))) ||
-                            //    (uin1 == "宵" && do1in1.All(x => !x.Contains("ol") && !x.Contains("ɔl"))) ||
-                            //    (!"宵藥".Contains(uin1) && do1in1.All(x => !x.Contains(uin4bu4[uin1]))))
+                            if (do1in1.All(x => uin4bu4[uin1].All(d => !x.Contains(d))))
                             {
                                 StaticNumer(zy, ref chu5vin4zy4, ref chu5vin4zy4su4);
                                 vals[vals.IndexOf(zy)] += "謬";
@@ -138,14 +140,18 @@ namespace zhongguliin
                         hang2++;
                     }
                 }
-                string chu5vin4zy4tong3ji4 = "紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
-                ws2.Cells[hang2, 0].Value = "紅色出韻音" + miou4su4.ToString() + "個";
+                string chu5vin4zy4tong3ji4 = uin2 + "部紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
+                ws2.Cells[hang2, 0].Value = uin2 + "部紅色出韻音" + miou4su4.ToString() + "個";
                 ws2.Cells[hang2, 8].Value = chu5vin4zy4tong3ji4;
-                ws2.Cells[hang2 +1, 0].Value = "韻腳字" + cy3bu4zy4su4.ToString() + "個: " + vin4jo5zy4;
+                ws2.Cells[hang2 +1, 0].Value = uin2 + "部韻腳字" + cy3bu4zy4su4.ToString() + "個: " + vin4jo5zy4;
                 Console.Write(chu5vin4zy4tong3ji4);
-                wb2.Save(@"D:\"+ uin1 + uin2 + ".xlsx");
             }
             else
+            {
+                int sas = 0;
+            }
+            }
+            catch (Exception e)
             {
                 int sas = 0;
             }
@@ -165,15 +171,15 @@ namespace zhongguliin
             Dictionary<string, List<string>> Mapping = new Dictionary<string, List<string>>();
             int res = 3;
             int nullcount = 0;
-            while (ws.Cells["D" + res.ToString()].Value == null || 
-                !String.IsNullOrWhiteSpace(ws.Cells["D" + res.ToString()].Value.ToString()))
+            while (ws.Cells["G" + res.ToString()].Value == null || 
+                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()))
             {
-                if (ws.Cells["D" + res.ToString()].Value != null)
+                if (ws.Cells["G" + res.ToString()].Value != null)
                 {
-                    string k = ws.Cells["D" + res.ToString()].Value.ToString();
-                    if (ws.Cells["K" + res.ToString()].Value != null)
+                    string k = ws.Cells["G" + res.ToString()].Value.ToString();
+                    if (ws.Cells["N" + res.ToString()].Value != null)
                     { 
-                        string v = ws.Cells["K" + res.ToString()].Value.ToString()+ ws.Cells["H" + res.ToString()].Value.ToString();
+                        string v = ws.Cells["N" + res.ToString()].Value.ToString()+ ws.Cells["K" + res.ToString()].Value.ToString();
                         if (!Mapping.ContainsKey(k))
                         {
                             Mapping.Add(k, new List<string>());
@@ -203,7 +209,7 @@ namespace zhongguliin
                     Console.WriteLine();
                 }
             }
-            return res - 1;
+            return res - nullcount;
 
         }
 
@@ -213,16 +219,16 @@ namespace zhongguliin
                 { "一", new List<string>() },{ "二", new List<string>() },{ "三", new List<string>() },{ "四", new List<string>() },
             };
             int res = 3;
-            while (ws.Cells["D" + res.ToString()].Value == null ||
-                !String.IsNullOrWhiteSpace(ws.Cells["D" + res.ToString()].Value.ToString()))
+            while (ws.Cells["G" + res.ToString()].Value == null ||
+                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()))
             {
-                if (ws.Cells["D" + res.ToString()].Value != null)
+                if (ws.Cells["G" + res.ToString()].Value != null)
                 {
-                    string oe = ws.Cells["D" + res.ToString()].Value.ToString();
+                    string oe = ws.Cells["G" + res.ToString()].Value.ToString();
                     if (oe.Contains("ø") && !oe.Contains("øk"))
                     {
-                        string k = ws.Cells["F" + res.ToString()].Value.ToString();
-                        string v = ws.Cells["H" + res.ToString()].Value.ToString();
+                        string k = ws.Cells["I" + res.ToString()].Value.ToString();
+                        string v = ws.Cells["K" + res.ToString()].Value.ToString();
                         if (!Siao1di5den3[k].Contains(v))
                         {
                             Siao1di5den3[k].Add(v);
