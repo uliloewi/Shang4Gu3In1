@@ -308,8 +308,7 @@ namespace zhongguliin
                             Mapping[shang4gu3in1].Add(v);
                         }
                     }
-                }
-                
+                }                
             }
             foreach (var kv in Mapping)
             {
@@ -327,11 +326,9 @@ namespace zhongguliin
             Dictionary<string, List<string>> Mapping = new Dictionary<string, List<string>>();
             int res = 3;
             int nullcount = 0;
-            int mcm = 0;
             while (ws.Cells["G" + res.ToString()].Value == null || 
                 !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString())) //"G"列是上古音
-            {
-                
+            {                
                 if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
                 {
                     string k = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音                    
