@@ -19,8 +19,8 @@ namespace zhongguliin
         private static Dictionary<string, string[]> shang4gu3vin4bu4 = new Dictionary<string, string[]>() {//三十一韻部
             { "鐸", [lu5vwn2in1[0]+"k"]}, { "錫", [lu5vwn2in1[1]+"k"]}, { "屋", [lu5vwn2in1[2]+"k"]}, { "職", [lu5vwn2in1[3]+"k"]}, { "藥", [lu5vwn2in1[4]+"k"]}, { "覺", [lu5vwn2in1[5]+"k"]}, 
             { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
-            { "歌", [lu5vwn2in1[1]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
-            { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, 
+            { "歌", [lu5vwn2in1[0]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
+            { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
             { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
             { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
             { "葉", [lu5vwn2in1[0]+"p"]}, { "緝", [lu5vwn2in1[3]+"p", lu5vwn2in1[4]+"p"]},
@@ -63,7 +63,6 @@ namespace zhongguliin
             int length = CheckDoubleMapping(ws);
             //Console.WriteLine(lu5vwn2in1[1]);
             Workbook wbForSave = new Workbook();
-
             int sheetNr = 0;
             foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x=="月"))
             {
@@ -226,14 +225,14 @@ namespace zhongguliin
                         )
                     {//第二次自改：找同上古韻部的中古同韻字
                         string vin4 = vin4bu4.First(x => ws.Cells["G" + j.ToString()].Value.ToString().Contains(x));
-                        res = ChangePronuciatioOC(ws, [vin4], shang4gu3in1, Convert.ToInt32(zhong1gu3in1[1]), ref found, exelRowsCount);
+                        res = ChangePronuciationOC(ws, [vin4], shang4gu3in1, Convert.ToInt32(zhong1gu3in1[1]), ref found, exelRowsCount);
                         if (found)
                             return res;
                     }
                 }
 
                 //第三次自改： 無據試改
-                res = ChangePronuciatioOC(ws, vin4bu4, shang4gu3in1, Convert.ToInt32(zhong1gu3in1[1]), ref found, exelRowsCount);
+                res = ChangePronuciationOC(ws, vin4bu4, shang4gu3in1, Convert.ToInt32(zhong1gu3in1[1]), ref found, exelRowsCount);
                 return res;
             }
             catch (Exception e)
@@ -243,7 +242,7 @@ namespace zhongguliin
             
         }
 
-        private static string ChangePronuciatioOC(Worksheet ws, string[] vin4bu4, string shang4gu3in1, int rowWithZy, ref bool found, int exelRowsCount=10000)
+        private static string ChangePronuciationOC(Worksheet ws, string[] vin4bu4, string shang4gu3in1, int rowWithZy, ref bool found, int exelRowsCount=10000)
         {
             string res = shang4gu3in1;
             foreach (var v in shang4gu3vin4bu4)
@@ -261,7 +260,8 @@ namespace zhongguliin
                                 if (!DoubleMapping(ws, res, exelRowsCount))         //防止一上古對多中古
                                 {
                                     found = true;
-                                    //todo:同聲旁字試做類似更改
+                                    var zy4zu5hang2 = FindAllRowsOfSamePhoneticComponent(ws, rowWithZy);
+                                    ChangePronuciationOfBrothers(ws, zy4zu5hang2, rhyme, vin4, exelRowsCount);
                                     return res;
                                 }
                                 else
@@ -272,6 +272,37 @@ namespace zhongguliin
                         }
                     }
                 }
+            }
+            return res;
+        }
+
+        static void ChangePronuciationOfBrothers(Worksheet ws, int[] rows, string rhyme, string newryhme, int exelRowsCount = 10000)
+        {
+            int hang2 = rows[0];
+            while (hang2 < rows[1])
+            {
+                string sin1in1zie5 = ws.Cells["G" + hang2.ToString()].Value.ToString().Replace(rhyme, newryhme);
+                ws.Cells["G" + hang2.ToString()].Value = sin1in1zie5;
+                if (DoubleMapping(ws, sin1in1zie5, exelRowsCount))
+                    ws.Cells["G" + hang2.ToString()].Value = sin1in1zie5.Replace(newryhme,rhyme);
+                hang2++;
+            }
+        }
+
+
+        private static int[] FindAllRowsOfSamePhoneticComponent(Worksheet ws, int row)
+        {
+            var res = new int[2];
+            var gw5 = ws.Cells["A" + row.ToString()];
+            if (gw5.IsMerged)
+            {//如：缶族9-17行
+                var gw5sin4si5 = gw5.GetMergedRange();
+                res[0] = gw5sin4si5.FirstRow + 1;
+                res[1] = gw5sin4si5.FirstRow + gw5sin4si5.RowCount;
+            }
+            else
+            {//如：孑族只有一行krat見三開薛B入居列kiät孑𨥂
+                res[0] = res[1] = row;
             }
             return res;
         }
