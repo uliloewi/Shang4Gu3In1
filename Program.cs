@@ -14,13 +14,13 @@ namespace zhongguliin
     {
 
 
-        const string lu5vwn2in1 = "aɛɔəøo";
+        const string lu5vwn2in1 = "aɛɔəøo";//六元音
 
-        private static Dictionary<string, string[]> shang4gu3vin4bu4 = new Dictionary<string, string[]>() {
+        private static Dictionary<string, string[]> shang4gu3vin4bu4 = new Dictionary<string, string[]>() {//三十一韻部
             { "鐸", [lu5vwn2in1[0]+"k"]}, { "錫", [lu5vwn2in1[1]+"k"]}, { "屋", [lu5vwn2in1[2]+"k"]}, { "職", [lu5vwn2in1[3]+"k"]}, { "藥", [lu5vwn2in1[4]+"k"]}, { "覺", [lu5vwn2in1[5]+"k"]}, 
             { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
             { "歌", [lu5vwn2in1[1]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
-            { "月", [lu5vwn2in1[0]+"t"]}, { "質", [lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, 
+            { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, 
             { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
             { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
             { "葉", [lu5vwn2in1[0]+"p"]}, { "緝", [lu5vwn2in1[3]+"p", lu5vwn2in1[4]+"p"]},
@@ -52,19 +52,20 @@ namespace zhongguliin
         //    /*      { "月", ["at"], ["ɛt"]]}, { "質", ["et"]},  { "物", ["ət", "ot"]}*/
         //};
 
-        private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";
+        private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";//廣通中古拼音的元音
 
         static async Task Main(string[] args)
         {            
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Workbook wk = new Workbook("D:/shang4gu3li3in1(2411302202).xlsx");
+            Workbook wk = new Workbook("D:/shang4gu3li3in1-zh4len2-3.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
             //Console.WriteLine(lu5vwn2in1[1]);
             Workbook wbForSave = new Workbook();
+
             int sheetNr = 0;
-            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x=="物"))
+            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x=="月"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -252,19 +253,40 @@ namespace zhongguliin
                     if (shang4gu3in1.Contains(rhyme))
                     {
                         foreach (var vin4 in vin4bu4)
-                        {                            
-                            ws.Cells["G" + rowWithZy.ToString()].Value = res = shang4gu3in1.Replace(rhyme, vin4);
-                            if (!DoubleMapping(ws, res, exelRowsCount))         //防止一上古對多中古
+                        {
+                            var sin1in1 = shang4gu3in1.Replace(rhyme, vin4);
+                            if (RythmsOC().Any(x => sin1in1.EndsWith(x)))
                             {
-                                found = true;
+                                ws.Cells["G" + rowWithZy.ToString()].Value = res = sin1in1;
+                                if (!DoubleMapping(ws, res, exelRowsCount))         //防止一上古對多中古
+                                {
+                                    found = true;
+                                    //todo:同聲旁字試做類似更改
+                                    return res;
+                                }
+                                else
+                                {
+                                    ws.Cells["G" + rowWithZy.ToString()].Value = res = shang4gu3in1;
+                                }
                             }
-                            else
-                            {
-                                ws.Cells["G" + rowWithZy.ToString()].Value = res = shang4gu3in1;
-                            }
-                            return res;
                         }
                     }
+                }
+            }
+            return res;
+        }
+
+        private static List<string> RythmsOC() //所有上古韻母
+        {
+            var res = new List<string>();
+            foreach (var vin4bu in shang4gu3vin4bu4.Values)
+            {
+                foreach (var v in vin4bu)
+                {
+                    res.Add(v);
+                    res.Add(v + "h");
+                    if ("ktp".All(x => !v.EndsWith(x)))
+                        res.Add(v + "ɣ");
                 }
             }
             return res;
