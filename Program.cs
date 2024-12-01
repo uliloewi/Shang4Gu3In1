@@ -38,6 +38,12 @@ namespace zhongguliin
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
+
+            Dictionary<string, int> d = OnsetsOC(ws, length);
+            foreach (var s in d)
+            {
+                Console.WriteLine(s);
+            }
             //Console.WriteLine(lu5vwn2in1[1]);
             Workbook wbForSave = new Workbook();
             int sheetNr = 0;
@@ -320,6 +326,39 @@ namespace zhongguliin
                     res.Add(v + "h");
                     if ("ktp".All(x => !v.EndsWith(x)))
                         res.Add(v + "ɣ");
+                }
+            }
+            return res;
+        }
+
+        private static Dictionary<string,int> OnsetsOC(Worksheet ws, int exelRowsCount = 10000) //所有當前擬構的上古聲母及出現次數
+        {
+            Dictionary<string, int> res = new Dictionary<string, int>();
+            List<string> vin4mu3lie5bao3 = new List<string>();
+
+            foreach (var item in RythmsOC())
+            {
+                vin4mu3lie5bao3.Add("ˤ" + item);
+                vin4mu3lie5bao3.Add(item);
+            }
+
+            for (int j = 1; j < exelRowsCount; j++)
+            {
+                if (ws.Cells["G" + j.ToString()].Value != null)//"O"列是同聲旁同音字"G"列是上古音
+                {
+                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();
+                    foreach (var v in vin4mu3lie5bao3)
+                    {
+                        if (in1zie5.IndexOf(v) > 0 )
+                        {
+                            string shen1 = in1zie5.Substring(0, in1zie5.IndexOf(v));
+                            if (!res.Keys.Contains(shen1))
+                                res.Add(shen1, 1);
+                            else
+                                res[shen1]++;
+                            break;
+                        }
+                    }
                 }
             }
             return res;
