@@ -1,14 +1,10 @@
 ﻿using Shang4Gu3In1;
 using Aspose.Cells;
 using System.Drawing;
-using System.Runtime.CompilerServices;
-using System;
 using System.Globalization;
 using System.Text;
-using System.Linq;
-using System.Reflection.Metadata;
 
-namespace zhongguliin
+namespace Shang4Gu3In1
 {
     class Program
     {
@@ -31,6 +27,18 @@ namespace zhongguliin
 
         private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";//廣通中古拼音的元音
 
+        private static Dictionary<string, string[]> shen1luei4 = new Dictionary<string, string[]>() {//聲類是聲母中的主輔音
+            { "K", ["g","k","ŋ","x","ɣ","h"]},
+            { "P", ["b","p","m"]},
+            { "T", ["d","t","n","l"]},
+            { "L", ["l"]},
+            //{ "H", ["h"]}, 
+            { "S", ["s"]},
+            { "R", ["r"]},
+        };
+
+        private static Dictionary<string, string> shen1pang2vin4luei4 = new Dictionary<string, string>();
+
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -41,6 +49,14 @@ namespace zhongguliin
 
             Dictionary<string, int> d = OnsetsOC(ws, length);
             foreach (var s in d)
+            {
+                Console.WriteLine(s);
+            }
+            foreach (var s in GetPhoneticComponent(ws,length))
+            {
+                Console.WriteLine(s);
+            }
+            foreach (var s in shen1pang2vin4luei4)
             {
                 Console.WriteLine(s);
             }
@@ -80,6 +96,56 @@ namespace zhongguliin
             string fn = shang4gu3vin4bu4.Keys.Count > 3 ? "shang4gu3vin4jo5" : string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             wbForSave.Save(@"D:\" + fn + "(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
             ws.Workbook.Save(@"D:\shang4gu3li3in1(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
+        }
+
+        private static Dictionary<string, int[]> GetPhoneticComponent(Worksheet ws, int exelRowsCount = 10000) //所有聲旁及占據的行
+        {
+            Dictionary<string, int[]> res = new Dictionary<string, int[]>();
+            for (int j = 3; j < exelRowsCount; j++)
+            {
+                if (ws.Cells["A" + j.ToString()].Value != null)//"A"列是聲旁
+                {
+                    var shen1pang2 = ws.Cells["A" + j.ToString()].Value.ToString();
+                    if (!string.IsNullOrEmpty(shen1pang2) && !res.ContainsKey(shen1pang2))
+                    {
+                        res.Add(shen1pang2, FindAllRowsOfSamePhoneticComponent(ws, j));
+                    }
+                    if (!shen1pang2vin4luei4.ContainsKey(shen1pang2))
+                    {
+                        List<string> onsets = new List<string>();
+                        for (int i = res[shen1pang2][0]; i <= res[shen1pang2][1]; i++)
+                        {
+                            if (ws.Cells["G" + j.ToString()].Value != null)
+                                onsets.Add(GetOnset(ws.Cells["G" + j.ToString()].Value.ToString()));
+                        }
+                        string shen1luei4 = GetOnsetGroup(onsets);
+                        shen1pang2vin4luei4.Add(shen1pang2, shen1luei4);
+                    }
+                }
+            }
+            return res;
+        }
+
+        private static string GetOnsetGroup(List<string> onsets)//sg, rk, hr -> K
+        {
+            int cnt =0;
+            double len = (double)onsets.Count;
+            foreach (var onset in onsets)
+            {
+                foreach (var s in shen1luei4)
+                {
+                    if (s.Value.Any(x => onset.Contains(x)))
+                    {
+                        cnt++;
+                        if ((double)((double)cnt / len) > 0.5)
+                        {
+                            return s.Key;
+                        }
+                        break;
+                    }
+                }
+            }
+            return "";
         }
 
         private static bool ProcessTable(string theText, Worksheet ws, Workbook wbForSave, int sheetNr, int length, string vin11, string vin12)
@@ -330,35 +396,40 @@ namespace zhongguliin
             }
             return res;
         }
-
+        
         private static Dictionary<string,int> OnsetsOC(Worksheet ws, int exelRowsCount = 10000) //所有當前擬構的上古聲母及出現次數
         {
             Dictionary<string, int> res = new Dictionary<string, int>();
-            List<string> vin4mu3lie5bao3 = new List<string>();
 
+            for (int j = 3; j < exelRowsCount; j++)
+            {
+                if (ws.Cells["G" + j.ToString()].Value != null)//"G"列是上古音
+                {
+                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();
+                    string shen1 = GetOnset(in1zie5);
+                    if (!res.Keys.Contains(shen1))
+                        res.Add(shen1, 1);
+                    else
+                        res[shen1]++;
+                }
+            }
+            return res;
+        }
+
+        static string GetOnset(string in1zie5)//sgat->sg
+        {
+            List<string> vin4mu3lie5bao3 = new List<string>();
             foreach (var item in RythmsOC())
             {
                 vin4mu3lie5bao3.Add("ˤ" + item);
                 vin4mu3lie5bao3.Add(item);
             }
-
-            for (int j = 1; j < exelRowsCount; j++)
+            string res = "";
+            foreach (var v in vin4mu3lie5bao3)
             {
-                if (ws.Cells["G" + j.ToString()].Value != null)//"O"列是同聲旁同音字"G"列是上古音
+                if (in1zie5.IndexOf(v) > 0)
                 {
-                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();
-                    foreach (var v in vin4mu3lie5bao3)
-                    {
-                        if (in1zie5.IndexOf(v) > 0 )
-                        {
-                            string shen1 = in1zie5.Substring(0, in1zie5.IndexOf(v));
-                            if (!res.Keys.Contains(shen1))
-                                res.Add(shen1, 1);
-                            else
-                                res[shen1]++;
-                            break;
-                        }
-                    }
+                    res = in1zie5.Substring(0, in1zie5.IndexOf(v));
                 }
             }
             return res;
