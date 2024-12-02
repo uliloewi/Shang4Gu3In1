@@ -27,35 +27,33 @@ namespace Shang4Gu3In1
 
         private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";//廣通中古拼音的元音
 
-        private static Dictionary<string, string[]> shen1luei4 = new Dictionary<string, string[]>() {//聲類是聲母中的主輔音
-            { "K", ["g","k","ŋ","x","ɣ","h"]},
-            { "P", ["b","p","m"]},
-            { "T", ["d","t","n","l"]},
-            { "L", ["l"]},
-            //{ "H", ["h"]}, 
-            { "S", ["s"]},
-            { "R", ["r"]},
-        };
-
+        //private static Dictionary<string, string[]> shen1luei4 = new Dictionary<string, string[]>() {//聲類是聲母中的主輔音
+        //    { "K", ["g","k","kh", "ŋ","x","ɣ","h"]},
+        //    { "P", ["b","p","ph","m"]},
+        //    { "T", ["d","t","th","n","l"]},
+        //    { "L", ["l"]},
+        //    { "KW", ["gw","kw","khw","ŋw","xw","ɣw","hw"，"m"]}, 
+        //    { "S", ["s"]},
+        //    { "R", ["r"]},
+        //};
         private static Dictionary<string, string> shen1pang2vin4luei4 = new Dictionary<string, string>();
 
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/shang4gu3li3in1-zh4len2-3(將就老韻部韻部).xlsx");
+            Workbook wk = new Workbook("D:/shang4gu3li3in1-zh4len2-3.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-
             Dictionary<string, int> d = OnsetsOC(ws, length);
-            foreach (var s in d)
+            foreach (var s in d.OrderBy(x=>x.Value))
             {
                 Console.WriteLine(s);
             }
-            foreach (var s in GetPhoneticComponent(ws,length))
+           /* foreach (var s in GetPhoneticComponent(ws,length))
             {
                 Console.WriteLine(s);
-            }
+            }*/
             foreach (var s in shen1pang2vin4luei4)
             {
                 Console.WriteLine(s);
@@ -126,23 +124,63 @@ namespace Shang4Gu3In1
             return res;
         }
 
+
+        private static string GetOnsetGroup(string consonant)
+        {
+            if ("bpm".Any(x => consonant.Contains(x)))
+            {
+                return "P";
+            }
+            else if ("dtn".Any(x => consonant.Contains(x)))
+            {
+                return "T";
+            }
+            else if("gkŋɣh".Any(x=>consonant.Contains(x)))
+            {
+                return "K";
+            }
+            else if (consonant.Contains("l"))
+            {
+                return "L";
+            }
+            else if (consonant.Contains("x"))
+            {
+                return "K";
+            }
+            else if (consonant.Contains("s"))
+            {
+                return "S";
+            }
+            else if (consonant.Contains("r"))
+            {
+                return "R";
+            }
+            else
+            {
+                return "K";
+            }
+        }
+
         private static string GetOnsetGroup(List<string> onsets)//sg, rk, hr -> K
         {
-            int cnt =0;
+            Dictionary<string,int> shen1luei4 = new Dictionary<string, int>() 
+            {//聲類是聲母中的主輔音
+                { "K", 0},
+                { "P", 0},
+                { "T", 0},
+                { "L", 0},
+                { "S", 0},
+                { "R", 0},
+            };
+
             double len = (double)onsets.Count;
             foreach (var onset in onsets)
             {
-                foreach (var s in shen1luei4)
+                var k = GetOnsetGroup(onset);
+                shen1luei4[k]++;
+                if ((double)((double)shen1luei4[k] / len) > 0.5)
                 {
-                    if (s.Value.Any(x => onset.Contains(x)))
-                    {
-                        cnt++;
-                        if ((double)((double)cnt / len) > 0.5)
-                        {
-                            return s.Key;
-                        }
-                        break;
-                    }
+                    return k;
                 }
             }
             return "";
