@@ -11,21 +11,33 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
+        /*
+              { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
+              { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
+              { "歌", "al", "ɛl"},  { "微", "əl"}, { "脂", "øl"},
+              { "月", "at", （拜）"ɛt"}, { "物", "ət"}, { "質", "øt"},
+              { "元", （山）"an", （見）"ɛn", "ɔn"}, { "文", "ən"},
+              { "真", "øn", （印）"øŋ"},
+              { "葉", "ap"}, { "緝", "əp", （怗）"øp"},
+              { "談", "am"}, { "侵", "əm", （風）"om"}, { "添"韻不用, "øm"},
+              { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
+              { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
+         */
 
         private static Dictionary<string, string[]> shang4gu3vin4bu4 = new Dictionary<string, string[]>() {//三十一韻部
              { "鐸", [lu5vwn2in1[0]+"k"]}, { "錫", [lu5vwn2in1[1]+"k"]}, { "屋", [lu5vwn2in1[2]+"k"]}, { "職", [lu5vwn2in1[3]+"k"]}, { "藥", [lu5vwn2in1[4]+"k"]}, { "覺", [lu5vwn2in1[5]+"k"]},
-              { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
-              { "歌", [lu5vwn2in1[0]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
-              { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
-              { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
-              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
-              { "葉", [lu5vwn2in1[0]+"p"]}, { "緝", [lu5vwn2in1[3]+"p", lu5vwn2in1[4]+"p"]},
-            { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[5]+"m"]},
-            { "魚", [lu5vwn2in1[0].ToString()]}, { "之", [lu5vwn2in1[3].ToString()]}, { "支", [lu5vwn2in1[1].ToString()]},
-            { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
+             { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
+             { "歌", [lu5vwn2in1[0]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
+             { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
+             { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
+             { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
+             { "葉", [lu5vwn2in1[0]+"p"]}, { "緝", [lu5vwn2in1[3]+"p", lu5vwn2in1[4]+"p"]},
+             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[5]+"m"]},
+             { "魚", [lu5vwn2in1[0].ToString()]}, { "之", [lu5vwn2in1[3].ToString()]}, { "支", [lu5vwn2in1[1].ToString()]},
+             { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
 
-        static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚微", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
+        static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
             "鐸之", "鐸職", "鐸錫", "鐸侯", "鐸屋", "鐸幽", "鐸藥", "鐸歌", "鐸質", "鐸葉", "陽蒸", "陽錫", "陽耕", "陽東", "陽冬", 
             "之職", "之蒸", "之侯", "之幽", "之覺", "之宵", "之元", "之緝", "職蒸", "職侯", "職屋", "職幽", "職覺", "職藥", "職葉", "職緝", 
             "蒸侯", "蒸東", "蒸冬", "蒸文", "蒸侵", "支錫", "支歌", "支月", "支元", "支微", "支物", "支文", "支脂", "支質",
@@ -41,7 +53,7 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/shang4gu3li3in1(2412021705).xlsx");
+            Workbook wk = new Workbook("D:/《廣韻》形聲考李.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
@@ -78,7 +90,7 @@ namespace Shang4Gu3In1
                 sheetNr++;
             }
 
-            foreach (var tong1vin4 in tong1ia5)
+            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x== "魚屋"))
             {
                 Thread.Sleep(5000);
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
