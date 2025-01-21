@@ -19,7 +19,7 @@ namespace Shang4Gu3In1
               { "元", （山）"an", （見）"ɛn", "ɔn"}, { "文", "ən"},
               { "真", "øn", （印）"øŋ"},
               { "葉", "ap"}, { "緝", "əp", （怗）"øp"},
-              { "談", "am"}, { "侵", "əm", （風）"om"}, { "添"韻不用, "øm"},
+              { "談", "am"}, { "侵", "əm", （風）"om", （添）"øm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
          */
@@ -32,7 +32,7 @@ namespace Shang4Gu3In1
              { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
              { "葉", [lu5vwn2in1[0]+"p"]}, { "緝", [lu5vwn2in1[3]+"p", lu5vwn2in1[4]+"p"]},
-             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[5]+"m"]},
+             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[4]+"m", lu5vwn2in1[5]+"m"]},
              { "魚", [lu5vwn2in1[0].ToString()]}, { "之", [lu5vwn2in1[3].ToString()]}, { "支", [lu5vwn2in1[1].ToString()]},
              { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
@@ -65,12 +65,12 @@ namespace Shang4Gu3In1
            /* foreach (var s in GetPhoneticComponent(ws,length))
             {
                 Console.WriteLine(s);
-            }*/
+            }*/            
             foreach (var s in shen1pang2vin4luei4)
             {
                 Console.WriteLine(s);
             }
-            //Console.WriteLine(lu5vwn2in1[1]);
+            //Console.WriteLine(lu5vwn2in1[1]);            
             Workbook wbForSave = new Workbook();
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
@@ -597,6 +597,7 @@ namespace Shang4Gu3In1
             {
                 if (kv.Value.Count > 1)
                 {
+                    Console.WriteLine("以下的上古擬音對映多個中古音，請重擬！");
                     Console.Write(kv.Key + " ");
                     foreach (var v in kv.Value)
                         Console.Write(v + " ");
