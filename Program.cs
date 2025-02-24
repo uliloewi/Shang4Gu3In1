@@ -37,6 +37,42 @@ namespace Shang4Gu3In1
              { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
 
+        private static Dictionary<string, int> vin4bu4hao4 = new Dictionary<string, int>() {//三十一韻部
+             {lu5vwn2in1[0]+"k", 1}, { lu5vwn2in1[1]+"k", 2}, { lu5vwn2in1[2]+"k",3}, { lu5vwn2in1[3]+"k", 4}, { lu5vwn2in1[4]+"k",5}, { lu5vwn2in1[5]+"k",6},
+             { lu5vwn2in1[0]+"ŋ", 7}, { lu5vwn2in1[1]+"ŋ", 8}, { lu5vwn2in1[2]+"ŋ", 9}, { lu5vwn2in1[3]+"ŋ", 10}, { lu5vwn2in1[5]+"ŋ", 11},
+             { lu5vwn2in1[0]+"l",12 }, {lu5vwn2in1[1]+"l",13},  { lu5vwn2in1[3]+"l",14}, { lu5vwn2in1[4]+"l",15},
+             { lu5vwn2in1[0]+"t",16 },{ lu5vwn2in1[1]+"t",17}, { lu5vwn2in1[3]+"t",18}, { lu5vwn2in1[4]+"t", 19},
+             { lu5vwn2in1[0]+"n", 20 },{ lu5vwn2in1[1]+"n", 21 }, {lu5vwn2in1[2]+"n",22}, { lu5vwn2in1[3]+"n",23},
+             { lu5vwn2in1[4]+"n", 24 },{ lu5vwn2in1[4]+"ŋ", 25},
+             { lu5vwn2in1[0]+"p", 25 },{lu5vwn2in1[4]+"p",27}, { lu5vwn2in1[3]+"p",28},
+             { lu5vwn2in1[0]+"m", 29}, { lu5vwn2in1[3]+"m", 30 },{lu5vwn2in1[4]+"m", 31 },{lu5vwn2in1[5]+"m", 32},
+             { lu5vwn2in1[0].ToString(), 33}, { lu5vwn2in1[3].ToString(), 34}, { lu5vwn2in1[1].ToString(), 35},
+             { lu5vwn2in1[2].ToString(), 36}, { lu5vwn2in1[5].ToString(), 37}, { lu5vwn2in1[4].ToString(), 38},
+        };
+
+        private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
+            { "sKr莊組A", ["skr", "skʰr", "sgr", "sxr", "sɣr"]},            
+            { "sK精組B", ["skʰ", "sk", "sg", "sx", "sɣ"]},  
+            { "sC心C", ["sn", "sŋ", "sm"]}, 
+            { "sl心母D", ["sl"]}, 
+            { "st心書母E", ["st"]}, 
+            { "sd從邪母F", ["sd"]},
+            { "rT端組日母G", ["rtʰ", "rt", "rd", "rn"]}, 
+            { "xm曉H", ["xm"]},
+            { "sr生母I", ["sr"]},
+            { "Kl章端組以母J", ["kl", "kʰl", "gl", "ŋl", "xl", "xn", "ɣl", "l"]},
+            { "Tr知組K", ["tr", "tʰr", "dr", "nr"]}, 
+            { "rK知組L",["rkʰ", "rk", "rg", "rx", "rŋ"]},
+            { "r來母M", ["rɣ", "r"]}, 
+            { "N明泥日娘組N", ["n"]}, 
+            { "T章端組O", [ "tʰ", "t", "d"]}, 
+            { "M明母P", ["m"]}, 
+            { "K見溪群疑Q", ["kʰ", "k",  "g", "ŋ"]}, 
+            { "X曉匣R", ["x", "ɣ"]}, // { "rɣl知組",["rɣl"]},
+            { "P幫組S", ["pʰ", "p", "b"]},
+            { "h影母T", ["h"]},
+        };
+
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
             "鐸之", "鐸職", "鐸錫", "鐸侯", "鐸屋", "鐸幽", "鐸藥", "鐸歌", "鐸質", "鐸葉", "陽蒸", "陽錫", "陽耕", "陽東", "陽冬", 
             "之職", "之蒸", "之侯", "之幽", "之覺", "之宵", "之元", "之緝", "職蒸", "職侯", "職屋", "職幽", "職覺", "職藥", "職葉", "職緝", 
@@ -72,6 +108,7 @@ namespace Shang4Gu3In1
             }
             //Console.WriteLine(lu5vwn2in1[1]);            
             Workbook wbForSave = new Workbook();
+            shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             
@@ -240,10 +277,10 @@ namespace Shang4Gu3In1
                                 Dictionary<string, string[]> do1in1 = new Dictionary<string, string[]>();
                                 for (int j = 1; j < length; j++)
                                 {
-                                    if (ws.Cells["O" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)//"O"列是同聲旁同音字"G"列是上古音
+                                    if (ws.Cells["P" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
                                         continue;
-                                    else if (ws.Cells["O" + j.ToString()].Value.ToString().Contains(zy) &&
-                                        ws.Cells["O" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))//"O"列是同聲旁同音字
+                                    else if (ws.Cells["P" + j.ToString()].Value.ToString().Contains(zy) &&
+                                        ws.Cells["P" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))//"P"列是同聲旁同音字
                                     {
                                         var shang4gu3du5in1 = ws.Cells["G" + j.ToString()].Value.ToString(); //"G"列是上古音
                                         string[] zhong1gu3du5in1 = [ws.Cells["N" + j.ToString()].Value.ToString(), j.ToString()]; //"N"列是中古音
@@ -528,7 +565,7 @@ namespace Shang4Gu3In1
             Dictionary<string, List<string>> Mapping = new Dictionary<string, List<string>>() { { shang4gu3in1, new List<string>() } };
             for (int j = 1; j < length; j++)
             {
-                if (ws.Cells["O" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)//"O"列是同聲旁同音字"G"列是上古音
+                if (ws.Cells["P" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
                     continue;
 
                 if (ws.Cells["G" + j.ToString()].Value != null && ws.Cells["G" + j.ToString()].Value.ToString() == shang4gu3in1)//"G"列是上古音
@@ -699,6 +736,78 @@ namespace Shang4Gu3In1
                 zy = "丱";
             }
             return zy;
+        }
+
+        static void shang4gu3duei4zhong1gu3(Worksheet ws, int length)
+        {
+
+            Workbook wbForSave = new Workbook();
+            wbForSave.Worksheets.Add();
+            //var ws0 = wbForSave.Worksheets[0];
+            //var ws1 = wbForSave.Worksheets[1];
+            List<string> sheng1mu3=new List<string>();
+
+            int res = 3;
+            int nullcount = 0;
+            while ((ws.Cells["G" + res.ToString()].Value == null ||
+                       !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()))&& res<=length) //"G"列是上古音
+            {
+                if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
+                {
+                    string k = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
+                    if ((k.EndsWith("h") && !k.EndsWith("kh") && !k.EndsWith("th") && !k.EndsWith("ph")) || k.EndsWith("ɣ"))
+                        k = k.Substring(0, k.Length - 1);
+
+                    bool shenmuFound = false;
+                    foreach (var kv in shen1mu3duei4in4)
+                    {
+                        foreach (var shang4gu3sheng1mu3 in kv.Value)
+                        {
+                            if (k.StartsWith(shang4gu3sheng1mu3))
+                            {
+                                shenmuFound = true;
+                                //string cellvalue = "";
+                                bool vinmuFound = false;
+                                foreach (var vin5bu4 in shang4gu3vin4bu4)
+                                {
+                                    foreach(var v in vin5bu4.Value)
+                                    {
+                                        if (k.EndsWith(v))
+                                        {
+                                            int hang2hao4=0;
+                                            vinmuFound=true;
+                                            var vinmu = k.Substring(shang4gu3sheng1mu3.Length);//e.g.: am, ʷˤəl ...
+                                            foreach (var vinbu in vin4bu4hao4)
+                                            {
+                                                if (vinmu.EndsWith(vinbu.Key))
+                                                {
+                                                    hang2hao4 = vinbu.Value;
+                                                    break;
+                                                }
+                                            }
+                                            string ss = vinmu + ws.Cells["I" + res.ToString()].Value.ToString()
+                                                + ws.Cells["J" + res.ToString()].Value.ToString() + ws.Cells["K" + res.ToString()].Value.ToString();
+                                            int biao3hao4 = k.Contains("ˤ") ? 1 : 0;
+                                            if (wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value == null||
+                                                !wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value.ToString().Contains(ss))
+                                                wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value += ss + ", ";
+                                            break;
+                                        }
+                                    }
+                                    if (vinmuFound)
+                                        break;
+                                }
+                                break;
+                            }
+                        }
+                        if (shenmuFound)
+                            break;
+
+                    }
+                }
+                res++;
+            }
+            wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
         }
     }
 }
