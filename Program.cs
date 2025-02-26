@@ -16,7 +16,7 @@ namespace Shang4Gu3In1
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
               { "歌", "al", "ɛl"},  { "微", "əl"}, { "脂", "øl"},
               { "月", "at", （拜）"ɛt"}, { "物", "ət"}, { "質", "øt"},
-              { "元", （山）"an", （見）"ɛn", "ɔn"}, { "文", "ən"},
+              { "元", "an", （見）"ɛn"}, { "文", "ən"},
               { "真", "øn", （印）"øŋ"},
               { "葉", "ap", （怗）"øp"}, { "緝", "əp"},
               { "談", "am"}, { "侵", "əm", （風）"om", （添）"øm"},
@@ -29,7 +29,7 @@ namespace Shang4Gu3In1
              { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
              { "歌", [lu5vwn2in1[0]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
              { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
-             { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n", lu5vwn2in1[2]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
+             { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
              { "葉", [lu5vwn2in1[0]+"p", lu5vwn2in1[4]+"p"]}, { "緝", [lu5vwn2in1[3]+"p"]},
              { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[4]+"m", lu5vwn2in1[5]+"m"]},
@@ -37,17 +37,17 @@ namespace Shang4Gu3In1
              { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
 
-        private static Dictionary<string, int> vin4bu4hao4 = new Dictionary<string, int>() {//三十一韻部
+        private static Dictionary<string, int> vin4bu4hao4 = new Dictionary<string, int>() {//三十七韻
              {lu5vwn2in1[0]+"k", 1}, { lu5vwn2in1[1]+"k", 2}, { lu5vwn2in1[2]+"k",3}, { lu5vwn2in1[3]+"k", 4}, { lu5vwn2in1[4]+"k",5}, { lu5vwn2in1[5]+"k",6},
              { lu5vwn2in1[0]+"ŋ", 7}, { lu5vwn2in1[1]+"ŋ", 8}, { lu5vwn2in1[2]+"ŋ", 9}, { lu5vwn2in1[3]+"ŋ", 10}, { lu5vwn2in1[5]+"ŋ", 11},
              { lu5vwn2in1[0]+"l",12 }, {lu5vwn2in1[1]+"l",13},  { lu5vwn2in1[3]+"l",14}, { lu5vwn2in1[4]+"l",15},
              { lu5vwn2in1[0]+"t",16 },{ lu5vwn2in1[1]+"t",17}, { lu5vwn2in1[3]+"t",18}, { lu5vwn2in1[4]+"t", 19},
-             { lu5vwn2in1[0]+"n", 20 },{ lu5vwn2in1[1]+"n", 21 }, {lu5vwn2in1[2]+"n",22}, { lu5vwn2in1[3]+"n",23},
-             { lu5vwn2in1[4]+"n", 24 },{ lu5vwn2in1[4]+"ŋ", 25},
-             { lu5vwn2in1[0]+"p", 25 },{lu5vwn2in1[4]+"p",27}, { lu5vwn2in1[3]+"p",28},
-             { lu5vwn2in1[0]+"m", 29}, { lu5vwn2in1[3]+"m", 30 },{lu5vwn2in1[4]+"m", 31 },{lu5vwn2in1[5]+"m", 32},
-             { lu5vwn2in1[0].ToString(), 33}, { lu5vwn2in1[3].ToString(), 34}, { lu5vwn2in1[1].ToString(), 35},
-             { lu5vwn2in1[2].ToString(), 36}, { lu5vwn2in1[5].ToString(), 37}, { lu5vwn2in1[4].ToString(), 38},
+             { lu5vwn2in1[0]+"n", 20 },{ lu5vwn2in1[1]+"n", 21 }, { lu5vwn2in1[3]+"n",22},
+             { lu5vwn2in1[4]+"n", 23 },{ lu5vwn2in1[4]+"ŋ", 24},
+             { lu5vwn2in1[0]+"p", 25 },{lu5vwn2in1[4]+"p",26}, { lu5vwn2in1[3]+"p",27},
+             { lu5vwn2in1[0]+"m", 28}, { lu5vwn2in1[3]+"m", 29 },{lu5vwn2in1[4]+"m", 30 },{lu5vwn2in1[5]+"m", 31},
+             { lu5vwn2in1[0].ToString(), 32}, { lu5vwn2in1[3].ToString(), 33}, { lu5vwn2in1[1].ToString(), 34},
+             { lu5vwn2in1[2].ToString(), 35}, { lu5vwn2in1[5].ToString(), 36}, { lu5vwn2in1[4].ToString(), 37},
         };
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
@@ -69,8 +69,9 @@ namespace Shang4Gu3In1
             { "M明母P", ["m"]}, 
             { "K見溪群疑Q", ["kʰ", "k",  "g", "ŋ"]}, 
             { "X曉匣R", ["x", "ɣ"]}, // { "rɣl知組",["rɣl"]},
-            { "P幫組S", ["pʰ", "p", "b"]},
+            { "S心S", ["s"]},
             { "h影母T", ["h"]},
+            { "P幫組U", ["pʰ", "p", "b"]},
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -772,14 +773,14 @@ namespace Shang4Gu3In1
                                 {
                                     foreach(var v in vin5bu4.Value)
                                     {
-                                        if (k.EndsWith(v))
+                                        if (k.EndsWith(v) || k.EndsWith(v + "h"))
                                         {
                                             int hang2hao4=0;
                                             vinmuFound=true;
-                                            var vinmu = k.Substring(shang4gu3sheng1mu3.Length);//e.g.: am, ʷˤəl ...
+                                            var vinmu = "," + k.Substring(shang4gu3sheng1mu3.Length);//e.g.: ",am", ",ʷˤəl" ...
                                             foreach (var vinbu in vin4bu4hao4)
                                             {
-                                                if (vinmu.EndsWith(vinbu.Key))
+                                                if (vinmu.EndsWith(vinbu.Key) || vinmu.EndsWith(vinbu.Key + "h"))
                                                 {
                                                     hang2hao4 = vinbu.Value;
                                                     break;
@@ -788,9 +789,19 @@ namespace Shang4Gu3In1
                                             string ss = vinmu + ws.Cells["I" + res.ToString()].Value.ToString()
                                                 + ws.Cells["J" + res.ToString()].Value.ToString() + ws.Cells["K" + res.ToString()].Value.ToString();
                                             int biao3hao4 = k.Contains("ˤ") ? 1 : 0;
-                                            if (wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value == null||
+                                            if (wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value == null ||
                                                 !wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value.ToString().Contains(ss))
-                                                wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value += ss + ", ";
+                                            {
+                                                Cell cell = wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()];
+                                                string oldString = cell.Value?.ToString();
+                                                string newString = oldString + ss;
+                                                cell.PutValue(newString);
+                                                if (!String.IsNullOrEmpty(oldString) && oldString.Contains(vinmu) && !oldString.Contains(vinmu + "h"))
+                                                {
+                                                    var characters = cell.Characters(newString.IndexOf(ss), ss.Length);
+                                                    characters.Font.Color = Color.Red;
+                                                }
+                                            }
                                             break;
                                         }
                                     }
