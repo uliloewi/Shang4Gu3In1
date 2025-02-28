@@ -14,11 +14,11 @@ namespace Shang4Gu3In1
         /*
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
-              { "歌", "al", "ɛl"},  { "微", "əl"}, { "脂", "øl"},
+              { "歌", "al", （皮）"ɛl"},  { "微", "əl"}, { "脂", "øl"},
               { "月", "at", （拜）"ɛt"}, { "物", "ət"}, { "質", "øt"},
               { "元", "an", （見）"ɛn"}, { "文", "ən"},
               { "真", "øn", （印）"øŋ"},
-              { "葉", "ap", （怗）"øp"}, { "緝", "əp"},
+              { "葉", "ap", （夾）"øp"}, { "緝", "əp"},
               { "談", "am"}, { "侵", "əm", （風）"om", （添）"øm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
@@ -52,26 +52,32 @@ namespace Shang4Gu3In1
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
             { "sKr莊組A", ["skr", "skʰr", "sgr", "sxr", "sɣr"]},            
-            { "sK精組B", ["skʰ", "sk", "sg", "sx", "sɣ"]},  
-            { "sC心C", ["sn", "sŋ", "sm"]}, 
-            { "sl心母D", ["sl"]}, 
-            { "st心書母E", ["st"]}, 
-            { "sd從邪母F", ["sd"]},
-            { "rT端組日母G", ["rtʰ", "rt", "rd", "rn"]}, 
-            { "xm曉H", ["xm"]},
-            { "sr生母I", ["sr"]},
-            { "Kl章端組以母J", ["kl", "kʰl", "gl", "ŋl", "xl", "xn", "ɣl", "l"]},
-            { "Tr知組K", ["tr", "tʰr", "dr", "nr"]}, 
-            { "rK知組L",["rkʰ", "rk", "rg", "rx", "rŋ"]},
-            { "r來母M", ["rɣ", "r"]}, 
+            { "sK精組B", ["skʰ", "sk", "sg", "sŋ"]},
+            { "sK精組C", ["sx", "sɣ"]},
+            { "rK知組D",["rkʰ", "rk", "rg", "rx"]},
+            { "rŊ娘日E",["rŋ"]},
+            { "sT心書從邪母F", ["sn", "st", "sd"]},
+            { "Tr知組G", ["tr", "tʰr", "dr", "nr"]},
+            { "sr生母H", ["sr"]},
+            { "Kl章端組以母I", ["kl", "kʰl", "gl"]},
+            { "Ŋl章端組以母J", ["ŋl"]},
+            { "Xl透書母K", ["xl", "xn"]},
+            { "Ɣl定以母L", [ "ɣl", "l"]},
+            { "xm曉M", ["xm"]},
             { "N明泥日娘組N", ["n"]}, 
-            { "T章端組O", [ "tʰ", "t", "d"]}, 
-            { "M明母P", ["m"]}, 
-            { "K見溪群疑Q", ["kʰ", "k",  "g", "ŋ"]}, 
-            { "X曉匣R", ["x", "ɣ"]}, // { "rɣl知組",["rɣl"]},
-            { "S心S", ["s"]},
-            { "h影母T", ["h"]},
-            { "P幫組U", ["pʰ", "p", "b"]},
+            { "T章端組O", [ "tʰ", "t", "d"]},
+            { "r來母P", ["rɣ"]},
+            { "r來母Q", ["r"]},
+            { "h影母R", ["h"]},
+            { "S心生S", ["s"]},
+            { "X曉T", ["x"]},
+            { "Ɣ匣云U", ["ɣ"]},
+            { "K見溪群V", ["kʰ", "k",  "g"]},
+            { "Ŋ疑明W", ["ŋ"]},
+            { "P幫組X", ["pʰ", "p", "b"]},
+            { "M明母Y", ["m"]},
+
+
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -99,10 +105,10 @@ namespace Shang4Gu3In1
             {
                 Console.WriteLine(s);
             }
-           /* foreach (var s in GetPhoneticComponent(ws,length))
-            {
-                Console.WriteLine(s);
-            }*/            
+            /* foreach (var s in GetPhoneticComponent(ws,length))
+             {
+                 Console.WriteLine(s);
+             }*/
             foreach (var s in shen1pang2vin4luei4)
             {
                 Console.WriteLine(s);
@@ -758,7 +764,6 @@ namespace Shang4Gu3In1
                     string k = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
                     if ((k.EndsWith("h") && !k.EndsWith("kh") && !k.EndsWith("th") && !k.EndsWith("ph")) || k.EndsWith("ɣ"))
                         k = k.Substring(0, k.Length - 1);
-
                     bool shenmuFound = false;
                     foreach (var kv in shen1mu3duei4in4)
                     {
