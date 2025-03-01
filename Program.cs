@@ -51,23 +51,23 @@ namespace Shang4Gu3In1
         };
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
-            { "sKr莊組A", ["skr", "skʰr", "sgr", "sxr", "sɣr"]},            
-            { "sK精組B", ["skʰ", "sk", "sg", "sŋ"]},
-            { "sK精組C", ["sx", "sɣ"]},
-            { "rK知組D",["rkʰ", "rk", "rg", "rx"]},
-            { "rŊ娘日E",["rŋ"]},
-            { "sT心書從邪母F", ["sn", "st", "sd"]},
-            { "Tr知組G", ["tr", "tʰr", "dr", "nr"]},
-            { "sr生母H", ["sr"]},
-            { "Kl章端組以母I", ["kl", "kʰl", "gl"]},
-            { "Ŋl章端組以母J", ["ŋl"]},
-            { "Xl透書母K", ["xl", "xn"]},
-            { "Ɣl定以母L", [ "ɣl", "l"]},
-            { "xm曉M", ["xm"]},
-            { "N明泥日娘組N", ["n"]}, 
+            { "SKR莊組A", ["skr", "skʰr", "sgr", "sxr"]},
+            { "SƔR俟船母B", ["sɣr"]},
+            { "SK精組C", ["skʰ", "sk", "sg", "sŋ"]},
+            { "SK精組D", ["sx", "sɣ"]},
+            { "RK知組E",["rkʰ", "rk", "rg", "rx"]},
+            { "RŊ娘日F",["rŋ"]},
+            { "ST心書從邪母G", ["sn", "st", "sd"]},
+            { "TR知組H", ["tr", "tʰr", "dr", "nr"]},
+            { "SR生母I", ["sr"]},
+            { "KL章端組以母J", ["kl", "kʰl", "gl"]},
+            { "ŊL章端組以母K", ["ŋl"]},
+            { "XL透書母L", ["xl", "xn"]},
+            { "ƔL定以母M", [ "ɣl", "l"]},
+            { "N明泥日娘組N", ["n"]},
             { "T章端組O", [ "tʰ", "t", "d"]},
-            { "r來母P", ["rɣ"]},
-            { "r來母Q", ["r"]},
+            { "RƔ來母P", ["rɣ"]},
+            { "R來母Q", ["r"]},
             { "h影母R", ["h"]},
             { "S心生S", ["s"]},
             { "X曉T", ["x"]},
@@ -76,8 +76,6 @@ namespace Shang4Gu3In1
             { "Ŋ疑明W", ["ŋ"]},
             { "P幫組X", ["pʰ", "p", "b"]},
             { "M明母Y", ["m"]},
-
-
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -822,6 +820,12 @@ namespace Shang4Gu3In1
                     }
                 }
                 res++;
+                foreach (var kv in shen1mu3duei4in4)
+                {
+                    wbForSave.Worksheets[0].Cells[kv.Key.Substring(kv.Key.Length - 1) + (vin4bu4hao4.Count + 1).ToString()].Value = kv.Key;
+                    wbForSave.Worksheets[1].Cells[kv.Key.Substring(kv.Key.Length - 1) + (vin4bu4hao4.Count + 1).ToString()].Value = kv.Key;
+                }
+
             }
             wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
         }
