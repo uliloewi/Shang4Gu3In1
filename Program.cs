@@ -55,17 +55,17 @@ namespace Shang4Gu3In1
             { "SƔR俟船母B", ["sɣr"]},
             { "SK精組C", ["skʰ", "sk", "sg", "sŋ"]},
             { "SK精組D", ["sx", "sɣ"]},
-            { "RK知組E",["rkʰ", "rk", "rg", "rx"]},
-            { "RŊ娘日F",["rŋ"]},
-            { "ST心書從邪母G", ["sn", "st", "sd"]},
-            { "TR知組H", ["tr", "tʰr", "dr", "nr"]},
-            { "SR生母I", ["sr"]},
-            { "KL章端組以母J", ["kl", "kʰl", "gl"]},
-            { "ŊL章端組以母K", ["ŋl"]},
-            { "XL透書母L", ["xl", "xn"]},
-            { "ƔL定以母M", [ "ɣl", "l"]},
-            { "N明泥日娘組N", ["n"]},
-            { "T章端組O", [ "tʰ", "t", "d"]},
+            { "RK知組E",["rkʰ", "rk", "rg", "rx", "rŋ"]},
+            { "ST心書從邪母F", ["sn", "st", "sd"]},
+            { "TR知組G", ["tr", "tʰr", "dr", "nr"]},
+            { "SR生母H", ["sr"]},
+            { "KL章端組以母I", ["kl", "kʰl", "gl", "ŋl"]},
+            { "XL透書母J", ["xl", "xn"]},
+            { "ƔL定以母K", [ "ɣl", "l"]},
+            { "P幫組L", ["pʰ", "p", "b"]},
+            { "M明母M", ["m"]},
+            { "T章端組N", [ "tʰ", "t", "d"]},
+            { "N明泥日娘組O", ["n"]},
             { "RƔ來母P", ["rɣ"]},
             { "R來母Q", ["r"]},
             { "h影母R", ["h"]},
@@ -74,8 +74,6 @@ namespace Shang4Gu3In1
             { "Ɣ匣云U", ["ɣ"]},
             { "K見溪群V", ["kʰ", "k",  "g"]},
             { "Ŋ疑明W", ["ŋ"]},
-            { "P幫組X", ["pʰ", "p", "b"]},
-            { "M明母Y", ["m"]},
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -132,9 +130,9 @@ namespace Shang4Gu3In1
                 sheetNr++;
             }
 
-            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x== "魚屋"))
+            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x== "鐸錫"))
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
                 var content = await httpResponseMessage.Content.ReadAsStringAsync();
                 ProcessTable(content, ws, wbForSave, sheetNr, length, tong1vin4[0].ToString(), tong1vin4[1].ToString());
