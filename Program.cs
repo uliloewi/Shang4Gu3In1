@@ -109,20 +109,23 @@ namespace Shang4Gu3In1
             {
                 Console.WriteLine(s);
             }
-            //Console.WriteLine(lu5vwn2in1[1]);            
+            //Console.WriteLine(lu5vwn2in1[1]);
+
+            //Huang4Üin4("三藥", "ak", "øk", "ʷak");
+
             Workbook wbForSave = new Workbook();
             shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             
-            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x== "葉"))
+            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x== "鐸"))
             {
                 string vin11 = k;
                 string vin12 = k;
                 Thread.Sleep(5000);
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + vin11 + "&y=" + vin12 + "&mode=yunbu");
                 var content = await httpResponseMessage.Content.ReadAsStringAsync();
-                ProcessTable(content, ws, wbForSave, sheetNr, length, vin11, vin12);
+                ProcessTable(content, ws, wbForSave, sheetNr, length, vin11, vin12, false);
 
                 //ProcessTable("<table><tr><th><b style=\"戾<b style=\"戾", ws, wbForSave, sheetNr, length, vin11, vin12); 
                 wbForSave.Worksheets[sheetNr].Name= vin11;
@@ -236,7 +239,7 @@ namespace Shang4Gu3In1
             return "";
         }
 
-        private static void ProcessTable(string theText, Worksheet ws, Workbook wbForSave, int sheetNr, int length, string vin11, string vin12)
+        private static void ProcessTable(string theText, Worksheet ws, Workbook wbForSave, int sheetNr, int length, string vin11, string vin12, bool aiModificating = true)
         {
             try
             {
@@ -305,7 +308,7 @@ namespace Shang4Gu3In1
                                     bool i3siou1zhen4 = false;
                                     foreach (var gu3in1 in do1in1.ToList())
                                     {
-                                        string qi2ta1shang4gu3in1 = FindRightOldPronunciation(ws, length, shang4gu3vin4bu4[vin11], gu3in1.Value, gu3in1.Key, length);
+                                        string qi2ta1shang4gu3in1 = aiModificating ? FindRightOldPronunciation(ws, length, shang4gu3vin4bu4[vin11], gu3in1.Value, gu3in1.Key, length) : gu3in1.Key;
                                         if (qi2ta1shang4gu3in1 != gu3in1.Key && !do1in1.Keys.Contains(qi2ta1shang4gu3in1))
                                         {
                                             do1in1.Add(qi2ta1shang4gu3in1, gu3in1.Value);
@@ -826,6 +829,33 @@ namespace Shang4Gu3In1
 
             }
             wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
+        }
+
+        private static void Huang4Üin4(string denüin, string jouli, string sinli, string liuä = "")
+        {
+            Workbook wb = new Workbook(@"D:\《廣韻》形聲考李.xlsx");//上古表
+            Worksheet ws = wb.Worksheets[0];
+            var dt = ws.Cells.ExportDataTable(0, 0, 9912, 1);
+            int ii;
+            for (int k = 2; k < 9912; k++)
+            {
+                string zhongguüinmu = ws.Cells["I" + (k + 1).ToString()].Value.ToString() + ws.Cells["K" + (k + 1).ToString()].Value.ToString();//K列是中古韻母
+
+                if (ws.Cells["G" + (k + 1).ToString()].Value != null)
+                {
+                    string shangguin = ws.Cells["G" + (k + 1).ToString()].Value.ToString();//G列是上古擬音
+
+                    if (zhongguüinmu == denüin)
+                    {
+                        if (shangguin.Contains(jouli) && !shangguin.Contains(liuä) && !shangguin.Contains("n" + jouli) && !shangguin.Contains("r" + jouli))
+                        {
+                            ws.Cells["G" + (k + 1).ToString()].Value = shangguin.Replace(jouli, sinli);
+                        }
+                    }
+                }
+            }
+            wb.Save(@"D:\shangguliin.xlsx");
+
         }
     }
 }
