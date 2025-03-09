@@ -138,7 +138,7 @@ namespace Shang4Gu3In1
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
                 var content = await httpResponseMessage.Content.ReadAsStringAsync();
-                ProcessTable(content, ws, wbForSave, sheetNr, length, tong1vin4[0].ToString(), tong1vin4[1].ToString());
+                ProcessTable(content, ws, wbForSave, sheetNr, length, tong1vin4[0].ToString(), tong1vin4[1].ToString(), false);
                 wbForSave.Worksheets[sheetNr].Name = tong1vin4;
                 wbForSave.Worksheets.Add();
                 sheetNr++;
