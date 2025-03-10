@@ -118,7 +118,7 @@ namespace Shang4Gu3In1
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             
-            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x== "鐸"))
+            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x== "職" || x == "覺"))
             {
                 string vin11 = k;
                 string vin12 = k;
