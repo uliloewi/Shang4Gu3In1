@@ -111,14 +111,14 @@ namespace Shang4Gu3In1
             }
             //Console.WriteLine(lu5vwn2in1[1]);
 
-            //Huang4Üin4("三藥", "ak", "øk", "ʷak");
+           // Huang4Üin4(new List<string>() { "三術", "三櫛", "三脂A" }, "ət", "øt");
 
             Workbook wbForSave = new Workbook();
             shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             
-            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x== "職" || x == "覺"))
+            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x== "質" || x == "物"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -132,8 +132,8 @@ namespace Shang4Gu3In1
                 wbForSave.Worksheets.Add();
                 sheetNr++;
             }
-
-            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x== "鐸錫"))
+            
+            foreach (var tong1vin4 in tong1ia5.Where(x=>x== "物質"))
             {
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
@@ -831,7 +831,7 @@ namespace Shang4Gu3In1
             wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
         }
 
-        private static void Huang4Üin4(string denüin, string jouli, string sinli, string liuä = "")
+        private static void Huang4Üin4(List<string> denüin, string jouli, string sinli, string liuä = "")
         {
             Workbook wb = new Workbook(@"D:\《廣韻》形聲考李.xlsx");//上古表
             Worksheet ws = wb.Worksheets[0];
@@ -845,16 +845,19 @@ namespace Shang4Gu3In1
                 {
                     string shangguin = ws.Cells["G" + (k + 1).ToString()].Value.ToString();//G列是上古擬音
 
-                    if (zhongguüinmu == denüin)
+                    foreach (var s in denüin)
                     {
-                        if (shangguin.Contains(jouli) && !shangguin.Contains(liuä) && !shangguin.Contains("n" + jouli) && !shangguin.Contains("r" + jouli))
+                        if (zhongguüinmu == s)
                         {
-                            ws.Cells["G" + (k + 1).ToString()].Value = shangguin.Replace(jouli, sinli);
+                            if (shangguin.Contains(jouli))
+                            {
+                                ws.Cells["G" + (k + 1).ToString()].Value = shangguin.Replace(jouli, sinli);
+                            }
                         }
                     }
                 }
             }
-            wb.Save(@"D:\shangguliin.xlsx");
+            wb.Save(@"D:\質物嚴分.xlsx");
 
         }
     }
