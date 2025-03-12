@@ -19,7 +19,7 @@ namespace Shang4Gu3In1
               { "元", "an", （見）"ɛn"}, { "文", "ən"},
               { "真", "øn", （印）"øŋ"},
               { "葉", "ap", （夾）"øp"}, { "緝", "əp"},
-              { "談", "am"}, { "侵", "əm", （風）"om", （添）"øm"},
+              { "談", "am"}, { "侵", "əm", （添）"øm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
          */
@@ -32,7 +32,7 @@ namespace Shang4Gu3In1
              { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
              { "葉", [lu5vwn2in1[0]+"p", lu5vwn2in1[4]+"p"]}, { "緝", [lu5vwn2in1[3]+"p"]},
-             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[4]+"m", lu5vwn2in1[5]+"m"]},
+             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[4]+"m"]},
              { "魚", [lu5vwn2in1[0].ToString()]}, { "之", [lu5vwn2in1[3].ToString()]}, { "支", [lu5vwn2in1[1].ToString()]},
              { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
@@ -111,14 +111,13 @@ namespace Shang4Gu3In1
             }
             //Console.WriteLine(lu5vwn2in1[1]);
 
-           // Huang4Üin4(new List<string>() { "三術", "三櫛", "三脂A" }, "ət", "øt");
-
             Workbook wbForSave = new Workbook();
+            //Huang4Üin4(new List<string>() { "三開真A" }, "ən", "øn", "r");
             shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
             
-            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x== "質" || x == "物"))
+            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x== "談" || x == "侵"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -133,7 +132,7 @@ namespace Shang4Gu3In1
                 sheetNr++;
             }
             
-            foreach (var tong1vin4 in tong1ia5.Where(x=>x== "物質"))
+            foreach (var tong1vin4 in tong1ia5.Where(x=>x== "談侵"))
             {
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
@@ -741,6 +740,18 @@ namespace Shang4Gu3In1
             {
                 zy = "丱";
             }
+            else if (zy == "川")
+            {
+                zy = "𡿦";
+            }
+            else if (zy == "楫")
+            {
+                zy = "檝";
+            }
+            else if (zy == "斬")//須平聲同義談韻字
+            {
+                zy = "槧";  
+            }
             return zy;
         }
 
@@ -839,7 +850,7 @@ namespace Shang4Gu3In1
             int ii;
             for (int k = 2; k < 9912; k++)
             {
-                string zhongguüinmu = ws.Cells["I" + (k + 1).ToString()].Value.ToString() + ws.Cells["K" + (k + 1).ToString()].Value.ToString();//K列是中古韻母
+                string zhongguüinmu = ws.Cells["I" + (k + 1).ToString()].Value.ToString()  + ws.Cells["J" + (k + 1).ToString()].Value.ToString() + ws.Cells["K" + (k + 1).ToString()].Value.ToString();//K列是中古韻母
 
                 if (ws.Cells["G" + (k + 1).ToString()].Value != null)
                 {
@@ -849,7 +860,7 @@ namespace Shang4Gu3In1
                     {
                         if (zhongguüinmu == s)
                         {
-                            if (shangguin.Contains(jouli))
+                            if (shangguin.Contains(jouli) && !shangguin.Contains(liuä))
                             {
                                 ws.Cells["G" + (k + 1).ToString()].Value = shangguin.Replace(jouli, sinli);
                             }
@@ -857,7 +868,7 @@ namespace Shang4Gu3In1
                     }
                 }
             }
-            wb.Save(@"D:\質物嚴分.xlsx");
+            wb.Save(@"D:\真皆真部.xlsx");
 
         }
     }
