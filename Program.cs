@@ -19,8 +19,8 @@ namespace Shang4Gu3In1
               { "月", "at", （拜）"ɛt"}, { "物", "ət"}, { "質", "øt"},
               { "元", "an", （見）"ɛn"}, { "文", "ən"},
               { "真", "øn", （印）"øŋ"},
-              { "葉", "ap", （業）"øp"}, { "緝", "əp"},
-              { "談", "am"}, { "侵", "əm", （嚴）"øm"},
+              { "葉", "ap", （業）"ɛp"}, { "緝", "əp"},
+              { "談", "am", （嚴）"ɛm"}, { "侵", "əm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
          */
@@ -32,8 +32,8 @@ namespace Shang4Gu3In1
              { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
              { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
-             { "葉", [lu5vwn2in1[0]+"p", lu5vwn2in1[4]+"p"]}, { "緝", [lu5vwn2in1[3]+"p"]},
-             { "談", [lu5vwn2in1[0]+"m"]}, { "侵", [lu5vwn2in1[3]+"m", lu5vwn2in1[4]+"m"]},
+             { "葉", [lu5vwn2in1[0]+"p", lu5vwn2in1[1]+"p"]}, { "緝", [lu5vwn2in1[3]+"p"]},
+             { "談", [lu5vwn2in1[0]+"m", lu5vwn2in1[1]+"m"]}, { "侵", [lu5vwn2in1[3]+"m"]},
              { "魚", [lu5vwn2in1[0].ToString()]}, { "之", [lu5vwn2in1[3].ToString()]}, { "支", [lu5vwn2in1[1].ToString()]},
              { "侯", [lu5vwn2in1[2].ToString()]}, { "幽", [lu5vwn2in1[5].ToString()]}, { "宵", [lu5vwn2in1[4].ToString()]},
         };
@@ -118,8 +118,8 @@ namespace Shang4Gu3In1
             var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
-            
-            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=> x == "脂" || x =="月"||x == "質"))
+
+            foreach (var k in shang4gu3vin4bu4.Keys.Where(x => x == "葉" || x == "緝" || x == "談" || x == "侵"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -270,10 +270,6 @@ namespace Shang4Gu3In1
                                 for (int i = 0; i < rythms.Length - 1; i++)
                                 {
                                     string zy = GetCharacter(rythms[i]);
-                                    //if ("戾捩綟唳㑦蜧䓞悷".Contains(zy))
-                                    //{
-                                    //    int x = 0;
-                                    //}
                                     Console.Write(zy);
                                     CalcTotalHanzy(zy, ref vin4jo5zy4, ref cy3bu4zy4su4);
                                     vals.Add(zy);
@@ -376,14 +372,7 @@ namespace Shang4Gu3In1
                                 for (int i = 0; i < rythms.Length - 1; i++)
                                 {//處理一首詩所有韻腳字
                                     string zy = GetCharacter(rythms[i]);
-                                    //if ("戾捩綟唳㑦蜧䓞悷".Contains(zy))
-                                    //{
-                                    //    int x = 0;
-                                    //}
                                     Console.Write(zy);
-                                    if (zy=="紱"|| zy == "捋" || zy == "蕨" || zy == "刈")
-                                    {
-                                    }
                                     CalcTotalHanzy(zy, ref vin4jo5zy4, ref cy3bu4zy4su4);
                                     vals.Add(zy);
                                     List<string> guinmen= new List<string>();
@@ -412,26 +401,6 @@ namespace Shang4Gu3In1
                                         }
                                     }
                                     duin.Add(guinmen);
-                                        //if (iao4gw3 && do1in1.All(x => shang4gu3vin4bu4[vin11].All(d => !x.Key.Contains(d))))
-                                        //{//多音字所有音都不合韻部，先嘗試人工智能修正，正不了再確定出韻
-                                        //    bool i3siou1zhen4 = false;
-                                        //    foreach (var gu3in1 in do1in1.ToList())
-                                        //    {
-                                        //        string qi2ta1shang4gu3in1 = aiModificating ? FindRightOldPronunciation(cvwn2zy4biao3, vinbu2denvin, length, shang4gu3vin4bu4[vin11], gu3in1.Value, gu3in1.Key, length) : gu3in1.Key;
-                                        //        if (qi2ta1shang4gu3in1 != gu3in1.Key && !do1in1.Keys.Contains(qi2ta1shang4gu3in1))
-                                        //        {
-                                        //            do1in1.Add(qi2ta1shang4gu3in1, gu3in1.Value);
-                                        //            do1in1.Remove(gu3in1.Key);
-                                        //            vals[vals.IndexOf(gu3in1.Key + "謬")] = qi2ta1shang4gu3in1;
-                                        //            i3siou1zhen4 = true;
-                                        //        }
-                                        //    }
-                                        //    if (!i3siou1zhen4)
-                                        //    {
-                                        //        CalcTotalHanzy(zy, ref chu5vin4zy4, ref chu5vin4zy4su4);
-                                        //        vals[vals.IndexOf(zy)] += "謬";
-                                        //    }
-                                        //}
                                 }
                                 bool u2tong1ia5 = false;
                                 for (int jj = 0; jj < shang4gu3vin4bu4[vin11].Length; jj++)
@@ -476,6 +445,17 @@ namespace Shang4Gu3In1
                                         wsForVinJo.Cells[hang2[idx], lie5].Value = line.Substring(shr3, uei3 - shr3);
                                         lie5++;
                                     }
+                                    if (duin.Where(x => x.Count > 0).Any(y => y.All(x => x.Contains("謬"))))
+                                    {//多音字所有音都不合韻部，先嘗試人工智能修正，正不了再確定出韻
+                                        var itms = duin.Where(x => x.Count > 0 && x.All(s => s.Contains("謬"))).ToList();
+                                        foreach (var itm in itms)
+                                        {
+                                            int svhao = duin.IndexOf(itm);
+                                            var zy = rythms[svhao].Substring(rythms[svhao].Length - 1);
+                                            CalcTotalHanzy(zy, ref chu5vin4zy4, ref chu5vin4zy4su4);
+                                            vals[vals.IndexOf(zy)] += "謬";                                            
+                                        }
+                                    }
                                     foreach (var v in vals)
                                     {
                                         if (v.EndsWith("謬"))
@@ -487,12 +467,21 @@ namespace Shang4Gu3In1
                                         wsForVinJo.Cells[hang2[idx], lie5].Value = v.Replace("謬", "");
                                         lie5++;
                                     }
+                                    
                                     hang2[idx]++;
                                 }
                                 Console.WriteLine();
+                                
                             }
                         }
-                        
+                        int idxl = hang2.Count - 1;
+                        var wsHuen = wbForVinJo.Worksheets[startSheetNr +idxl];
+                        string chu5vin4zy4tong3ji4 = vin12 + "部紅色出韻字" + chu5vin4zy4su4.ToString() + "個：" + chu5vin4zy4;
+                        wsHuen.Cells[hang2[idxl], 0].Value = iao4gw3 ? vin12 + "部紅色出韻音" + miou4su4.ToString() + "個" : "";
+                        wsHuen.Cells[hang2[idxl], 8].Value = iao4gw3 ? chu5vin4zy4tong3ji4 : "";
+                        wsHuen.Cells[hang2[idxl], 0].Value = vin11 + vin12 + "押韻韻腳字" + cy3bu4zy4su4.ToString() + "個: " + vin4jo5zy4;
+                        Console.WriteLine(iao4gw3 ? chu5vin4zy4tong3ji4 : vin11 + vin12 + "通押如上");
+
                     }
                 }
             }
