@@ -59,12 +59,11 @@ namespace Shang4Gu3In1
             { "ST心書從邪船母F", ["sl", "sn", "st", "sd"]},
             { "TR知組G", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
             { "SR生母H", ["sʀ"]},
-            { "KL章端組以母I", ["kl", "kʰl", "gl", "ŋl"]},
+            { "KL章端組母I", ["kl", "kʰl", "gl", "ŋl"]},
             { "XL透書母J", ["xl", "xn"]},
             { "ƔL定以母K", [ "ɣl", "l"]},
             { "T章端組L", [ "tʰ", "t", "d"]},
             { "N明泥日娘組M", ["n"]},
-            //{ "RƔ來母N", ["ʀɣ"]},
             { "R來母N", ["ʀ"]},
             { "S心生O", ["s"]},
             { "P幫組P", ["pʰ", "p", "b"]},
@@ -92,7 +91,7 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/Norgh.xlsx");
+            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
@@ -102,17 +101,27 @@ namespace Shang4Gu3In1
                 Console.WriteLine(s);
             }
             /* foreach (var s in GetPhoneticComponent(ws,length))
-             {
-                 Console.WriteLine(s);
+            {
+                Console.WriteLine(s);
              }*/
             Console.WriteLine(CalculateCombination(4, 2));
             foreach (var s in shen1pang2vin4luei4)
             {
-                Console.WriteLine(s);
+                 Console.WriteLine(s);
             }
-            //Console.WriteLine(lu5vwn2in1[1]);
 
-            Workbook wbForSave = new Workbook();
+            var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length);
+            foreach (var dd in shenmuZhongDueiShang)
+            {
+                Console.WriteLine(dd.Key);
+                foreach (var ee in dd.Value)
+                {
+                    Console.WriteLine(ee.Key + ":" + ee.Value);
+                }
+            }
+                //Console.WriteLine(lu5vwn2in1[1]);
+
+                Workbook wbForSave = new Workbook();
             //Huang4Üin4(new List<string>() { "三開嚴" }, "əm", "øm");
             var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
@@ -947,6 +956,51 @@ namespace Shang4Gu3In1
             }
             wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
             return wbForSave;
+        }
+
+        /*
+         * 聲母中對上。統計中古聲母來自哪些上古聲母
+         */
+        static Dictionary<string, Dictionary<string, int>> ShengMuZhongDueiShang(Worksheet ws, int length)
+        {
+            
+            Dictionary<string, Dictionary<string, int>> dic = new Dictionary<string, Dictionary<string, int>>();
+            int res = 3;
+            try
+            {
+                while ((ws.Cells["G" + res.ToString()].Value == null ||
+                       !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString())) && res <= length) //"G"列是上古音
+                {
+                    if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
+                    {
+                        string in1zie5 = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
+                        string shen1 = GetOnset(in1zie5);//e.g. glw
+                        string den = ws.Cells["I" + res.ToString()].Value.ToString() == "三" ? "三" : "丰";
+                        string shengden = ws.Cells["H" + res.ToString()].Value.ToString() + den;
+                        if (dic.Keys.Contains(shengden))
+                        {
+                            if (dic[shengden].Keys.Contains(shen1))
+                            {
+                                dic[shengden][shen1]++;
+                            }
+                            else
+                            {
+                                dic[shengden].Add(shen1, 1);
+                            }
+                        }
+                        else
+                        {
+                            dic.Add(shengden, new Dictionary<string, int>() { { shen1, 1 }, });
+                        }
+                    }
+                    res++;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return dic;
         }
 
         private static void Huang4Üin4(List<string> denüin, string jouli, string sinli, string liuä = "")
