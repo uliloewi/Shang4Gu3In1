@@ -95,23 +95,27 @@ namespace Shang4Gu3In1
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-            Dictionary<string, int> d = OnsetsOC(ws, length);
-            foreach (var s in d.OrderBy(x=>x.Value))
+            var d = OnsetsOC(ws, length);
+            foreach (var s in d.OrderBy(x => x.Value.Sum(d => d.Value)))
             {
-                Console.WriteLine(s);
+                Console.WriteLine(s.Key + ":" + s.Value.Sum(d => d.Value));
+                foreach (var kv in s.Value.OrderBy(v => v.Value))
+                {
+                    Console.WriteLine(kv);
+                }
             }
             /* foreach (var s in GetPhoneticComponent(ws,length))
             {
                 Console.WriteLine(s);
              }*/
-            Console.WriteLine(CalculateCombination(4, 2));
+            /*
             foreach (var s in shen1pang2vin4luei4)
             {
                  Console.WriteLine(s);
-            }
+            }*/
 
             var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length);
-            foreach (var dd in shenmuZhongDueiShang)
+            foreach (var dd in shenmuZhongDueiShang.OrderBy(x=>x.Key))
             {
                 Console.WriteLine(dd.Key);
                 foreach (var ee in dd.Value)
@@ -623,20 +627,30 @@ namespace Shang4Gu3In1
             return res;
         }
         
-        private static Dictionary<string,int> OnsetsOC(Worksheet ws, int exelRowsCount = 10000) //所有當前擬構的上古聲母及出現次數
+        private static Dictionary<string, Dictionary<string, int>> OnsetsOC(Worksheet ws, int exelRowsCount = 10000) //所有當前擬構的上古聲母及出現次數
         {
-            Dictionary<string, int> res = new Dictionary<string, int>();
+            Dictionary<string, Dictionary<string, int>> res = new Dictionary<string, Dictionary<string, int>>();
 
             for (int j = 3; j < exelRowsCount; j++)
             {
                 if (ws.Cells["G" + j.ToString()].Value != null)//"G"列是上古音
                 {
                     var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();
+                    string shendenhu = ws.Cells["H" + j.ToString()].Value.ToString() + ws.Cells["I" + j.ToString()].Value.ToString() + ws.Cells["J" + j.ToString()].Value.ToString();////中古聲等呼
                     string shen1 = GetOnset(in1zie5);
                     if (!res.Keys.Contains(shen1))
-                        res.Add(shen1, 1);
+                        res.Add(shen1, new Dictionary<string, int>() { { shendenhu, 1 } });
                     else
-                        res[shen1]++;
+                    {
+                        if (!res[shen1].Keys.Contains(shendenhu))
+                        {
+                            res[shen1].Add(shendenhu, 1);
+                        }
+                        else
+                        {
+                            res[shen1][shendenhu]++;
+                        }
+                    }
                 }
             }
             return res;
@@ -971,7 +985,7 @@ namespace Shang4Gu3In1
                 while ((ws.Cells["G" + res.ToString()].Value == null ||
                        !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString())) && res <= length) //"G"列是上古音
                 {
-                    if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
+                    if (ws.Cells["G" + res.ToString()].Value != null && ws.Cells["G" + res.ToString()].GetStyle().Font.Color.Name != "ffffcc00")//"G"列是上古音 ffffcc00是黃標特殊僞音須忽略
                     {
                         string in1zie5 = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
                         string shen1 = GetOnset(in1zie5);//e.g. glw
