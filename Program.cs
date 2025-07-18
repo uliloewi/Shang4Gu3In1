@@ -52,27 +52,26 @@ namespace Shang4Gu3In1
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
             { "SKR莊組A", ["skʀ", "skʰʀ", "sgʀ", "sxʀ"]},
-            { "SƔR俟船母B", ["sɣʀ"]},
+            { "SƔR俟從母B", ["sɣʀ"]},
             { "SK精組C", ["skʰ", "sk", "sg", "sŋ"]},
             { "SK精組D", ["sx", "sɣ"]},
-            { "RK知組E",["ʀkʰ", "ʀk", "ʀg", "ʀx", "ʀŋ"]},
-            { "ST心書從邪船母F", ["sl", "sn", "st", "sd"]},
-            { "TR知組G", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
-            { "SR生母H", ["sʀ"]},
-            { "KL章端組母I", ["kl", "kʰl", "gl", "ŋl"]},
-            { "XL透書母J", ["xl", "xn"]},
-            { "ƔL定以母K", [ "ɣl", "l"]},
-            { "T章端組L", [ "tʰ", "t", "d"]},
-            { "N明泥日娘組M", ["n"]},
-            { "R來母N", ["ʀ"]},
-            { "S心生O", ["s"]},
-            { "P幫組P", ["pʰ", "p", "b"]},
-            { "M明母Q", ["m"]},
-            { "h影母R", ["h"]},
-            { "X曉S", ["x"]},
-            { "Ɣ匣云T", ["ɣ"]},
-            { "K見溪群U", ["kʰ", "k",  "g"]},
-            { "Ŋ疑明V", ["ŋ"]},
+            { "ST心書從邪母E", ["sn", "st", "sd"]},
+            { "TR知組F", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
+            { "SR生母G", ["sʀ"]},
+            { "KL章端組母H", ["kl", "kʰl", "gl", "ŋl"]},
+            { "XL透書船母I", ["xl", "xn", "hl"]},
+            { "ƔL定以母J", [ "ɣl", "l"]},
+            { "T章端組K", [ "tʰ", "t", "d"]},
+            { "N明泥日娘組L", ["n"]},
+            { "R來母M", ["ʀ"]},
+            { "S心生N", ["s"]},
+            { "P幫組O", ["pʰ", "p", "b"]},
+            { "M明母P", ["m"]},
+            { "h影母Q", ["h"]},
+            { "X曉R", ["x"]},
+            { "Ɣ匣云S", ["ɣ"]},
+            { "K見溪群T", ["kʰ", "k",  "g"]},
+            { "Ŋ疑明U", ["ŋ"]},
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -125,12 +124,13 @@ namespace Shang4Gu3In1
             }
                 //Console.WriteLine(lu5vwn2in1[1]);
 
-                Workbook wbForSave = new Workbook();
+            Workbook wbForSave = new Workbook();
             //Huang4Üin4(new List<string>() { "三開嚴" }, "əm", "øm");
             var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
+            
             foreach (var k in shang4gu3vin4bu4.Keys)
             {
                 string vin11 = k;
