@@ -95,7 +95,7 @@ namespace Shang4Gu3In1
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
             var d = OnsetsOC(ws, length);
-            foreach (var s in d.OrderBy(x => x.Value.Sum(d => d.Value)))
+            foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
                 Console.WriteLine(s.Key + ":" + s.Value.Sum(d => d.Value));
                 foreach (var kv in s.Value.OrderBy(v => v.Value))
@@ -438,7 +438,7 @@ namespace Shang4Gu3In1
             CalcTotalHanzy(zy, ref vin4jo5zy4, ref cy3bu4zy4su4);
             vals.Add(zy);            
             Dictionary<string, string[]> do1in1 = new Dictionary<string, string[]>();
-            for (int j = 1; j < length; j++)
+            for (int j = 3; j < length; j++)
             {//處理了一字所有古音
                 if (cvwn2zy4biao3.Cells["P" + j.ToString()].Value == null || cvwn2zy4biao3.Cells["G" + j.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
                     continue;
@@ -478,7 +478,7 @@ namespace Shang4Gu3In1
             bool found = false;
             try
             {
-                for (int j = 1; j < length; j++)
+                for (int j = 3; j < length; j++)
                 {
                     if (cvwn2zy4biao3.Cells["N" + j.ToString()].Value != null && //"N"列是中古音
                         cvwn2zy4biao3.Cells["G" + j.ToString()].Value != null && //"G"列是上古音
@@ -493,7 +493,7 @@ namespace Shang4Gu3In1
                 }
 
                 var zhong1gu3vin4mu3 = GetRhymeOfMC(zhong1gu3in1[0]);
-                for (int j = 1; j < length; j++)
+                for (int j = 3; j < length; j++)
                 {
                     if (cvwn2zy4biao3.Cells["N" + j.ToString()].Value != null && //"N"列是中古音
                         cvwn2zy4biao3.Cells["G" + j.ToString()].Value != null && //"G"列是上古音
@@ -692,7 +692,7 @@ namespace Shang4Gu3In1
         {
             bool res = false;
             Dictionary<string, List<string>> Mapping = new Dictionary<string, List<string>>() { { shang4gu3in1, new List<string>() } };
-            for (int j = 1; j < length; j++)
+            for (int j = 3; j < length; j++)
             {
                 if (ws.Cells["P" + j.ToString()].Value == null || ws.Cells["G" + j.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
                     continue;
