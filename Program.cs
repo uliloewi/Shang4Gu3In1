@@ -52,26 +52,24 @@ namespace Shang4Gu3In1
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
             { "SKR莊組A", ["skʀ", "skʰʀ", "sgʀ", "sxʀ"]},
-            { "SƔR俟從母B", ["sɣʀ"]},
-            { "SK精組C", ["skʰ", "sk", "sg", "sŋ"]},
-            { "SK精組D", ["sx", "sɣ"]},
-            { "ST心書從邪母E", ["sn", "st", "sd"]},
-            { "TR知組F", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
-            { "SR生母G", ["sʀ"]},
-            { "KL章端組母H", ["kl", "kʰl", "gl", "ŋl"]},
-            { "XL透書船母I", ["xl", "xn", "hl"]},
-            { "ƔL定以母J", [ "ɣl", "l"]},
-            { "T章端組K", [ "tʰ", "t", "d"]},
-            { "N明泥日娘組L", ["n"]},
-            { "R來母M", ["ʀ"]},
-            { "S心生N", ["s"]},
-            { "P幫組O", ["pʰ", "p", "b"]},
-            { "M明母P", ["m"]},
-            { "h影母Q", ["h"]},
-            { "X曉R", ["x"]},
-            { "Ɣ匣云S", ["ɣ"]},
-            { "K見溪群T", ["kʰ", "k",  "g"]},
-            { "Ŋ疑明U", ["ŋ"]},
+            { "SK精組B", ["skʰ", "sk", "sg"]},
+            { "SK精組C", ["sx", "sɣ"]},
+            { "TR知組D", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
+            { "SR生母E", ["sʀ"]},
+            { "KL章端組母F", ["kl", "kʰl", "gl", "ŋl"]},
+            { "XL透書船母G", ["xl", "xn", "hl"]},
+            { "ƔL定以母H", [ "ɣl", "l"]},
+            { "T章端組I", [ "tʰ", "t", "d"]},
+            { "N明泥日娘組J", ["n"]},
+            { "R來母K", ["ʀ"]},
+            { "S心生L", ["s"]},
+            { "P幫組M", ["pʰ", "p", "b"]},
+            { "M明母N", ["m"]},
+            { "h影母O", ["h"]},
+            { "X曉P", ["x"]},
+            { "Ɣ匣云Q", ["ɣ"]},
+            { "K見溪群R", ["kʰ", "k",  "g"]},
+            { "Ŋ疑明S", ["ŋ"]},
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
@@ -151,8 +149,8 @@ namespace Shang4Gu3In1
                 ProcessTable(content, ws, wbForSave, vinbu2denvin, ref sheetNr, length, tong1vin4[0].ToString(), tong1vin4[1].ToString(), false);
             }
 
-            string fn = shang4gu3vin4bu4.Keys.Count > 3 ? "shang4gu3vin4jo5" : string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
-            wbForSave.Save(@"D:\" + fn + "(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
+            string fn = shang4gu3vin4bu4.Keys.Count > 3 ? "上古韻腳" : string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
+            wbForSave.Save(@"D:\" + fn  + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
             //ws.Workbook.Save(@"D:\shang4gu3li3in1(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
         }
 
