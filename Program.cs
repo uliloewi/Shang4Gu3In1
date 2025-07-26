@@ -11,18 +11,18 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        /*
+        private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
-              { "歌", "al", （皮）"ɛl"},  { "微", "əl"}, { "脂", "øl"},
-              { "月", "at", （拜）"ɛt"}, { "物", "ət"}, { "質", "øt"},
-              { "元", "an", （見）"ɛn"}, { "文", "ən"},
-              { "真", "øn", （印）"øŋ"},
-              { "葉", "ap", （業）"ɛp"}, { "緝", "əp"},
-              { "談", "am", （嚴）"ɛm"}, { "侵", "əm"},
+              { "歌(歌0)", "al"}, { "皮(歌1)","ɛl"},  { "微", "əl"}, { "脂", "øl"},
+              { "月(月0)", "at"}, { "拜(月1)","ɛt"}, { "物", "ət"}, { "質", "øt"},
+              { "元(元0)", "an"}, { "見(元1)","ɛn"}, { "文", "ən"},
+              { "真(真0)", "øn"}, { "印(真1)","øŋ"},
+              { "葉(葉0)", "ap"}, { "業(葉1)","ɛp"}, { "緝", "əp"},
+              { "談(談0)", "am"}, { "嚴(談1)","ɛm"}, { "侵", "əm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
-         */
+        };
 
         private static Dictionary<string, string[]> shang4gu3vin4bu4 = new Dictionary<string, string[]>() {//三十一韻部
              { "鐸", [lu5vwn2in1[0]+"k"]}, { "錫", [lu5vwn2in1[1]+"k"]}, { "屋", [lu5vwn2in1[2]+"k"]}, { "職", [lu5vwn2in1[3]+"k"]}, { "藥", [lu5vwn2in1[4]+"k"]}, { "覺", [lu5vwn2in1[5]+"k"]},
@@ -87,6 +87,22 @@ namespace Shang4Gu3In1
 
         static async Task Main(string[] args)
         {
+#pragma region 按聲旁筆畫數排序
+            /*/var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
+            Console.OutputEncoding = Encoding.UTF8;
+            Workbook wk = new Workbook("D:/廣韻字上古音形考3.xlsx");
+            Worksheet ws = wk.Worksheets[0];
+            Din4Vin4Bu4(ws, 4, 6);
+            //UnmergeAndPropagateValueInColumn(ws, 1);
+            /*int startRow = 2;
+            foreach (var kv in myDict)//.Where(x=>x.Value>2))
+            {
+                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws, kv.Key, 0);
+                CutAndInsertRows(ws, rowIndex, rowCount, ref startRow);
+                startRow += rowCount;
+            }
+            wk.Save("D:/廣韻字上古音形考1.xlsx");*/
+#pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
             Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");
             Worksheet ws = wk.Worksheets[0];
@@ -1067,6 +1083,118 @@ namespace Shang4Gu3In1
             int denominator = Factorial(k) * Factorial(n - k);
 
             return numerator / denominator;
+        }
+
+        static Dictionary<string, int> ReadCsvToDictionary(string filePath)
+        {
+            var dict = new Dictionary<string, int>();
+            using var reader = new StreamReader(filePath);
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                var parts = line.Split(',');
+                if (parts.Length < 2) continue; // Zeile überspringen, falls weniger als 2 Spalten
+                if (int.TryParse(parts[1], out int value))
+                {
+                    dict[parts[0]] = value;
+                }
+            }
+            return dict;
+        }
+
+        static (int rowIndex, int rowCount) FindRowAndMergedLengthByPrefix(Worksheet ws, string prefix, int colNum)
+        {
+            for (int row =2; row <= ws.Cells.MaxDataRow; row++)
+            {
+                var cell = ws.Cells[row, colNum];
+                if (cell.Value is string cellValue && cellValue.StartsWith(prefix))
+                {
+                    int rowCount = 1;
+                    int startRow = row;
+                    if (cell.IsMerged)
+                    {
+                        var range = cell.GetMergedRange();
+                        rowCount = range.RowCount;
+                        startRow = range.FirstRow;
+                    }
+                    // row+1, weil Aspose.Cells 0-basiert ist, Excel aber 1-basiert
+                    return (startRow, rowCount);
+                }
+            }
+            return (0, 0); // Nicht gefunden
+        }
+
+        static void CutAndInsertRows(Worksheet wsh, int startRow, int totalRows, ref int insertAtRow)
+        {
+            // 1. Zeilen ausschneiden (kopieren und löschen)
+            //if (IsMergedAndNotFirstRow(wsh.Cells[insertAtRow,0]))
+            //{
+
+            //}
+            while (IsMergedAndNotFirstRow(wsh.Cells[insertAtRow, 0]))
+            {
+                insertAtRow++;
+            }
+            wsh.Cells.InsertRows(insertAtRow, totalRows, true); // Platz schaffen
+            wsh.Cells.CopyRows(wsh.Cells, insertAtRow > startRow? startRow : startRow + totalRows, insertAtRow, totalRows);
+
+            // Wenn die Einfügeposition nach dem Ausschneidebereich liegt, muss der Startindex angepasst werden
+            if (insertAtRow > startRow)
+            {
+                wsh.Cells.DeleteRows(startRow, totalRows, true);
+            }
+            else
+            {
+                wsh.Cells.DeleteRows(startRow + totalRows, totalRows, true);
+            }
+        }
+
+        static bool IsMergedAndNotFirstRow(Cell cell)
+        {
+            if (cell.IsMerged)
+            {
+                var range = cell.GetMergedRange();
+                // Prüfe, ob die aktuelle Zeile nicht die erste Zeile des Merged-Bereichs ist
+                if (cell.Row > range.FirstRow)
+                    return true;
+            }
+            return false;
+        }
+
+        static void UnmergeAndPropagateValueInColumn(Worksheet ws, int colIndex)
+        {
+            for (int row = 2; row <= ws.Cells.MaxDataRow; row++)
+            {
+                var cell = ws.Cells[row, colIndex];
+                if (cell.IsMerged)
+                {
+                    var range = cell.GetMergedRange();
+                    var originalValue = cell.Value;
+                    ws.Cells.UnMerge(range.FirstRow, range.FirstColumn, range.RowCount, range.ColumnCount);
+                    for (int r = range.FirstRow; r < range.FirstRow + range.RowCount; r++)
+                    {
+                        ws.Cells[r, colIndex].Value = originalValue;
+                    }
+                    row = range.FirstRow + range.RowCount - 1;
+                }
+            }
+        }
+
+        static void Din4Vin4Bu4(Worksheet ws, int vin4bu4lie5, int li3in1lie5)//根據上古韻母定韻部
+        {
+            for (int row = 2; row <= ws.Cells.MaxDataRow; row++)
+            {
+                var cell = ws.Cells[row, li3in1lie5];
+                foreach (var vin4bu4 in liou3mang4vin4bu4)
+                {
+                    if (cell.Value != null && cell.Value.ToString().Contains(vin4bu4.Value))
+                    {
+                        ws.Cells[row, vin4bu4lie5].Value = vin4bu4.Key;
+                        break;
+                    }
+                }                
+            }
         }
     }
 }
