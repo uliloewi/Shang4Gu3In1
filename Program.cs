@@ -320,7 +320,7 @@ namespace Shang4Gu3In1
                     }
                     AddSheet(wbForVinJo, vin11 + vin12, ref sheetNr);
                 }
-                else if (shang4gu3vin4bu4[vin11].Length > 1)
+                else if (shang4gu3vin4bu4[vin11].Length > 1)//韻部細分
                 {
                     if (table != null)
                     {
@@ -329,7 +329,7 @@ namespace Shang4Gu3In1
                         int sinieshu = shang4gu3vin4bu4[vin11].Length;// + CalculateCombination(shang4gu3vin4bu4[vin11].Length, 2);//歌：al，El，al+El 3新頁
                         for (int i = 0; i <= sinieshu; i++)
                         {
-                            AddSheet(wbForVinJo, vin11 + i, ref sheetNr);
+                            AddSheet(wbForVinJo, i!=2 ? vin11 + i : vin11 + "混", ref sheetNr);
                             hang2.Add(0);
                         }
 
