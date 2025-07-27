@@ -88,19 +88,20 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
 #pragma region 按聲旁筆畫數排序
-            /*/var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
+           /* var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/廣韻字上古音形考3.xlsx");
+            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");
             Worksheet ws = wk.Worksheets[0];
-            Din4Vin4Bu4(ws, 4, 6);
+            MoveRedCharactersToFrontInColumn(ws, 15);
+;           //Din4Vin4Bu4(ws, 4, 6);
             //UnmergeAndPropagateValueInColumn(ws, 1);
-            /*int startRow = 2;
+            /int startRow = 2;
             foreach (var kv in myDict)//.Where(x=>x.Value>2))
             {
                 var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws, kv.Key, 0);
                 CutAndInsertRows(ws, rowIndex, rowCount, ref startRow);
                 startRow += rowCount;
-            }
+            }*
             wk.Save("D:/廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
@@ -1194,6 +1195,41 @@ namespace Shang4Gu3In1
                         break;
                     }
                 }                
+            }
+        }
+
+        static void MoveRedCharactersToFrontInColumn(Worksheet ws, int colIndex)
+        {
+            for (int row = 2; row <= ws.Cells.MaxDataRow; row++)
+            {
+                var cell = ws.Cells[row, colIndex];
+                if (cell.Value is string str && str.Length > 0)
+                {
+                    //var chars = cell.GetCharacters();
+                    var redChars = new StringBuilder();
+                    var normalChars = new StringBuilder(str);
+
+                    // Sammle alle roten Zeichen und entferne sie aus dem Originalstring
+                    for (int i = str.Length - 1; i >= 0; i--)
+                    {
+                        var c = cell.Characters(i, 1);
+                        if (c.Font.Color.Name == "ffff0000")
+                        {
+                            redChars.Insert(0, str.Substring(c.StartIndex, c.Length));
+                            normalChars.Remove(c.StartIndex, c.Length);
+                        }
+                    }
+
+                    // Setze neuen Wert: rote Zeichen vorne, Rest dahinter
+                    cell.PutValue(redChars.ToString() + normalChars.ToString());
+
+                    // Setze die roten Zeichen wieder als rot
+                    if (redChars.Length > 0)
+                    {
+                        var newChars = cell.Characters(0, redChars.Length);
+                        newChars.Font.Color = Color.Red;
+                    }
+                }
             }
         }
     }
