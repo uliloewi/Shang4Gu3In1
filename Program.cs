@@ -73,13 +73,14 @@ namespace Shang4Gu3In1
         };
 
         static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
-            "鐸之", "鐸職", "鐸錫", "鐸侯", "鐸屋", "鐸幽", "鐸藥", "鐸歌", "鐸質", "鐸葉", "陽蒸", "陽錫", "陽耕", "陽東", "陽冬", 
+            "鐸之", "鐸職", "鐸錫", "鐸侯", "鐸屋", "鐸幽", "鐸藥", "鐸歌", "鐸質", "鐸葉", "陽蒸", "陽錫", "陽耕", "陽東", "陽冬", "陽真",
             "之職", "之蒸", "之侯", "之幽", "之覺", "之宵", "之元", "之緝", "職蒸", "職侯", "職屋", "職幽", "職覺", "職藥", "職葉", "職緝", 
             "蒸侯", "蒸東", "蒸冬", "蒸文", "蒸侵", "支錫", "支歌", "支月", "支元", "支微", "支物", "支文", "支脂", "支質",
             "錫屋", "錫歌", "錫月", "錫物", "錫質", "耕東", "耕元", "耕文", "耕真", "侯屋", "侯東", "侯幽", "侯冬", "侯宵", 
-            "屋覺", "屋宵", "屋藥", "東幽", "東冬", "東侵", "幽覺", "幽宵", "覺宵", "覺緝", "冬真", "冬侵", "宵元", "歌元", "歌微", "歌物", "歌脂", 
+            "屋覺", "屋宵", "屋藥", "東幽", "東冬", "東侵", "幽覺", "幽宵", "覺宵", "覺緝",  "冬侵", "宵元", "歌元", "歌微", "歌物", "歌脂", 
             "月元", "月物", "月脂", "月質", "月葉", "月緝", "元微", "元物", "元文", "元脂", "元質", "元真", "元緝", "微物", "微文", "微脂", "微質", 
-            "物脂", "物質", "文質", "文真", "文緝", "脂質", "質真", "葉談", "葉緝", "談侵"};
+            "物脂", "物質", "文質", "文真", "文緝", "脂質",  "葉談", "葉緝", "談侵"};
+        //kaom通押判斷錯誤，刪 "冬真", "質真",
 
         private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";//廣通中古拼音的元音
 
@@ -139,14 +140,13 @@ namespace Shang4Gu3In1
             }
                 //Console.WriteLine(lu5vwn2in1[1]);
 
-            Workbook wbForSave = new Workbook();
             //Huang4Üin4(new List<string>() { "三開嚴" }, "əm", "øm");
             var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
-            
-            foreach (var k in shang4gu3vin4bu4.Keys)
+            Workbook wbForSave = new Workbook();
+            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x=="真"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -158,7 +158,7 @@ namespace Shang4Gu3In1
                 //ProcessTable("<table><tr><th><b style=\"戾<b style=\"戾", ws, wbForSave, sheetNr, length, vin11, vin12); 
             }
             
-            foreach (var tong1vin4 in tong1ia5)
+            foreach (var tong1vin4 in tong1ia5.Where(x=>x.Contains("真")))
             {
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
