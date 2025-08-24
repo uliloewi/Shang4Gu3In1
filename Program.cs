@@ -1232,5 +1232,17 @@ namespace Shang4Gu3In1
                 }
             }
         }
+
+        static void CopyColumnValues(Worksheet ws, int rowLength, int fromCol, int toCol)
+        {
+            for (int row = 2; row <= rowLength; row++)
+            {
+                var value = ws.Cells[row, fromCol].StringValue;
+                if (value != ws.Cells[row, toCol].StringValue)
+                { 
+                }
+                ws.Cells[row, toCol].Value = value;
+            }
+        }
     }
 }
