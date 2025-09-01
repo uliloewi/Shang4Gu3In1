@@ -89,24 +89,24 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
 #pragma region 按聲旁筆畫數排序
-           /* var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
+         /*   var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");
-            Worksheet ws = wk.Worksheets[0];
-            MoveRedCharactersToFrontInColumn(ws, 15);
-;           //Din4Vin4Bu4(ws, 4, 6);
-            //UnmergeAndPropagateValueInColumn(ws, 1);
-            /int startRow = 2;
+            Workbook wk0 = new Workbook("D:/廣韻字上古音形考.xlsx");
+            Worksheet ws0 = wk0.Worksheets[0];
+            //MoveRedCharactersToFrontInColumn(ws0, 15);
+;           //Din4Vin4Bu4(ws0, 4, 6);
+            //UnmergeAndPropagateValueInColumn(ws0, 1);
+            int startRow = 2;
             foreach (var kv in myDict)//.Where(x=>x.Value>2))
             {
-                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws, kv.Key, 0);
-                CutAndInsertRows(ws, rowIndex, rowCount, ref startRow);
+                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
+                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
                 startRow += rowCount;
-            }*
-            wk.Save("D:/廣韻字上古音形考1.xlsx");*/
+            }
+            wk0.Save("D:/廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");
+            Workbook wk = new Workbook("D:/廣韻字上古音形考1.xlsx");//("../../../上古音.csv");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
@@ -146,7 +146,7 @@ namespace Shang4Gu3In1
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
             Workbook wbForSave = new Workbook();
-            foreach (var k in shang4gu3vin4bu4.Keys.Where(x=>x=="真"))
+            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x=="真"))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -158,7 +158,7 @@ namespace Shang4Gu3In1
                 //ProcessTable("<table><tr><th><b style=\"戾<b style=\"戾", ws, wbForSave, sheetNr, length, vin11, vin12); 
             }
             
-            foreach (var tong1vin4 in tong1ia5.Where(x=>x.Contains("真")))
+            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x.Contains("真")))
             {
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
@@ -747,7 +747,9 @@ namespace Shang4Gu3In1
             int res = 3;
             int nullcount = 0;
             while (ws.Cells["G" + res.ToString()].Value == null ||
-                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString())) //"G"列是上古音
+                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()) ||
+                (ws.Cells["P" + res.ToString()].Value !=null &&
+                !String.IsNullOrWhiteSpace(ws.Cells["P" + res.ToString()].Value.ToString()))) //"G"列是上古音
             {
                 if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
                 {
@@ -774,7 +776,7 @@ namespace Shang4Gu3In1
                     break;
                 res++;
             }
-            foreach (var kv in Mapping)
+            foreach (var kv in Mapping.Where(kv=>kv.Key.Trim()!=""))
             {
                 if (kv.Value.Count > 1)
                 {
