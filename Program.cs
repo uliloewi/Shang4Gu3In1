@@ -106,7 +106,7 @@ namespace Shang4Gu3In1
             wk0.Save("D:/廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/廣韻字上古音形考1.xlsx");//("../../../上古音.csv");
+            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");//("../../../上古音.csv");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
