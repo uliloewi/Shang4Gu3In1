@@ -11,6 +11,7 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
+        const string uen2jän4ja5 = @"D:\";//MyDocument\音韻學\st sk\
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
@@ -88,25 +89,26 @@ namespace Shang4Gu3In1
 
         static async Task Main(string[] args)
         {
+            
 #pragma region 按聲旁筆畫數排序
-         /*   var myDict = ReadCsvToDictionary("D:/output.csv").OrderBy(x=>x.Value);
-            Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk0 = new Workbook("D:/廣韻字上古音形考.xlsx");
-            Worksheet ws0 = wk0.Worksheets[0];
-            //MoveRedCharactersToFrontInColumn(ws0, 15);
-;           //Din4Vin4Bu4(ws0, 4, 6);
-            //UnmergeAndPropagateValueInColumn(ws0, 1);
-            int startRow = 2;
-            foreach (var kv in myDict)//.Where(x=>x.Value>2))
-            {
-                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
-                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
-                startRow += rowCount;
-            }
-            wk0.Save("D:/廣韻字上古音形考1.xlsx");*/
+            /*   var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
+               Console.OutputEncoding = Encoding.UTF8;
+               Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
+               Worksheet ws0 = wk0.Worksheets[0];
+               //MoveRedCharactersToFrontInColumn(ws0, 15);
+   ;           //Din4Vin4Bu4(ws0, 4, 6);
+               //UnmergeAndPropagateValueInColumn(ws0, 1);
+               int startRow = 2;
+               foreach (var kv in myDict)//.Where(x=>x.Value>2))
+               {
+                   var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
+                   CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
+                   startRow += rowCount;
+               }
+               wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk = new Workbook("D:/廣韻字上古音形考.xlsx");//("../../../上古音.csv");
+            Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");//("../../../上古音.csv");
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
@@ -167,8 +169,8 @@ namespace Shang4Gu3In1
             }
 
             string fn = shang4gu3vin4bu4.Keys.Count > 3 ? "上古韻腳" : string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
-            wbForSave.Save(@"D:\" + fn  + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
-            //ws.Workbook.Save(@"D:\shang4gu3li3in1(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
+            wbForSave.Save(uen2jän4ja5 + fn  + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
+            //ws.Workbook.Save(uen2jän4ja5 + "shang4gu3li3in1(" + DateTime.Now.ToString("yyMMddHHmm") + ").xlsx");
         }
 
         private static Dictionary<string, int[]> GetPhoneticComponent(Worksheet ws, int exelRowsCount = 10000) //所有聲旁及占據的行
@@ -985,7 +987,7 @@ namespace Shang4Gu3In1
                 }
 
             }
-            wbForSave.Save(@"D:\上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
+            wbForSave.Save(uen2jän4ja5 + "上古對中古" + DateTime.Now.ToString("yyMMddHHmm") + ".xlsx");
             return wbForSave;
         }
 
@@ -1036,7 +1038,7 @@ namespace Shang4Gu3In1
 
         private static void Huang4Üin4(List<string> denüin, string jouli, string sinli, string liuä = "")
         {
-            Workbook wb = new Workbook(@"D:\《廣韻》形聲考李.xlsx");//上古表
+            Workbook wb = new Workbook(uen2jän4ja5 + "《廣韻》形聲考李.xlsx");//上古表
             Worksheet ws = wb.Worksheets[0];
             var dt = ws.Cells.ExportDataTable(0, 0, 9912, 1);
             int ii;
@@ -1060,7 +1062,7 @@ namespace Shang4Gu3In1
                     }
                 }
             }
-            wb.Save(@"D:\真皆真部.xlsx");
+            wb.Save(uen2jän4ja5 + "真皆真部.xlsx");
 
         }
 
