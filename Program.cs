@@ -11,7 +11,7 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\";//MyDocument\音韻學\st sk\
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
@@ -52,9 +52,9 @@ namespace Shang4Gu3In1
         };
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
-            { "SKR莊組A", ["skʀ", "skʰʀ", "sgʀ", "sxʀ"]},
-            { "SK精組B", ["skʰ", "sk", "sg"]},
-            { "SK精組C", ["sx", "sɣ"]},
+            { "ScR莊組A", ["skʀ", "skʰʀ", "sgʀ", "stʀ", "stʰʀ", "sdʀ", "sxʀ"]},
+            { "Sc精組B", ["skʰ", "sk", "sg","stʰ", "st", "sd"]},
+            { "Sc精組C", ["sx", "sɣ", "sl"]},
             { "TR知組D", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
             { "SR生母E", ["sʀ"]},
             { "KL章端組母F", ["kl", "kʰl", "gl", "ŋl"]},
@@ -748,10 +748,7 @@ namespace Shang4Gu3In1
             Dictionary<string, List<string>> Mapping = new Dictionary<string, List<string>>();
             int res = 3;
             int nullcount = 0;
-            while (ws.Cells["G" + res.ToString()].Value == null ||
-                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()) ||
-                (ws.Cells["P" + res.ToString()].Value !=null &&
-                !String.IsNullOrWhiteSpace(ws.Cells["P" + res.ToString()].Value.ToString()))) //"G"列是上古音
+            while (LoopCondition(ws, res)) //"G"列是上古音
             {
                 if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
                 {
@@ -914,8 +911,7 @@ namespace Shang4Gu3In1
 
             int res = 3;
             int nullcount = 0;
-            while ((ws.Cells["G" + res.ToString()].Value == null ||
-                       !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()))&& res<=length) //"G"列是上古音
+            while (LoopCondition(ws, res)) //"G"列是上古音
             {
                 if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
                 {
@@ -1001,8 +997,7 @@ namespace Shang4Gu3In1
             int res = 3;
             try
             {
-                while ((ws.Cells["G" + res.ToString()].Value == null ||
-                       !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString())) && res <= length) //"G"列是上古音
+                while (LoopCondition(ws, res))
                 {
                     if (ws.Cells["G" + res.ToString()].Value != null && ws.Cells["G" + res.ToString()].GetStyle().Font.Color.Name != "ffffcc00")//"G"列是上古音 ffffcc00是黃標特殊僞音須忽略
                     {
@@ -1247,6 +1242,14 @@ namespace Shang4Gu3In1
                 }
                 ws.Cells[row, toCol].Value = value;
             }
+        }
+
+        static bool LoopCondition(Worksheet ws, int res)
+        {
+            return ws.Cells["G" + res.ToString()].Value == null ||
+                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()) ||
+                (ws.Cells["P" + res.ToString()].Value != null &&
+                !String.IsNullOrWhiteSpace(ws.Cells["P" + res.ToString()].Value.ToString())); //"G"列是上古音
         }
     }
 }
