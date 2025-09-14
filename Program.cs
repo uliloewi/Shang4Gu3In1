@@ -56,7 +56,7 @@ namespace Shang4Gu3In1
             { "STR莊組B", ["stʀ", "stʰʀ", "sdʀ"]},
             { "SK精組C", ["skʰ", "sk", "sg"]},
             { "ST精組D", ["stʰ", "st", "sd"]},
-            { "SX精組E", ["sx", "sɣ"]},
+            { "SŊ精組E", ["sx", "sŋ"]},
             { "TR知組F", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
             { "SR生母G", ["sʀ"]},
             { "KL章端組母H", ["kl", "kʰl", "gl", "ŋl"]},
