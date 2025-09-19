@@ -53,7 +53,7 @@ namespace Shang4Gu3In1
         };
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
-            { "RK知組V", ["rk", "rŋ", "rg", "rx"]},
+            { "RK知組V", ["ʀk", "ʀg", "ʀx"]},
             { "SKR莊組A", ["skʀ", "skʰʀ", "sgʀ", "sxʀ"]},
             { "STR莊組B", ["stʀ", "stʰʀ", "sdʀ"]},
             { "SK精組C", ["skʰ", "sk", "sg"]},
@@ -116,8 +116,8 @@ namespace Shang4Gu3In1
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-            
-            var d = OnsetsOC(ws, length, true);
+           
+            var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
                 Console.WriteLine(s.Key + ":" + s.Value.Sum(d => d.Value));
@@ -136,7 +136,7 @@ namespace Shang4Gu3In1
                  Console.WriteLine(s);
             }*/
 
-            var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length, true);
+            var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length);
             foreach (var dd in shenmuZhongDueiShang.OrderBy(x=>x.Key))
             {
                 Console.WriteLine(dd.Key);
@@ -145,10 +145,10 @@ namespace Shang4Gu3In1
                     Console.WriteLine(ee.Key + ":" + ee.Value);
                 }
             }
-                //Console.WriteLine(lu5vwn2in1[1]);
+            //Console.WriteLine(lu5vwn2in1[1]);
 
             //Huang4Üin4(new List<string>() { "三開嚴" }, "əm", "øm");
-            var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length,true);
+            var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
@@ -1266,6 +1266,27 @@ namespace Shang4Gu3In1
                 !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()) ||
                 (ws.Cells["P" + res.ToString()].Value != null &&
                 !String.IsNullOrWhiteSpace(ws.Cells["P" + res.ToString()].Value.ToString())); //"G"列是上古音
+        }
+
+        static void Ja1rK(Worksheet ws, int length)//加ʀk、ʀg、ʀx
+        {
+            for (int j = 3; j < length; j++)
+            {
+                if (ws.Cells["F" + j.ToString()].Value != null && rK.Any(rk=>ws.Cells["F" + j.ToString()].Value.ToString().StartsWith(rk)))//"F"列是上古早晚變遷
+                {
+                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();//in1zie5是上古音節
+                    ws.Cells["G" + j.ToString()].Value = in1zie5?.Replace("tʀ", "ʀk").Replace("dʀ", "ʀg").Replace("tʰʀ", "ʀx");
+                    if (ws.Cells["F" + j.ToString()].Value.ToString().Contains("kʰ"))
+                        ws.Cells["F" + j.ToString()].Value= "ʀkʰ>ʀx";
+                    else if (ws.Cells["F" + j.ToString()].Value.ToString().Contains("ŋ"))
+                        ws.Cells["F" + j.ToString()].Value = "ʀŋ>nʀ";
+                    else
+                        ws.Cells["F" + j.ToString()].Value = "";
+
+                }
+            }
+            ws.Workbook.Save("new.xlsx");
+            
         }
     }
 }
