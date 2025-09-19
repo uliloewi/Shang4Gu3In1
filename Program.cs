@@ -11,7 +11,8 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\rK\";//MyDocument\音韻學\st sk\
+        private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
@@ -52,6 +53,7 @@ namespace Shang4Gu3In1
         };
 
         private static Dictionary<string, string[]> shen1mu3duei4in4 = new Dictionary<string, string[]>() {//上古中古聲母對映
+            { "RK知組V", ["rk", "rŋ", "rg", "rx"]},
             { "SKR莊組A", ["skʀ", "skʰʀ", "sgʀ", "sxʀ"]},
             { "STR莊組B", ["stʀ", "stʰʀ", "sdʀ"]},
             { "SK精組C", ["skʰ", "sk", "sg"]},
@@ -115,7 +117,7 @@ namespace Shang4Gu3In1
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
             
-            var d = OnsetsOC(ws, length);
+            var d = OnsetsOC(ws, length, true);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
                 Console.WriteLine(s.Key + ":" + s.Value.Sum(d => d.Value));
@@ -134,7 +136,7 @@ namespace Shang4Gu3In1
                  Console.WriteLine(s);
             }*/
 
-            var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length);
+            var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length, true);
             foreach (var dd in shenmuZhongDueiShang.OrderBy(x=>x.Key))
             {
                 Console.WriteLine(dd.Key);
@@ -146,7 +148,7 @@ namespace Shang4Gu3In1
                 //Console.WriteLine(lu5vwn2in1[1]);
 
             //Huang4Üin4(new List<string>() { "三開嚴" }, "əm", "øm");
-            var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length);
+            var vinbu2denvin = shang4gu3duei4zhong1gu3(ws, length,true);
             int sheetNr = 0;
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
@@ -179,22 +181,22 @@ namespace Shang4Gu3In1
         private static Dictionary<string, int[]> GetPhoneticComponent(Worksheet ws, int exelRowsCount = 10000) //所有聲旁及占據的行
         {
             Dictionary<string, int[]> res = new Dictionary<string, int[]>();
-            for (int j = 3; j < exelRowsCount; j++)
+            for (int row = 3; row < exelRowsCount; row++)
             {
-                if (ws.Cells["A" + j.ToString()].Value != null)//"A"列是聲旁
+                if (ws.Cells["A" + row.ToString()].Value != null)//"A"列是聲旁
                 {
-                    var shen1pang2 = ws.Cells["A" + j.ToString()].Value.ToString();
+                    var shen1pang2 = ws.Cells["A" + row.ToString()].Value.ToString();
                     if (!string.IsNullOrEmpty(shen1pang2) && !res.ContainsKey(shen1pang2))
                     {
-                        res.Add(shen1pang2, FindAllRowsOfSamePhoneticComponent(ws, j));
+                        res.Add(shen1pang2, FindAllRowsOfSamePhoneticComponent(ws, row));
                     }
                     if (!shen1pang2vin4luei4.ContainsKey(shen1pang2))
                     {
                         List<string> onsets = new List<string>();
                         for (int i = res[shen1pang2][0]; i <= res[shen1pang2][1]; i++)
                         {
-                            if (ws.Cells["G" + j.ToString()].Value != null)
-                                onsets.Add(GetOnset(ws.Cells["G" + j.ToString()].Value.ToString()));
+                            if (ws.Cells["G" + row.ToString()].Value != null)
+                                onsets.Add(GetOnset(ws.Cells["G" + row.ToString()].Value.ToString()));
                         }
                         string shen1luei4 = GetOnsetGroup(onsets);
                         shen1pang2vin4luei4.Add(shen1pang2, shen1luei4);
@@ -458,15 +460,15 @@ namespace Shang4Gu3In1
             CalcTotalHanzy(zy, ref vin4jo5zy4, ref cy3bu4zy4su4);
             vals.Add(zy);            
             Dictionary<string, string[]> do1in1 = new Dictionary<string, string[]>();
-            for (int j = 3; j < length; j++)
+            for (int row = 3; row < length; row++)
             {//處理了一字所有古音
-                if (cvwn2zy4biao3.Cells["P" + j.ToString()].Value == null || cvwn2zy4biao3.Cells["G" + j.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
+                if (cvwn2zy4biao3.Cells["P" + row.ToString()].Value == null || cvwn2zy4biao3.Cells["G" + row.ToString()].Value == null)//"P"列是同聲旁同音字"G"列是上古音
                     continue;
-                else if (cvwn2zy4biao3.Cells["P" + j.ToString()].Value.ToString().Contains(zy) &&
-                    cvwn2zy4biao3.Cells["P" + j.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))//"P"列是同聲旁同音字
+                else if (cvwn2zy4biao3.Cells["P" + row.ToString()].Value.ToString().Contains(zy) &&
+                    cvwn2zy4biao3.Cells["P" + row.ToString()].GetStyle().Font.Color != System.Drawing.ColorTranslator.FromHtml("#ffffcc00"))//"P"列是同聲旁同音字
                 {
-                    var shang4gu3du5in1 = cvwn2zy4biao3.Cells["G" + j.ToString()].Value.ToString(); //"G"列是上古音
-                    string[] zhong1gu3du5in1 = [cvwn2zy4biao3.Cells["N" + j.ToString()].Value.ToString(), j.ToString()]; //"N"列是中古音
+                    var shang4gu3du5in1 = cvwn2zy4biao3.Cells["G" + row.ToString()].Value.ToString(); //"G"列是上古音
+                    string[] zhong1gu3du5in1 = [cvwn2zy4biao3.Cells["N" + row.ToString()].Value.ToString(), row.ToString()]; //"N"列是中古音
                     if (!do1in1.Keys.Contains(shang4gu3du5in1))
                         do1in1.Add(shang4gu3du5in1, zhong1gu3du5in1);
                     if (shang4gu3vin4bu4[vin11].All(d => !shang4gu3du5in1.Contains(d))
@@ -647,7 +649,7 @@ namespace Shang4Gu3In1
             return res;
         }
         
-        private static Dictionary<string, Dictionary<string, int>> OnsetsOC(Worksheet ws, int exelRowsCount = 10000) //所有當前擬構的上古聲母及出現次數
+        private static Dictionary<string, Dictionary<string, int>> OnsetsOC(Worksheet ws, int exelRowsCount = 10000, bool checkRK = false) //所有當前擬構的上古聲母及出現次數
         {
             Dictionary<string, Dictionary<string, int>> res = new Dictionary<string, Dictionary<string, int>>();
 
@@ -655,9 +657,13 @@ namespace Shang4Gu3In1
             {
                 if (ws.Cells["G" + j.ToString()].Value != null)//"G"列是上古音
                 {
-                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();
-                    string shendenhu = ws.Cells["H" + j.ToString()].Value.ToString() + ws.Cells["I" + j.ToString()].Value.ToString() + ws.Cells["J" + j.ToString()].Value.ToString();////中古聲等呼
-                    string shen1 = GetOnset(in1zie5);
+                    if (checkRK && (ws.Cells["F" + j.ToString()].Value== null || ws.Cells["F" + j.ToString()].Value.ToString()=="" || !rK.Contains(ws.Cells["F" + j.ToString()].Value.ToString().Substring(0,2))))
+                    {
+                         continue;
+                    }
+                    var in1zie5 = ws.Cells["G" + j.ToString()].Value.ToString();//in1zie5是上古音節
+                    string shendenhu = ws.Cells["H" + j.ToString()].Value.ToString() + ws.Cells["I" + j.ToString()].Value.ToString() + ws.Cells["J" + j.ToString()].Value.ToString();///中古聲等呼
+                    string shen1 = GetOnset(in1zie5,checkRK);
                     if (!res.Keys.Contains(shen1))
                         res.Add(shen1, new Dictionary<string, int>() { { shendenhu, 1 } });
                     else
@@ -676,9 +682,9 @@ namespace Shang4Gu3In1
             return res;
         }
 
-        static string GetOnset(string in1zie5)//sgat->sg
+        static string GetOnset(string in1zie5, bool checkRK=false)//sgat->sg
         {
-            List<string> vin4mu3lie5bao3 = new List<string>();
+            List<string> vin4mu3lie5bao3 = new List<string>();//所有上古韻母
             foreach (var item in RythmsOC())
             {
                 vin4mu3lie5bao3.Add("ˤ" + item);
@@ -692,7 +698,7 @@ namespace Shang4Gu3In1
                     res = in1zie5.Substring(0, in1zie5.IndexOf(v));
                 }
             }
-            return res;
+            return checkRK? res.Replace("tʀ", "rk").Replace("dʀ", "rg").Replace("tʰʀ", "rx").Replace("nʀ", "rŋ"):res;
         }
 
         private static string GetRhymeOfMC(string syllable)
@@ -903,7 +909,7 @@ namespace Shang4Gu3In1
         }
 
 
-        static Workbook shang4gu3duei4zhong1gu3(Worksheet ws, int length)
+        static Workbook shang4gu3duei4zhong1gu3(Worksheet ws, int length, bool checkRK=false)
         {
 
             Workbook wbForSave = new Workbook();
@@ -912,15 +918,17 @@ namespace Shang4Gu3In1
             //var ws1 = wbForSave.Worksheets[1];
             List<string> sheng1mu3=new List<string>();
 
-            int res = 3;
+            int row = 3;
             int nullcount = 0;
-            while (LoopCondition(ws, res)) //"G"列是上古音
+            while (LoopCondition(ws, row)) //"G"列是上古音
             {
-                if (ws.Cells["G" + res.ToString()].Value != null)//"G"列是上古音
+                if (ws.Cells["G" + row.ToString()].Value != null)//"G"列是上古音
                 {
-                    string k = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
+                    string k = ws.Cells["G" + row.ToString()].Value.ToString();//"G"列是上古音
                     if ((k.EndsWith("h") && !k.EndsWith("kh") && !k.EndsWith("th") && !k.EndsWith("ph")) || k.EndsWith("ɣ"))
                         k = k.Substring(0, k.Length - 1);
+                    if (checkRK && ws.Cells["F" + row.ToString()].Value != null && ws.Cells["F" + row.ToString()].Value.ToString() != "" && rK.Contains(ws.Cells["F" + row.ToString()].Value.ToString().Substring(0, 2)))
+                        k = k.Replace("tʀ", "rk").Replace("dʀ", "rg").Replace("tʰʀ", "rx").Replace("nʀ", "rŋ");
                     bool shenmuFound = false;
                     foreach (var kv in shen1mu3duei4in4)
                     {
@@ -948,8 +956,8 @@ namespace Shang4Gu3In1
                                                     break;
                                                 }
                                             }
-                                            string ss = vinmu + ws.Cells["I" + res.ToString()].Value.ToString()
-                                                + ws.Cells["J" + res.ToString()].Value.ToString() + ws.Cells["K" + res.ToString()].Value.ToString();
+                                            string ss = vinmu + ws.Cells["I" + row.ToString()].Value.ToString()
+                                                + ws.Cells["J" + row.ToString()].Value.ToString() + ws.Cells["K" + row.ToString()].Value.ToString();
                                             int biao3hao4 = k.Contains("ˤ") ? 1 : 0;
                                             if (wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value == null ||
                                                 !wbForSave.Worksheets[biao3hao4].Cells[kv.Key.Substring(kv.Key.Length - 1) + hang2hao4.ToString()].Value.ToString().Contains(ss))
@@ -978,7 +986,7 @@ namespace Shang4Gu3In1
 
                     }
                 }
-                res++;
+                row++;
                 foreach (var kv in shen1mu3duei4in4)
                 {
                     wbForSave.Worksheets[0].Cells[kv.Key.Substring(kv.Key.Length - 1) + (vin4bu4hao4.Count + 1).ToString()].Value = kv.Key;
@@ -993,21 +1001,26 @@ namespace Shang4Gu3In1
         /*
          * 聲母中對上。統計中古聲母來自哪些上古聲母
          */
-        static Dictionary<string, Dictionary<string, int>> ShengMuZhongDueiShang(Worksheet ws, int length)
+        static Dictionary<string, Dictionary<string, int>> ShengMuZhongDueiShang(Worksheet ws, int length, bool checkRK=false)
         {
             
             Dictionary<string, Dictionary<string, int>> dic = new Dictionary<string, Dictionary<string, int>>();
-            int res = 3;
+            int row = 3;
             try
             {
-                while (LoopCondition(ws, res))
+                while (LoopCondition(ws, row))
                 {
-                    if (ws.Cells["G" + res.ToString()].Value != null && ws.Cells["G" + res.ToString()].GetStyle().Font.Color.Name != "ffffcc00")//"G"列是上古音 ffffcc00是黃標特殊僞音須忽略
+                    if (checkRK && (ws.Cells["F" + row.ToString()].Value == null || ws.Cells["F" + row.ToString()].Value.ToString() == "" || !rK.Contains(ws.Cells["F" + row.ToString()].Value.ToString().Substring(0, 2))))
                     {
-                        string in1zie5 = ws.Cells["G" + res.ToString()].Value.ToString();//"G"列是上古音
-                        string shen1 = GetOnset(in1zie5);//e.g. glw
-                        string den = ws.Cells["I" + res.ToString()].Value.ToString() == "三" ? "三" : "丰";
-                        string shengden = ws.Cells["H" + res.ToString()].Value.ToString() + den;
+                        row++;                        
+                        continue;
+                    }
+                    if (ws.Cells["G" + row.ToString()].Value != null && ws.Cells["G" + row.ToString()].GetStyle().Font.Color.Name != "ffffcc00")//"G"列是上古音 ffffcc00是黃標特殊僞音須忽略
+                    {
+                        string in1zie5 = ws.Cells["G" + row.ToString()].Value.ToString();//"G"列是上古音
+                        string shen1 = GetOnset(in1zie5,checkRK);//e.g. glw
+                        string den = ws.Cells["I" + row.ToString()].Value.ToString() == "三" ? "三" : "丰";
+                        string shengden = ws.Cells["H" + row.ToString()].Value.ToString() + den;
                         if (dic.Keys.Contains(shengden))
                         {
                             if (dic[shengden].Keys.Contains(shen1))
@@ -1024,7 +1037,7 @@ namespace Shang4Gu3In1
                             dic.Add(shengden, new Dictionary<string, int>() { { shen1, 1 }, });
                         }
                     }
-                    res++;
+                    row++;
                 }
             }
             catch (Exception ex)
