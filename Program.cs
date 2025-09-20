@@ -11,13 +11,13 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\rK\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\";//MyDocument\音韻學\st sk\
         private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
               { "歌(歌0)", "al"}, { "皮(歌1)","ɛl"},  { "微", "əl"}, { "脂", "øl"},
-              { "月(月0)", "at"}, { "拜(月1)","ɛt"}, { "物", "ət"}, { "質", "øt"},
+              { "月(月0)","ɛt"}, { "薛(月1)", "at"}, { "物", "ət"}, { "質", "øt"},
               { "元(元0)", "an"}, { "見(元1)","ɛn"}, { "文", "ən"},
               { "真(真0)", "øn"}, { "印(真1)","øŋ"},
               { "葉(葉0)", "ap"}, { "業(葉1)","ɛp"}, { "緝", "əp"},
@@ -30,7 +30,7 @@ namespace Shang4Gu3In1
              { "鐸", [lu5vwn2in1[0]+"k"]}, { "錫", [lu5vwn2in1[1]+"k"]}, { "屋", [lu5vwn2in1[2]+"k"]}, { "職", [lu5vwn2in1[3]+"k"]}, { "藥", [lu5vwn2in1[4]+"k"]}, { "覺", [lu5vwn2in1[5]+"k"]},
              { "陽", [lu5vwn2in1[0]+"ŋ"]}, { "耕", [lu5vwn2in1[1]+"ŋ"]}, { "東", [lu5vwn2in1[2]+"ŋ"]}, { "蒸", [lu5vwn2in1[3]+"ŋ"]}, { "冬", [lu5vwn2in1[5]+"ŋ"]},
              { "歌", [lu5vwn2in1[0]+"l", lu5vwn2in1[1]+"l"]},  { "微", [lu5vwn2in1[3]+"l"]}, { "脂", [lu5vwn2in1[4]+"l"]},
-             { "月", [lu5vwn2in1[0]+"t", lu5vwn2in1[1]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
+             { "月", [lu5vwn2in1[1]+"t", lu5vwn2in1[0]+"t"]}, { "物", [lu5vwn2in1[3]+"t"]}, { "質", [lu5vwn2in1[4]+"t"]},
              { "元", [lu5vwn2in1[0]+"n", lu5vwn2in1[1]+"n"]}, { "文", [lu5vwn2in1[3]+"n"]},
              { "真", [lu5vwn2in1[4]+"n", lu5vwn2in1[4]+"ŋ"]},
              { "葉", [lu5vwn2in1[0]+"p", lu5vwn2in1[1]+"p"]}, { "緝", [lu5vwn2in1[3]+"p"]},
@@ -43,7 +43,7 @@ namespace Shang4Gu3In1
              {lu5vwn2in1[0]+"k", 1}, { lu5vwn2in1[1]+"k", 2}, { lu5vwn2in1[2]+"k",3}, { lu5vwn2in1[3]+"k", 4}, { lu5vwn2in1[4]+"k",5}, { lu5vwn2in1[5]+"k",6},
              { lu5vwn2in1[0]+"ŋ", 7}, { lu5vwn2in1[1]+"ŋ", 8}, { lu5vwn2in1[2]+"ŋ", 9}, { lu5vwn2in1[3]+"ŋ", 10}, { lu5vwn2in1[5]+"ŋ", 11},
              { lu5vwn2in1[0]+"l",12 }, {lu5vwn2in1[1]+"l",13},  { lu5vwn2in1[3]+"l",14}, { lu5vwn2in1[4]+"l",15},
-             { lu5vwn2in1[0]+"t",16 },{ lu5vwn2in1[1]+"t",17}, { lu5vwn2in1[3]+"t",18}, { lu5vwn2in1[4]+"t", 19},
+             { lu5vwn2in1[1]+"t",16 },{ lu5vwn2in1[0]+"t",17}, { lu5vwn2in1[3]+"t",18}, { lu5vwn2in1[4]+"t", 19},
              { lu5vwn2in1[0]+"n", 20 },{ lu5vwn2in1[1]+"n", 21 }, { lu5vwn2in1[3]+"n",22},
              { lu5vwn2in1[4]+"n", 23 },{ lu5vwn2in1[4]+"ŋ", 24},
              { lu5vwn2in1[0]+"p", 25 }, { lu5vwn2in1[1]+"p",26}, {lu5vwn2in1[3]+"p",27},
