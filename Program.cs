@@ -865,6 +865,10 @@ namespace Shang4Gu3In1
             {
                 zy = text.Substring(text.Length - 2, 2);
             }
+            if (zy.Contains("\udd9f"))
+            {
+                zy = "爽";//丼人𡚬鐘是⿰喪走
+            }
             if (zy.Contains("}"))
             {
                 zy = text.Substring(text.Length - 3, 3);
