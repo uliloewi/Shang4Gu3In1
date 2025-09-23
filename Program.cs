@@ -77,7 +77,7 @@ namespace Shang4Gu3In1
             { "Ŋ疑明U", ["ŋ"]},
         };
 
-        static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚東", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
+        static List<string> tong1ia5 = new List<string>() { "魚鐸", "魚陽", "魚之", "魚支", "魚侯", "魚屋", "魚幽", "魚宵", "魚歌", "魚元", "魚微",
             "鐸之", "鐸職", "鐸錫", "鐸侯", "鐸屋", "鐸幽", "鐸藥", "鐸歌", "鐸質", "鐸葉", "陽蒸", "陽錫", "陽耕", "陽東", "陽冬", "陽真",
             "之職", "之蒸", "之侯", "之幽", "之覺", "之宵", "之元", "之緝", "職蒸", "職侯", "職屋", "職幽", "職覺", "職藥", "職葉", "職緝", 
             "蒸侯", "蒸東", "蒸冬", "蒸文", "蒸侵", "支錫", "支歌", "支月", "支元", "支微", "支物", "支文", "支脂", "支質",
@@ -85,7 +85,7 @@ namespace Shang4Gu3In1
             "屋覺", "屋宵", "屋藥", "東幽", "東冬", "東侵", "幽覺", "幽宵", "覺宵", "覺緝",  "冬侵", "宵元", "歌元", "歌微", "歌物", "歌脂", 
             "月元", "月物", "月脂", "月質", "月葉", "月緝", "元微", "元物", "元文", "元脂", "元質", "元真", "元緝", "微物", "微文", "微脂", "微質", 
             "物脂", "物質", "文質", "文真", "文緝", "脂質",  "葉談", "葉緝", "談侵"};
-        //kaom通押判斷錯誤，刪 "冬真", "質真",
+        //kaom通押判斷錯誤，刪 "魚東", "冬真", "質真"（所謂質真是隔行交錯押韻）,
 
         private static string zhong1gu3vwn2in1 = "aeiouvwryäüöëï";//廣通中古拼音的元音
 
@@ -299,7 +299,8 @@ namespace Shang4Gu3In1
                                 {
                                     string zy = GetCharacter(rythms[i]);
                                     Dictionary<string, string[]> do1in1 = Chu3Li3Vin4Jo5Zy4(cvwn2zy4biao3, zy, i, length, vals, vin11, ref miou4su4, ref vin4jo5zy4, ref cy3bu4zy4su4);                                   
-                                    if (iao4gw3 && do1in1.All(x => shang4gu3vin4bu4[vin11].All(d => !x.Key.Contains(d))))
+                                    if (iao4gw3 && (do1in1.All(x => shang4gu3vin4bu4[vin11].All(d => !x.Key.Contains(d)))||
+                                        do1in1.All(x => shang4gu3vin4bu4[vin11].All(d => !x.Key.Replace("ɣ", "").Replace("h", "").EndsWith(d)))))
                                     {//多音字所有音都不合韻部，先嘗試人工智能修正，正不了再確定出韻
                                         bool i3siou1zhen4 = false;
                                         foreach (var gu3in1 in do1in1.ToList())
@@ -471,9 +472,8 @@ namespace Shang4Gu3In1
                     string[] zhong1gu3du5in1 = [cvwn2zy4biao3.Cells["N" + row.ToString()].Value.ToString(), row.ToString()]; //"N"列是中古音
                     if (!do1in1.Keys.Contains(shang4gu3du5in1))
                         do1in1.Add(shang4gu3du5in1, zhong1gu3du5in1);
-                    if (shang4gu3vin4bu4[vin11].All(d => !shang4gu3du5in1.Contains(d))
-                     || (vin11 == "之" && shang4gu3du5in1.Contains("əl"))
-                     || (vin11 == "幽" && (shang4gu3du5in1.EndsWith("l") || shang4gu3du5in1.EndsWith("lh") || shang4gu3du5in1.EndsWith("lɣ"))))
+                    if (shang4gu3vin4bu4[vin11].All(d => !shang4gu3du5in1.Contains(d) ||
+                    do1in1.All(x => shang4gu3vin4bu4[vin11].All(d => !x.Key.Replace("ɣ", "").Replace("h", "").EndsWith(d)))))
                     {
                         shang4gu3du5in1 += "謬";
                         miou4su4++;
@@ -908,6 +908,10 @@ namespace Shang4Gu3In1
             else if (zy == "奭")//𥈜通赩，皆許極切。
             {
                 zy = "𥈜";
+            }
+            else if (zy.Contains("修"))
+            {
+                zy = "脩";
             }
             return zy;
         }
