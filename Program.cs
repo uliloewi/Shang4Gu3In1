@@ -288,7 +288,7 @@ namespace Shang4Gu3In1
                         int hang2 = 0;
                         foreach (string line in lines)
                         {
-                            var rythms = line.Split(new string[] { "<b style=\"" }, StringSplitOptions.None);
+                            var rythms = line.Split(new string[] { "<b style=\"", "<span style=\"" }, StringSplitOptions.None);
                             List<string> vals = new List<string>();
                             if (rythms.Length > 1)
                             {
