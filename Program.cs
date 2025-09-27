@@ -925,6 +925,10 @@ namespace Shang4Gu3In1
             {
                 zy = "敕";
             }
+            else if (zy.Contains("胕"))
+            {
+                zy = "腑";
+            }
             return zy;
         }
 
