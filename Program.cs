@@ -929,6 +929,14 @@ namespace Shang4Gu3In1
             {
                 zy = "腑";
             }
+            else if (zy.Contains("毖"))
+            {//毖廣雅音註秘，秘案集韻有入聲，毖僅去聲
+                zy = "秘";
+            }
+            else if (zy.Contains("勻"))
+            {//勻常通均，均案集韻有去聲，勻僅平聲
+                zy = "均";
+            }
             return zy;
         }
 
