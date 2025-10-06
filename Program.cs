@@ -11,7 +11,7 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\宵ö幽o\";//MyDocument\音韻學\st sk\
         private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
@@ -82,7 +82,7 @@ namespace Shang4Gu3In1
             "之職", "之蒸", "之侯", "之幽", "之覺", "之宵", "之元", "之緝", "職蒸", "職侯", "職屋", "職幽", "職覺", "職藥", "職葉", "職緝", 
             "蒸侯", "蒸東", "蒸冬", "蒸文", "蒸侵", "支錫", "支歌", "支月", "支元", "支微", "支物", "支文", "支脂", "支質",
             "錫屋", "錫歌", "錫月", "錫物", "錫質", "耕東", "耕元", "耕文", "耕真", "侯屋", "侯東", "侯幽", "侯冬", "侯宵", 
-            "屋覺", "屋宵", "屋藥", "東幽", "東冬", "東侵", "幽覺", "幽宵", "覺宵", "覺緝",  "冬真", "冬侵", "宵元", "歌元", "歌微", "歌物", "歌脂", 
+            "屋覺", "屋宵", "屋藥", "東幽", "東冬", "東侵", "幽覺", "幽宵", "覺宵", "覺緝",  "冬真", "冬侵", "宵藥", "宵元", "歌元", "歌微", "歌物", "歌脂", 
             "月元", "月物", "月脂", "月質", "月葉", "月緝", "元微", "元物", "元文", "元脂", "元質", "元真", "元緝", "微物", "微文", "微脂", "微質", 
             "物脂", "物質", "文質", "文真", "文緝", "脂質",  "葉談", "葉緝", "談侵", "質真"};
         //kaom通押判斷錯誤， "魚東", "鐸歌", "冬真", "鐸質", "鐸葉", "錫物", "侯冬", "月緝", "元物", "陽錫", "質真"不可信
@@ -93,7 +93,6 @@ namespace Shang4Gu3In1
 
         static async Task Main(string[] args)
         {
-            
 #pragma region 按聲旁筆畫數排序
             /*   var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
                Console.OutputEncoding = Encoding.UTF8;
@@ -116,7 +115,6 @@ namespace Shang4Gu3In1
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-           
             var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
@@ -137,7 +135,7 @@ namespace Shang4Gu3In1
             }*/
 
             var shenmuZhongDueiShang = ShengMuZhongDueiShang(ws, length);
-            foreach (var dd in shenmuZhongDueiShang.OrderBy(x=>x.Key))
+            foreach (var dd in shenmuZhongDueiShang.OrderBy(x => x.Key))
             {
                 Console.WriteLine(dd.Key);
                 foreach (var ee in dd.Value)
@@ -153,7 +151,7 @@ namespace Shang4Gu3In1
             //string vin4bu4zy4 = string.Concat(shang4gu3vin4bu4.Keys.AsEnumerable());
 
             Workbook wbForSave = new Workbook();
-            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x=>x=="真"))
+            foreach (var k in shang4gu3vin4bu4.Keys)//.Where(x => new[] { "藥", "覺", "幽", "宵" }.Contains(x)))
             {
                 string vin11 = k;
                 string vin12 = k;
@@ -164,8 +162,8 @@ namespace Shang4Gu3In1
 
                 //ProcessTable("<table><tr><th><b style=\"戾<b style=\"戾", ws, wbForSave, sheetNr, length, vin11, vin12); 
             }
-            
-            foreach (var tong1vin4 in tong1ia5)//.Where(x=>x.Contains("真")))
+
+            foreach (var tong1vin4 in tong1ia5)//.Where(x => new[] { "幽覺", "幽宵", "覺宵", "宵藥" }.Contains(x)))
             {
                 Thread.Sleep(5000);                
                 var httpResponseMessage = await DataService.Client.GetAsync("http://www.kaom.net/yayuns_bu88.php?book=all&x=" + tong1vin4[0] + "&y=" + tong1vin4[1] + "&mode=yunbu");
@@ -937,6 +935,15 @@ namespace Shang4Gu3In1
             {//勻常通均，均案集韻有去聲，勻僅平聲
                 zy = "均";
             }
+            else if (zy.Contains("刀"))
+            {//刀刁源自同一大篆，“刀”入宵部韻，因爲讀如“刁”
+                zy = "刁";
+            }
+            else if (zy.Contains("懆"))
+            {//此韻腳傳世楷書文獻做“慘”，不韻。故《五經文字》改“懆”，惜不合《月出》宵部韻。故改爲“慅”，《集韻》先彫切。
+                zy = "慅";
+            }
+            
             return zy;
         }
 
