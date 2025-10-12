@@ -94,21 +94,22 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
 #pragma region 按聲旁筆畫數排序
-            /*   var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
-               Console.OutputEncoding = Encoding.UTF8;
-               Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
-               Worksheet ws0 = wk0.Worksheets[0];
-               //MoveRedCharactersToFrontInColumn(ws0, 15);
-   ;           //Din4Vin4Bu4(ws0, 4, 6);
-               //UnmergeAndPropagateValueInColumn(ws0, 1);
-               int startRow = 2;
-               foreach (var kv in myDict)//.Where(x=>x.Value>2))
-               {
-                   var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
-                   CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
-                   startRow += rowCount;
-               }
-               wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");*/
+               //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
+   //            Console.OutputEncoding = Encoding.UTF8;
+   //            Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
+   //            Worksheet ws0 = wk0.Worksheets[0];
+   //            //MoveRedCharactersToFrontInColumn(ws0, 15);
+   //;           //Din4Vin4Bu4(ws0, 4, 6);
+   //            //UnmergeAndPropagateValueInColumn(ws0, 1);
+   //            int startRow = 2;
+   //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
+   //            {
+   //                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
+   //                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
+   //                startRow += rowCount;
+   //            }*/
+   //            Tuei1Vin4Bu4(ws0, 10,6);
+   //            wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");
 #pragma endregion 按聲旁筆畫數排序
             Console.OutputEncoding = Encoding.UTF8;
             Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");//("../../../上古音.csv");
@@ -812,7 +813,7 @@ namespace Shang4Gu3In1
                     if (oe.Contains("ø") && !oe.Contains("øk"))
                     {
                         string k = ws.Cells["I" + res.ToString()].Value.ToString();//"I"列是中古等
-                        string v = ws.Cells["K" + res.ToString()].Value.ToString();//"I"列是中古韻
+                        string v = ws.Cells["K" + res.ToString()].Value.ToString();//"K"列是中古韻
                         if (!Siao1di5den3[k].Contains(v))
                         {
                             Siao1di5den3[k].Add(v);
@@ -1326,6 +1327,20 @@ namespace Shang4Gu3In1
             }
             ws.Workbook.Save("new.xlsx");
             
+        }
+
+        static void Tuei1Vin4Bu4(Worksheet ws, int siao3vin4, int li3in1lie5)//根據中古韻推定韻部，比如仙A、薛A、祭A韻母是ɛ韻腹，元、月、廢韻母是a韻腹
+        {     
+            for (int row = 2; row <= ws.Cells.MaxDataRow; row++)
+            {
+                if (ws.Cells[row, siao3vin4].Value != null && ws.Cells[row, li3in1lie5].Value != null)
+                {
+                    if (new[] { "仙A", "薛A", "祭A" }.Contains(ws.Cells[row, siao3vin4].Value.ToString()))
+                        ws.Cells[row, li3in1lie5].Value = ws.Cells[row, li3in1lie5].Value.ToString().Replace("a", "ɛ");
+                    else if (new[] { "元", "月", "廢" }.Contains(ws.Cells[row, siao3vin4].Value.ToString()))
+                        ws.Cells[row, li3in1lie5].Value = ws.Cells[row, li3in1lie5].Value.ToString().Replace("ɛ", "a");
+                }               
+            }
         }
     }
 }
