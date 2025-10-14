@@ -1346,49 +1346,50 @@ namespace Shang4Gu3In1
 
         static List<string> Svwn3Chu5Vin4Jo5Zy5(Worksheet ws, int length, Workbook vinjobiao)//選出韻腳字
         {
+            string so3iou3vin4jo5zy4 = So3Iou3Vin4Jo5(vinjobiao);
             List<string> res = new List<string>();
             for (int row = 2; row <= length; row++)
             {
-                if (ws.Cells[row, 6].Value != null && ws.Cells[row, 6].Value.ToString().Contains("ʷø"))
+                if (ws.Cells[row, 6].Value != null && ws.Cells[row, 6].Value.ToString().Contains("ʷˤø"))
                 {
                     string zy = ws.Cells[row, 15].Value?.ToString();
                     for (int i= 0; i < zy.Length; i++)
                     {
                         var c = zy[i];
-                            string hangzy = c.ToString();
-                            if (((short)c) > -20000 && ((short)c) < 0)
-                            {
-                                hangzy = c.ToString() + zy[i + 1];
-                                i++;
-                            }
-                            Console.WriteLine(hangzy);
-                            if (!"(=)12".Contains(c) && !res.Contains(hangzy) && Shr4Vin4Jo(vinjobiao, hangzy))
-                                res.Add(hangzy.ToString());
+                        string hangzy = c.ToString();
+                        if (((short)c) > -20000 && ((short)c) < 0)
+                        {
+                            hangzy = c.ToString() + zy[i + 1];
+                            i++;
+                        }
+                        Console.WriteLine(hangzy);
+                        if (!"(=)12".Contains(c) && !res.Contains(hangzy) && so3iou3vin4jo5zy4.Contains(hangzy))
+                            res.Add(hangzy.ToString());
                     }
                 }
             }
             return res;
         }
 
-        static bool Shr4Vin4Jo(Workbook wb, string character)//檢查某字是否在工作簿中出現
-        {   
+        static string So3Iou3Vin4Jo5(Workbook wb)//獲得所有韻腳字
+        {
+            string gong1zo5bu4so3iou3zy4 = "";
             foreach (Worksheet ws in wb.Worksheets)
             {
                 for (int row = 0; row <= ws.Cells.MaxDataRow; row++)
                 {
-                    if (ws.Cells[row, 0].Value==null || ws.Cells[row, 0].Value.ToString().Contains("出韻") || ws.Cells[row, 0].Value.ToString().Contains("押韻")) break;
+                    if (ws.Cells[row, 0].Value == null || ws.Cells[row, 0].Value.ToString().Contains("出韻") || ws.Cells[row, 0].Value.ToString().Contains("押韻")) break;
                     for (int col = 1; col <= ws.Cells.MaxDataColumn; col++)
                     {
                         var value = ws.Cells[row, col].StringValue;
-                        if (!string.IsNullOrEmpty(value) && value.Contains(character))
+                        if (!string.IsNullOrEmpty(value) && !gong1zo5bu4so3iou3zy4.Contains(value))
                         {
-                            return true;
+                            gong1zo5bu4so3iou3zy4 += value;
                         }
                     }
                 }
             }
-            return false;
-
+            return gong1zo5bu4so3iou3zy4;
         }
 
     }
