@@ -116,7 +116,7 @@ namespace Shang4Gu3In1
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-            var vinjo = Svwn3Chu5Vin4Jo5Zy5( ws,  length, new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
+            //var vinjo = Svwn3Chu5Vin4Jo5Zy5("騤1\r\n闋\r\n闋湀1\r\n湀2睽聧藈\r\n".ToList(),  new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
             var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
@@ -945,7 +945,15 @@ namespace Shang4Gu3In1
             {//此韻腳傳世楷書文獻做“慘”，不韻。故《五經文字》改“懆”，惜不合《月出》宵部韻。故改爲“慅”，《集韻》先彫切。
                 zy = "慅";
             }
-
+            else if (zy.Contains("簋"))
+            {//此韻腳傳世楷書文獻做“簋”，不韻。然《六書故》有“𥁬”，矩有切，合韻且合篆。
+                zy = "𥁬";
+            }
+            else if (zy.Contains("逵"))
+            {//此韻腳傳世楷書文獻做“逵”，不韻。然《集韻》有“馗”，巨鳩切，合韻且合篆。
+                zy = "馗";
+            }
+            
             return zy;
         }
 
@@ -1367,6 +1375,26 @@ namespace Shang4Gu3In1
                             res.Add(hangzy.ToString());
                     }
                 }
+            }
+            return res;
+        }
+
+        static List<string> Svwn3Chu5Vin4Jo5Zy5(List<char> zy, Workbook vinjobiao)//選出韻腳字
+        {
+            string so3iou3vin4jo5zy4 = So3Iou3Vin4Jo5(vinjobiao);
+            List<string> res = new List<string>();
+            for (int i= 0; i < zy.Count; i++)
+            {
+                var c = zy[i];
+                string hangzy = c.ToString();
+                if (((short)c) > -20000 && ((short)c) < 0)
+                {
+                    hangzy = c.ToString() + zy[i + 1];
+                    i++;
+                }
+                Console.WriteLine(hangzy);
+                if (!"(=)12".Contains(c) && !res.Contains(hangzy) && so3iou3vin4jo5zy4.Contains(hangzy))
+                    res.Add(hangzy.ToString());
             }
             return res;
         }
