@@ -93,6 +93,11 @@ namespace Shang4Gu3In1
 
         static async Task Main(string[] args)
         {
+#pragma region 寫書
+            Sie3Shu1.ExcelToWordTable(uen2jän4ja5 + "廣韻字上古音形考.xlsx", 0, 2, 4, 24, 14, uen2jän4ja5 + "a.docx");
+
+#pragma endregion 寫書
+
 #pragma region 按聲旁筆畫數排序
             //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
             //            Console.OutputEncoding = Encoding.UTF8;
@@ -111,6 +116,7 @@ namespace Shang4Gu3In1
             //            Tuei1Vin4Bu4(ws0, 10,6);
             //            wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");
 #pragma endregion 按聲旁筆畫數排序
+            
             Console.OutputEncoding = Encoding.UTF8;
             Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");//("../../../上古音.csv");
             Worksheet ws = wk.Worksheets[0];
