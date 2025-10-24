@@ -194,7 +194,7 @@ namespace Shang4Gu3In1
                     var shen1pang2 = ws.Cells["A" + row.ToString()].Value.ToString();
                     if (!string.IsNullOrEmpty(shen1pang2) && !res.ContainsKey(shen1pang2))
                     {
-                        res.Add(shen1pang2, FindAllRowsOfSamePhoneticComponent(ws, row));
+                        res.Add(shen1pang2, Sie3Shu1.FindAllRowsOfSamePhoneticComponent(ws, row));
                     }
                     if (!shen1pang2vin4luei4.ContainsKey(shen1pang2))
                     {
@@ -583,7 +583,7 @@ namespace Shang4Gu3In1
                                 if (!DoubleMapping(ws, res, exelRowsCount))         //防止一上古對多中古
                                 {
                                     found = true;
-                                    var zy4zu5hang2 = FindAllRowsOfSamePhoneticComponent(ws, rowWithZy);
+                                    var zy4zu5hang2 = Sie3Shu1.FindAllRowsOfSamePhoneticComponent(ws, rowWithZy);
                                     ChangePronuciationOfBrothers(ws, zy4zu5hang2, rhyme, vin4, exelRowsCount);
                                     return res;
                                 }
@@ -620,25 +620,7 @@ namespace Shang4Gu3In1
                 hang2++;
             }
         }
-
-
-        private static int[] FindAllRowsOfSamePhoneticComponent(Worksheet ws, int row)
-        {
-            var res = new int[2];
-            var gw5 = ws.Cells["A" + row.ToString()];
-            if (gw5.IsMerged)
-            {//如：缶族9-17行
-                var gw5sin4si5 = gw5.GetMergedRange();
-                res[0] = gw5sin4si5.FirstRow + 1;
-                res[1] = gw5sin4si5.FirstRow + gw5sin4si5.RowCount;
-            }
-            else
-            {//如：孑族只有一行krat見三開薛B入居列kiät孑𨥂
-                res[0] = res[1] = row;
-            }
-            return res;
-        }
-
+        
         private static List<string> RythmsOC() //所有上古韻母
         {
             var res = new List<string>();

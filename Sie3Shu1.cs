@@ -11,7 +11,7 @@ namespace Shang4Gu3In1
     {
         private static Dictionary<int, double> kuang1du4 = new Dictionary<int, double>() {
             { 1, 15},//直聲旁
-            { 2, 15},//韻部
+            { 2, 35},//韻部
             { 3, 30},//演變
             { 4, 35},//曹魯音
             { 5, 15},//聲
@@ -141,11 +141,31 @@ namespace Shang4Gu3In1
             var doc = new Document();
             var builder = new DocumentBuilder(doc);
 
-            // Erstelle Tabelle
-            var table = new Table(doc);
-            doc.FirstSection.Body.AppendChild(table);
+            int row=3;
+            while(row < worksheet.Cells.MaxDataRow)
+            { 
+                var shr3zhong1=FindAllRowsOfSamePhoneticComponent(worksheet, row);
 
-            for (int r = r0; r <= maxRow; r++)
+                var table = new Table(doc);
+                TableFromExelToWord(worksheet, table, doc, shr3zhong1[0]-1, shr3zhong1[1] - 1 , c0, maxCol);
+                doc.FirstSection.Body.AppendChild(table);
+                row = shr3zhong1[1]+1;
+                doc.FirstSection.Body.AppendParagraph("寫文章");
+            }
+
+            // Erstelle Tabelle
+        /*    var table = new Table(doc);
+            TableFromExelToWord(worksheet, table, doc, r0, maxRow, c0, maxCol);
+            doc.FirstSection.Body.AppendChild(table);            */
+
+            // Speichern als .docx
+            doc.Save(outputWordFilePath, Aspose.Words.SaveFormat.Docx);
+        }
+
+        private static void TableFromExelToWord(Worksheet worksheet, Table table, Document doc, int r0, int maxRow, int c0, int maxCol)
+        {
+
+            for (int r = 1; r <= maxRow; r++)
             {
                 int i = 0;
                 var wordRow = new Aspose.Words.Tables.Row(doc);
@@ -161,7 +181,7 @@ namespace Shang4Gu3In1
                     var characterColors = GetCharacterColors(excelCell);
                     string hong2zy4 = characterColors.Where(c => c.Color.Name == "ffff0000").Select(characterColors => characterColors.Character).Aggregate("", (current, ch) => current + ch);
 
-                    var run = new Run(doc,String.IsNullOrEmpty(hong2zy4)?text:text.Replace(hong2zy4,""));
+                    var run = new Run(doc, String.IsNullOrEmpty(hong2zy4) ? text : text.Replace(hong2zy4, ""));
                     // Übernehme einfache Font-Eigenschaften, wenn vorhanden
                     try
                     {
@@ -172,10 +192,6 @@ namespace Shang4Gu3In1
                             var f = style.Font;
                             if (f != null)
                             {
-                                if (text.StartsWith("匹"))
-                                {
-                                    
-                                }
                                 if (hong2zy4?.Length > 0)
                                 {
                                     var hong2run = new Run(doc, hong2zy4);
@@ -190,7 +206,7 @@ namespace Shang4Gu3In1
                                 //run.Font.Bold = f.Color != Color.Empty && f.Color.Name == "ffff0000";
                                 run.Font.Bold = f.IsBold;
                                 // Aspose.Cells.Font.Color ist System.Drawing.Color
-                                
+
                                 if (f.Color != Color.Empty)
                                 {
                                     run.Font.Color = f.Color;
@@ -213,11 +229,12 @@ namespace Shang4Gu3In1
                     wordRow.AppendChild(wordCell);
                 }
                 table.AppendChild(wordRow);
+                if (r == 1) r = r0-1; // 加了標題行
             }
             table.AutoFit(AutoFitBehavior.FixedColumnWidths);
 
             // Option: einfache Rahmen hinzufügen
-            
+
             foreach (Aspose.Words.Tables.Row wr in table.Rows)
             {
                 int i = 0;
@@ -232,9 +249,6 @@ namespace Shang4Gu3In1
                     wc.CellFormat.Borders.Bottom.LineStyle = LineStyle.Single;
                 }
             }
-
-            // Speichern als .docx
-            doc.Save(outputWordFilePath, Aspose.Words.SaveFormat.Docx);
         }
 
         public static List<(char Character, Color Color)> GetCharacterColors(Aspose.Cells.Cell cell)
@@ -270,5 +284,23 @@ namespace Shang4Gu3In1
 
             return result;
         }
+
+        public static int[] FindAllRowsOfSamePhoneticComponent(Worksheet ws, int row)
+        {
+            var res = new int[2];
+            var gw5 = ws.Cells["A" + row.ToString()];
+            if (gw5.IsMerged)
+            {//如：缶族9-17行
+                var gw5sin4si5 = gw5.GetMergedRange();
+                res[0] = gw5sin4si5.FirstRow + 1;
+                res[1] = gw5sin4si5.FirstRow + gw5sin4si5.RowCount;
+            }
+            else
+            {//如：孑族只有一行krat見三開薛B入居列kiät孑𨥂
+                res[0] = res[1] = row;
+            }
+            return res;
+        }
+
     }
 }
