@@ -13,15 +13,15 @@ namespace Shang4Gu3In1
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
         const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\";//MyDocument\音韻學\st sk\
         private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
-        private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {
+        private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {//柳漫韻部
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
-              { "歌(歌0)", "al"}, { "皮(歌1)","ɛl"},  { "微", "əl"}, { "脂", "øl"},
-              { "月(月0)","ɛt"}, { "薛(月1)", "at"}, { "物", "ət"}, { "質", "øt"},
-              { "元(元0)", "ɛn"}, { "刪(元1)","an"}, { "文", "ən"},
+              { "歌(歌0)", "al"}, { "罢(歌1)","ɛl"},  { "微", "əl"}, { "脂", "øl"},
+              { "月(月0)","at"}, { "列(月1)", "ɛt"}, { "物", "ət"}, { "質", "øt"},
+              { "元(元0)", "an"}, { "仙(元1)","ɛn"}, { "文", "ən"},
               { "真(真0)", "øn"}, { "印(真1)","øŋ"},
-              { "葉(葉0)", "ap"}, { "業(葉1)","ɛp"}, { "緝", "əp"},
-              { "談(談0)", "am"}, { "嚴(談1)","ɛm"}, { "侵", "əm"},
+              { "葉(葉0)", "ap"}, { "蝶(葉1)","ɛp"}, { "緝", "əp"},
+              { "談(談0)", "am"}, { "玷(談1)","ɛm"}, { "侵", "əm"},
               { "魚", "a"}, { "之", "ə"}, { "支", "ɛ"},
               { "侯", "ɔ"}, { "幽", "o"}, { "宵", "ø"},
         };
@@ -94,17 +94,17 @@ namespace Shang4Gu3In1
         static async Task Main(string[] args)
         {
 #pragma region 寫書
-            Sie3Shu1.ExcelToWordTable(uen2jän4ja5 + "廣韻字上古音形考.xlsx", 0, 2, 4, 24, 14, uen2jän4ja5 + "a.docx");
+            //Sie3Shu1.ExcelToWordTable(uen2jän4ja5 + "廣韻字上古音形考p.xlsx", 0, 2, 4, 24, 14, uen2jän4ja5 + "a.docx");
 
 #pragma endregion 寫書
 
 #pragma region 按聲旁筆畫數排序
             //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
             //            Console.OutputEncoding = Encoding.UTF8;
-            //            Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
-            //            Worksheet ws0 = wk0.Worksheets[0];
+            Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
+            Worksheet ws0 = wk0.Worksheets[0];
             //            //MoveRedCharactersToFrontInColumn(ws0, 15);
-            //;           //Din4Vin4Bu4(ws0, 4, 6);
+            Din4Vin4Bu4(ws0, 4, 6);
             //            //UnmergeAndPropagateValueInColumn(ws0, 1);
             //            int startRow = 2;
             //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
@@ -114,9 +114,9 @@ namespace Shang4Gu3In1
             //                startRow += rowCount;
             //            }*/
             //            Tuei1Vin4Bu4(ws0, 10,6);
-            //            wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");
+            wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");
 #pragma endregion 按聲旁筆畫數排序
-            
+
             Console.OutputEncoding = Encoding.UTF8;
             Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");//("../../../上古音.csv");
             Worksheet ws = wk.Worksheets[0];
