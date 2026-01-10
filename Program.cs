@@ -12,7 +12,7 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\探索去介音W\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\";//MyDocument\音韻學\st sk\
         private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {//柳漫韻部
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
@@ -124,6 +124,7 @@ namespace Shang4Gu3In1
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
             var ss = Gu1W(ws);
+            var ss1 = Gu1W(ws,false);
             var vinjo = Svwn3Chu5Vin4Jo5Zy5("𠀽硉𨁸𥓎㪐".ToList(),  new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
             var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
@@ -1410,9 +1411,8 @@ namespace Shang4Gu3In1
             return gong1zo5bu4so3iou3zy4;
         }
 
-        static List<string> Gu1W(Worksheet ws)//獲得所有無對映開口音節的帶ʷ音節
+        static List<string> Gu1W(Worksheet ws, bool guHokou = true)//獲得所有無對映開口音節的帶ʷ音節
         {
-
             List<string> res = new List<string>();
             List<string> soIouHoKou = new List<string>();
 
@@ -1420,30 +1420,36 @@ namespace Shang4Gu3In1
             {
                 if (ws.Cells[row, 6].Value != null && ws.Cells[row, 6].Value.ToString().Contains("ʷ"))
                 {
-                    var hoKou = ws.Cells[row, 6].Value?.ToString();
-                    if (hoKou== "xʷat")
-                    {                        
-                        int a = 1;
-                    }
+                    var hoKou = ws.Cells[row, 6].Value?.ToString();//合口
                     if (!soIouHoKou.Contains(hoKou))
                     {
                         soIouHoKou.Add(hoKou);
                         var käKow = ws.Cells[row, 6].Value?.ToString().Replace("ʷ", "").Trim();
-                        bool found= false;
+                        bool found = false;
                         for (int row1 = 0; row1 <= ws.Cells.MaxDataRow; row1++)
                         {
                             if (ws.Cells[row1, 6].Value != null && ws.Cells[row1, 6].Value.ToString().Trim() == käKow)
                             {
-                                found= true;
+                                found = true;
                             }
                         }
-                        if (!found && !res.Contains(hoKou))
+                        if (guHokou)//無對映開口音節，如止有ɣʷat、nʷˤət，沒ɣat、nˤət
                         {
-                            res.Add(hoKou);
+                            if (!found && !res.Contains(hoKou))
+                            {
+                                res.Add(hoKou);
+                            }
+                        }
+                        else//有對映開口音節，如有gʷat、lʷəm，又有gat、ləm
+                        {
+                            if (found && !res.Contains(hoKou))
+                            {
+                                res.Add(hoKou);
+                            }
                         }
                     }
                 }
-            }           
+            }
             return res;
         }
 
