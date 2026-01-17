@@ -18,9 +18,8 @@ namespace Shang4Gu3In1
     /// </summary>
     public class Die5Yuin4
     {
-        public static void Main1(string[] args)
+        public static void Main1(string[] args, string uen2jän4ja5)
         {
-            const string uen2jän4ja5 = @"C:\Users\xggg\Downloads\SieShu\";
             Console.OutputEncoding = Encoding.UTF8;
             Workbook wk = new Workbook(uen2jän4ja5 + "a.xlsx");
             Worksheet ws = wk.Worksheets[0];

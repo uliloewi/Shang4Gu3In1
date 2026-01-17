@@ -96,26 +96,26 @@ namespace Shang4Gu3In1
         {
 #pragma region 寫書
             //Sie3Shu1.ExcelToWordTable(uen2jän4ja5 + "廣韻字上古音形考p.xlsx", 0, 2, 4, 24, 14, uen2jän4ja5 + "a.docx");
-
+            Die5Yuin4.Main1(args, uen2jän4ja5);
 #pragma endregion 寫書
 
 #pragma region 按聲旁筆畫數排序
-        /*    //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
-            //            Console.OutputEncoding = Encoding.UTF8;
-            Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
-            Worksheet ws0 = wk0.Worksheets[0];
-            //            //MoveRedCharactersToFrontInColumn(ws0, 15);
-            Din4Vin4Bu4(ws0, 4, 6);
-            //            //UnmergeAndPropagateValueInColumn(ws0, 1);
-            //            int startRow = 2;
-            //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
-            //            {
-            //                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
-            //                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
-            //                startRow += rowCount;
-            //            }*
-            //            Tuei1Vin4Bu4(ws0, 10,6);
-            wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");*/
+            /*    //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
+                //            Console.OutputEncoding = Encoding.UTF8;
+                Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
+                Worksheet ws0 = wk0.Worksheets[0];
+                //            //MoveRedCharactersToFrontInColumn(ws0, 15);
+                Din4Vin4Bu4(ws0, 4, 6);
+                //            //UnmergeAndPropagateValueInColumn(ws0, 1);
+                //            int startRow = 2;
+                //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
+                //            {
+                //                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
+                //                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
+                //                startRow += rowCount;
+                //            }*
+                //            Tuei1Vin4Bu4(ws0, 10,6);
+                wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
 
             Console.OutputEncoding = Encoding.UTF8;
