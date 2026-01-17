@@ -16,9 +16,9 @@ namespace Shang4Gu3In1
     /// <summary>
     ///    檢查連綿詞擬音阿合理
     /// </summary>
-    internal class Die5Yuin4
+    public class Die5Yuin4
     {
-        public static void Main(string[] args)
+        public static void Main1(string[] args)
         {
             const string uen2jän4ja5 = @"C:\Users\xggg\Downloads\SieShu\";
             Console.OutputEncoding = Encoding.UTF8;
