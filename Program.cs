@@ -12,7 +12,7 @@ namespace Shang4Gu3In1
 
 
         const string lu5vwn2in1 = "aɛɔəøo";//六元音
-        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\";//MyDocument\音韻學\st sk\
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\liänmiän\";//MyDocument\音韻學\st sk\
         private static List<string> rK = new List<string>() { "rk", "rŋ", "rg", "rx" };
         private static Dictionary<string, string> liou3mang4vin4bu4 = new Dictionary<string, string>() {//柳漫韻部
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
