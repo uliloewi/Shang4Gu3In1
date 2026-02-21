@@ -96,7 +96,7 @@ namespace Shang4Gu3In1
         {
 #pragma region 寫書
             //Sie3Shu1.ExcelToWordTable(uen2jän4ja5 + "廣韻字上古音形考p.xlsx", 0, 2, 4, 24, 14, uen2jän4ja5 + "a.docx");
-            Die5Yuin4.Main1(args, uen2jän4ja5);
+            //Die5Yuin4.Main1(args, uen2jän4ja5);
 #pragma endregion 寫書
 
 #pragma region 按聲旁筆畫數排序
