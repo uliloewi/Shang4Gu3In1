@@ -105,7 +105,7 @@ namespace Shang4Gu3In1
                 Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
                 Worksheet ws0 = wk0.Worksheets[0];
                 //            //MoveRedCharactersToFrontInColumn(ws0, 15);
-                Din4Vin4Bu4(ws0, 4, 6);
+                Din4Vin4Bu4(ws0, 4, 6);//定韻部
                 //            //UnmergeAndPropagateValueInColumn(ws0, 1);
                 //            int startRow = 2;
                 //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
@@ -125,7 +125,7 @@ namespace Shang4Gu3In1
             int length = CheckDoubleMapping(ws);
             var ss = Gu1W(ws);
             var ss1 = Gu1W(ws,false);
-            var vinjo = Svwn3Chu5Vin4Jo5Zy5("𠀽硉𨁸𥓎㪐".ToList(),  new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
+            //var vinjo = Svwn3Chu5Vin4Jo5Zy5("𠀽硉𨁸𥓎㪐".ToList(),  new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
             var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))
             {
@@ -948,7 +948,13 @@ namespace Shang4Gu3In1
             return zy;
         }
 
-
+        /// <summary>
+        /// 上古韻部對中古等呼韻。統計中古韻來自哪些中古韻部
+        /// </summary>
+        /// <param name="ws"></param>
+        /// <param name="length"></param>
+        /// <param name="checkRK"></param>
+        /// <returns></returns>
         static Workbook shang4gu3duei4zhong1gu3(Worksheet ws, int length, bool checkRK = false)
         {
 
@@ -1302,8 +1308,8 @@ namespace Shang4Gu3In1
 
         static bool LoopCondition(Worksheet ws, int res)
         {
-            return ws.Cells["G" + res.ToString()].Value == null ||
-                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value.ToString()) ||//"G"列是上古音
+            return ws.Cells["G" + res.ToString()].Value != null ||
+                !String.IsNullOrWhiteSpace(ws.Cells["G" + res.ToString()].Value?.ToString()) ||//"G"列是上古音
                 (ws.Cells["P" + res.ToString()].Value != null &&
                 !String.IsNullOrWhiteSpace(ws.Cells["P" + res.ToString()].Value.ToString())); 
         }
