@@ -1,8 +1,8 @@
-﻿using System.IO;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
 using Aspose.Cells;
-using static System.Net.Mime.MediaTypeNames;
+using Microsoft.Office.Interop.Word;
+
 namespace Shang4Gu3In1
 {
     /// <summary>
@@ -39,12 +39,13 @@ namespace Shang4Gu3In1
         const string uen2jän4ja5 = @"C:\Users\xggg\Downloads\SieShu\";
         public static void Main1(string[] args, string uen2jän4ja5)
         {
-
             Console.OutputEncoding = Encoding.UTF8;
-            Gai3Zhong1Gu3Pin1In1(uen2jän4ja5);
-            Workbook wk = new Workbook(uen2jän4ja5 + "a.xlsx");
+            //Gai3Zhong1Gu3Pin1In1();
+            Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考M.xlsx");
             Worksheet ws = wk.Worksheets[0];
-            /*
+
+
+            string tong2jia3 = "";
             foreach (string line in File.ReadLines(uen2jän4ja5 + "dazydiän.txt"))
             {
                 bool tong2üän2 = false;
@@ -63,11 +64,15 @@ namespace Shang4Gu3In1
                     zy += GetTongJia(line, "寫做“", ref tong2üän2);
                     if (tong2üän2)
                     {
-                        NeedNotice(zy, ws);
+                        NeedNotice(zy, ws, ref tong2jia3);
                     }
                 }
-            }*/
+            }
+            File.WriteAllText(uen2jän4ja5 + "通假異體字.txt", tong2jia3);
 
+            Console.WriteLine("異體結束");
+
+            string lianmian = "";
             List<string> lm = new List<string>();
             foreach (string line in File.ReadLines(uen2jän4ja5 + "連綿詞.txt"))
             {
@@ -78,12 +83,13 @@ namespace Shang4Gu3In1
                     {
                         if (!Regex.IsMatch(s, "[a-zA-Z]"))
                         {
-                            NeedNotice(s, ws, true);
+                            NeedNotice(s, ws, ref lianmian, true);
                         }
                         lm.Add(s);
                     }
                 }
-            }            
+            }
+            File.WriteAllText(uen2jän4ja5 + "連綿字.txt", lianmian);
         }
 
         static string GetTongJia(string line, string splitter, ref bool tong2üän2)
@@ -95,14 +101,16 @@ namespace Shang4Gu3In1
                 tong2üän2 = true;
                 for (int i = 1; i < tong.Length; i++)
                 {
-                    if (tong[i].IndexOf("”") > 0)
+                    if (tong[i].IndexOf("”") > 1 && !IsExtChar(tong[i][0]))
+                        res += tong[i].Substring(0, 1) + "+" + tong[i].Substring(1, tong[i].IndexOf("”"));
+                    else if (tong[i].IndexOf("”") > 0)
                         res += tong[i].Substring(0, tong[i].IndexOf("”"));
                 }
             }
             return res;
         }
 
-        static void NeedNotice(string zy, Worksheet ws, bool chu4li3liwn2miwn2 = false)
+        static void NeedNotice(string zy, Worksheet ws, ref string luei4iong2, bool chu4li3liwn2miwn2 = false)
         {
             if (zy[0].ToString() == zy[1].ToString()) return;
             bool res = false;
@@ -121,7 +129,7 @@ namespace Shang4Gu3In1
                 }
                 listZy.Add(danzy);
             }
-            if (listZy.Count > 0 && listZy[0] == listZy[1])
+            if (listZy.Count > 1 && listZy[0] == listZy[1])
                 return;
             Dictionary<string, List<string>> map = ZyDict(listZy);
             Dictionary<string, List<string>> sheng1 = ZyDict(listZy);
@@ -143,24 +151,30 @@ namespace Shang4Gu3In1
                     }
                 }
             }
-            if ((chu4li3liwn2miwn2 && !Shr4Die5Vin4(in1zie5) && !Shr4Shuang1Shen1(in1zie5)) ||
-                (!chu4li3liwn2miwn2 && !AllListsShareCommonElement(in1zie5, true)))
+            //if ((chu4li3liwn2miwn2 && !Shr4Die5Vin4(in1zie5) && ! Shr4Shuang1Shen1(in1zie5))||//只選既不叠韻又不雙聲的連綿詞
+            //    (!chu4li3liwn2miwn2 && (zy.Contains("+")||(!AllListsShareCommonElement(in1zie5,true) && AllListsShareCommonElement(cie5in1, true)))))//只選中古上古都不同音的互通字
+            //{
+            for (int i = 0; i < listZy.Count; i++)
             {
-                for (int i = 0; i < listZy.Count; i++)
-                {
 
-                    Console.Write(listZy[i]);
-                    Console.Write(string.Join(";", in1zie5[listZy[i]]));
-                    if (i == listZy.Count - 1)
-                        Console.WriteLine();
-                }
-                string ciein = "";
-                for (int i = 0; i < listZy.Count; i++)
+                Console.Write(listZy[i]);
+                luei4iong2 += listZy[i];
+                Console.Write(string.Join(";", in1zie5[listZy[i]]));
+                luei4iong2 += string.Join(";", in1zie5[listZy[i]]);
+                if (i == listZy.Count - 1)
                 {
-                    ciein += string.Join(";", cie5in1[listZy[i]]) + " && ";
+                    Console.WriteLine();
+                    luei4iong2 += Environment.NewLine;
                 }
-                Console.WriteLine(ciein);
             }
+            string ciein = "";
+            for (int i = 0; i < listZy.Count; i++)
+            {
+                ciein += string.Join(";", cie5in1[listZy[i]]) + " && ";
+            }
+            Console.WriteLine(ciein);
+            luei4iong2 += ciein + Environment.NewLine;
+            //}
         }
 
         static Dictionary<string, List<string>> ZyDict(List<string> listZy)
@@ -170,7 +184,8 @@ namespace Shang4Gu3In1
             {
                 foreach (string s in listZy)
                 {
-                    map.Add(s, new List<string>());
+                    if (!map.ContainsKey(s))
+                        map.Add(s, new List<string>());
                 }
             }
             return map;
@@ -304,8 +319,7 @@ namespace Shang4Gu3In1
             return res;
         }
 
-        ///把大字典中的古韻拼音改成廣通拼音
-        static void Gai3Zhong1Gu3Pin1In1(string uen2jän4ja5)//改中古拼音
+        static void Gai3Zhong1Gu3Pin1In1()
         {
             Workbook wk = new Workbook(uen2jän4ja5 + "Guangyun_Langjin_pulish_Alphabetic.2.0.xlsx");
             var gu3vin4 = Fang3Cie5Duei4Pin1In1(wk, "H", "K");
@@ -337,11 +351,13 @@ namespace Shang4Gu3In1
                 doc.MainDocumentPart.Document.Save();
             }*/
 
-            Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+            Application wordApp = new Application();
             Microsoft.Office.Interop.Word.Document wordDoc = wordApp.Documents.Open(uen2jän4ja5 + "dazydiän.docx");
             for (int i = 1; i < wordDoc.Paragraphs.Count; i++)
             {
                 var txt = wordDoc.Paragraphs[i].Range.Text;
+                /*if (txt.EndsWith("；")|| txt.EndsWith(";"))
+                    Console.WriteLine(txt);*/
                 int idx = txt.IndexOf("中古音：");
                 if (idx > 0)
                 {
@@ -370,6 +386,7 @@ namespace Shang4Gu3In1
             wordDoc.Save();
         }
 
+
         static Dictionary<string, string> Fang3Cie5Duei4Pin1In1(Workbook wk, string colCie, string colPinIn)
         {
             Worksheet ws = wk.Worksheets[0];
@@ -380,6 +397,11 @@ namespace Shang4Gu3In1
                     vs.Add(ws.Cells[colCie + row.ToString()].Value.ToString().Trim(), ws.Cells[colPinIn + row.ToString()].Value.ToString().Trim());
             }
             return vs;
+        }
+
+        static bool IsExtChar(char c)
+        {
+            return ((short)c) > -20000 && ((short)c) < 0;
         }
     }
 }
