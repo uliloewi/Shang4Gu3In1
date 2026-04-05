@@ -41,7 +41,7 @@ namespace Shang4Gu3In1
         {
             Console.OutputEncoding = Encoding.UTF8;
             //Gai3Zhong1Gu3Pin1In1();
-            Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考M.xlsx");
+            Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
             Worksheet ws = wk.Worksheets[0];
 
 
@@ -151,8 +151,9 @@ namespace Shang4Gu3In1
                     }
                 }
             }
-            //if ((chu4li3liwn2miwn2 && !Shr4Die5Vin4(in1zie5) && ! Shr4Shuang1Shen1(in1zie5))||//只選既不叠韻又不雙聲的連綿詞
-            //    (!chu4li3liwn2miwn2 && (zy.Contains("+")||(!AllListsShareCommonElement(in1zie5,true) && AllListsShareCommonElement(cie5in1, true)))))//只選中古上古都不同音的互通字
+
+            //if ((chu4li3liwn2miwn2 && !Shr4Die5Vin4(in1zie5) && !Shr4Shuang1Shen1(in1zie5)) ||//只選既不叠韻又不雙聲的連綿詞
+            //    (!chu4li3liwn2miwn2 && (zy.Contains("+") || (!AllListsShareCommonElement(in1zie5, true) && AllListsShareCommonElement(cie5in1, true)))))//只選中古上古都不同音的互通字
             //{
             for (int i = 0; i < listZy.Count; i++)
             {
