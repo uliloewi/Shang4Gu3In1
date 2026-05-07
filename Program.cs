@@ -63,7 +63,7 @@ namespace Shang4Gu3In1
             { "TR知組F", ["tʀ", "tʰʀ", "dʀ", "nʀ"]},
             { "SR生母G", ["sʀ"]},
             { "KL章端組母H", ["kl", "kʰl", "gl", "ŋl"]},
-            { "XL透書船母I", ["xl", "xn", "hl"]},
+            { "XL透書船母I", ["xl", "xn", "sl"]},
             { "ƔL定以母J", [ "ɣl", "l"]},
             { "T章端組K", [ "tʰ", "t", "d"]},
             { "N明泥日娘組L", ["n"]},
@@ -123,8 +123,8 @@ namespace Shang4Gu3In1
             Worksheet ws = wk.Worksheets[0];
             //CheckDen(ws);
             int length = CheckDoubleMapping(ws);
-            var ss = Gu1W(ws);
-            var ss1 = Gu1W(ws,false);
+            //var ss = Gu1W(ws);
+            //var ss1 = Gu1W(ws,false);
             //var vinjo = Svwn3Chu5Vin4Jo5Zy5("𠀽硉𨁸𥓎㪐".ToList(),  new Workbook(uen2jän4ja5 + "上古韻腳.xlsx"));
             var d = OnsetsOC(ws, length);
             foreach (var s in d.OrderBy(x => x.Key).ThenBy(x => x.Value.Sum(d => d.Value)))

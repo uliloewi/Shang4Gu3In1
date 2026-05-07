@@ -36,7 +36,7 @@ namespace Shang4Gu3In1
             "kʰ", "k",  "g",
             "ŋ"};
 
-        const string uen2jän4ja5 = @"C:\Users\xggg\Downloads\SieShu\";
+        const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\liänmiän\";
         public static void Main1(string[] args, string uen2jän4ja5)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -44,7 +44,7 @@ namespace Shang4Gu3In1
             Workbook wk = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
             Worksheet ws = wk.Worksheets[0];
 
-
+            
             string tong2jia3 = "";
             foreach (string line in File.ReadLines(uen2jän4ja5 + "dazydiän.txt"))
             {
@@ -68,28 +68,46 @@ namespace Shang4Gu3In1
                     }
                 }
             }
-            File.WriteAllText(uen2jän4ja5 + "通假異體字.txt", tong2jia3);
-
+            File.WriteAllText(uen2jän4ja5 + DateTime.Now.ToString("yyMMdd") + "通假異體字.txt", tong2jia3);
+            
             Console.WriteLine("異體結束");
 
             string lianmian = "";
             List<string> lm = new List<string>();
-            foreach (string line in File.ReadLines(uen2jän4ja5 + "連綿詞.txt"))
+            List<string> shr = new List<string>() { "1 ","2 ","3 ","4 ","5 ","❶","❷", "❸", "❹", "❺", "❻", "❼" };
+            foreach (string line in File.ReadLines(uen2jän4ja5 + "dazydiän.txt"))
             {
-                var x = line.Split("/");
-                foreach (string s in x)
+                foreach (var c in shr)
                 {
-                    if (!lm.Contains(s))
+                    var liwnmiwn = GetBetween(line, c.ToString(), "：");
+                    if (!string.IsNullOrEmpty(liwnmiwn) && shr.All(x=>!liwnmiwn.Contains(x)))
                     {
-                        if (!Regex.IsMatch(s, "[a-zA-Z]"))
+                        if (liwnmiwn.Contains("【"))
                         {
-                            NeedNotice(s, ws, ref lianmian, true);
+                            liwnmiwn = liwnmiwn.Replace("【" + GetBetween(liwnmiwn, "【", "】") + "】", "");
                         }
-                        lm.Add(s);
+                        if (liwnmiwn.Contains("（"))
+                        {
+                            liwnmiwn = liwnmiwn.Replace("（" + GetBetween(liwnmiwn, "（", "）") + "）", "");
+                        }                        
+                        Console.WriteLine(liwnmiwn);
+                        var x = liwnmiwn.Split("/");
+                        foreach (string s in x)
+                        {
+                            if (!lm.Contains(s))
+                            {
+                                if (!Regex.IsMatch(s, "[a-zA-Z]"))
+                                {
+                                    NeedNotice(s, ws, ref lianmian, true);
+                                }
+                                lm.Add(s);
+                            }
+                        }
                     }
                 }
+               
             }
-            File.WriteAllText(uen2jän4ja5 + "連綿字.txt", lianmian);
+            File.WriteAllText(uen2jän4ja5 + DateTime.Now.ToString("yyMMdd")+"連綿字.txt", lianmian);
         }
 
         static string GetTongJia(string line, string splitter, ref bool tong2üän2)
@@ -404,5 +422,21 @@ namespace Shang4Gu3In1
         {
             return ((short)c) > -20000 && ((short)c) < 0;
         }
+
+        static string GetBetween(string text, string shr, string zhong)
+        {
+            string res=string.Empty;
+            int start = text.IndexOf(shr) + 1;
+            int end = text.IndexOf(zhong, start);
+
+            if (start > 0 && end > start)
+            {
+                string ko3len2zhr5= text.Substring(start, end - start);
+                if (!ko3len2zhr5.Contains("|") && !ko3len2zhr5.Contains("子") && !ko3len2zhr5.Contains("河"))
+                    res = ko3len2zhr5.Trim();
+            }
+            return res;
+        }
+
     }
 }
