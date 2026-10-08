@@ -100,20 +100,20 @@ namespace Shang4Gu3In1
 #pragma endregion 寫書
 
 #pragma region 按聲旁筆畫數排序
-            /*    //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
+                /*  //var myDict = ReadCsvToDictionary(uen2jän4ja5 + "output.csv").OrderBy(x=>x.Value);
                 //            Console.OutputEncoding = Encoding.UTF8;
                 Workbook wk0 = new Workbook(uen2jän4ja5 + "廣韻字上古音形考.xlsx");
                 Worksheet ws0 = wk0.Worksheets[0];
                 //            //MoveRedCharactersToFrontInColumn(ws0, 15);
                 Din4Vin4Bu4(ws0, 4, 6);//定韻部
-                //            //UnmergeAndPropagateValueInColumn(ws0, 1);
-                //            int startRow = 2;
-                //            /*foreach (var kv in myDict)//.Where(x=>x.Value>2))
-                //            {
-                //                var (rowIndex, rowCount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
-                //                CutAndInsertRows(ws0, rowIndex, rowCount, ref startRow);
-                //                startRow += rowCount;
-                //            }*
+                //            //unmergeandpropagatevalueincolumn(ws0, 1);
+                //    int startrow = 2;
+                //    foreach (var kv in myDict)//.where(x=>x.value>2))
+                //    {
+                //        var (rowindex, rowcount) = FindRowAndMergedLengthByPrefix(ws0, kv.Key, 0);
+                //        CutAndInsertRows(ws0, rowindex, rowcount, ref startrow);
+                //        startrow += rowcount;
+                //    }
                 //            Tuei1Vin4Bu4(ws0, 10,6);
                 wk0.Save(uen2jän4ja5 + "廣韻字上古音形考1.xlsx");*/
 #pragma endregion 按聲旁筆畫數排序
