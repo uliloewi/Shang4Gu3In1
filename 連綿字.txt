@@ -1,5 +1,5 @@
-䀂hˤan𥂥
-qan &&  && 
+䀂hˤan𥂫sdˤan
+qan && dzan && 
 媕hʀamɣ;hˤəm;hˤəp娿hˤal;hˤalɣ
 qyä́m;qöm;qöp && qö;qö́ && 
 腤hˤəm䐶stˤəm;stəmɣ
@@ -8,6 +8,8 @@ qöm && tsöm;tsím &&
 qyöp;qyäp;qyöm &&  && 
 骯kʰˤaŋɣ;gˤaŋɣ髒stˤaŋɣ
 kháng;xáng && tsáng && 
+菴hʀam;hˤəm䕡ʀa
+qyäm;qöm && lyo && 
 胦haŋ;hʀˤɔŋ肛kʀˤɔŋ;xʀˤɔŋ
 qyang;qröng && kröng;hröng && 
 嵁kʰʀˤəm;kʰˤəm;ŋˤəm;ŋˤəmɣ;sdʀˤəmɣ崿ŋˤak
@@ -56,8 +58,8 @@ pra && tscra &&
 phra;pra && hra;ngra && 
 𢑦dø𢃳dø;pʀˤaɣ
 dzjiäu && dzjiäu;prá && 
-.跁bʀˤaɣ;bʀˤah跒kʰʀˤaɣ
- && brá;brà && khrá && 
+跁bʀˤaɣ;bʀˤah跒kʰʀˤaɣ
+brá;brà && khrá && 
 𥝧bʀˤah稏hʀˤah
 brà && qrà && 
 菝bˤat;bʀˤɛt葜kʰʀˤɛt
@@ -66,8 +68,6 @@ buat;brät && khrät &&
 buat;brät && khrät && 
 𥎱bʀˤɛt䂒kʰʀˤɛt
 brät && khrät && 
-鳻bən;pʀˤan鳩ko
-büën;pran && kyu && 
 螌pʀˤan蝥mɔ;mʀˤo;mo;mɔh
 pran && müo;mrau;myu;müò && 
 斒pʀˤan;pʀˤɛn斕ʀˤɛn
@@ -86,6 +86,8 @@ thàn && buàn &&
 pràu && sàu && 
 阸hʀˤɛk;hʀˤɛkh㠔pʀˤɛkh
 qrek;qrè && prè && 
+蘿ʀˤal蔔bˤək
+lö && bëk && 
 蓓bˤøɣ;bˤəlɣ蕾ʀʷˤəlɣ
 bö́i;buö́i && luö́i && 
 賴ʀˤath䟺bˤath;pˤath
@@ -116,12 +118,12 @@ ngyu && biei;piḯ;piï;piéng &&
 piei;biï;byï && siei && 
 梐bˤølɣ;pˤøl枑ɣˤah
 biéi;piei && xò && 
+𥏠pˤɛ𥎬
+piei &&  && 
 狴pˤøl犴ŋˤan;ŋˤanh
 piei && ngan;ngàn && 
 峽ɣʀˤəp崥bˤɛ;pɛɣ
 xräp && biei;piḯ && 
-𦸣pɛɣ;bˤɛɣ;pøth鼠xlʷaɣ莞gʀʷˤanɣ;kʷˤan;gʷˤan
-piḯ;biéi;pì && sjyó && xwán;kuan;xuan && 
 𠈺bˤɛlɣ㒅kʰˤɛlɣ
 biéi && khiéi && 
 犢ɣlˤɔk襣bøth
@@ -140,6 +142,8 @@ pit && lö &&
 buot;byt && tscyt && 
 胇bʀət肸xət;xʀət
 byt && hyët;hyt && 
+荸薺sdˤølɣ;sdøl
+ && dziéi;dzi && 
 㱸bɛk;bˤɛk㱤sˤɛk
 biäk;biek && siek && 
 鷿bˤɛk鷉
@@ -160,14 +164,12 @@ pyuk;byk && üyk &&
 pyp;byäp && byp;byp;byäp && 
 瘭pø疽stʰʷa;mok
 piäu && tshyo;myuk && 
-𦠎pø;pʰø𦞵xˤø
+𦠎pø;pʰø𦟞xˤø
 piäu;phiäu && hieu && 
 蝙pˤɛn蝠pək
 pien && pyuk && 
 萹pˤɛnɣ;pʰɛn;pˤɛn蓄xok;ʀxok
 pién;phiän;pien && hyuk;tchyuk && 
-𥣰pˤøn;pˤønɣ豆dˤɔh
-pien;pién && dù && 
 愝hˤɛnɣ惼pˤɛnɣ
 qién && pién && 
 艑bˤɛnɣ艖sdˤal;stʰʀˤal
@@ -176,8 +178,8 @@ bién && dzö;tschra &&
 bién && buk && 
 雀støk䒪bʀɛnh
 tsyak && byä̀n && 
-蹩bˤøt𨇨sˤøt
-biet && siet && 
+蹩bˤøt躠sˤat
+biet && sat && 
 𩓝bˤɛt䫔kʰˤɛt;kʰˤɛth;kʰˤɛh
 biet && khiet;khièi;khièi && 
 大dˤalh;dˤath;tʰˤat𡷘bʀat
@@ -192,6 +194,8 @@ piä́ng;piäng;bieng && jiäng &&
 bieng && sieng && 
 嶓pˤal冢tʀɔŋɣ
 puö && tcyóng && 
+玻pʰˤal璃ʀɛl
+phuö && liï && 
 駊pˤalɣ;pʰˤalɣ騀ŋˤalɣ
 puö́;phuö́ && ngö́ && 
 爆pʀˤøk;pʀˤøkh;pˤak爍xløk
@@ -230,8 +234,8 @@ puak;brek;byäk && lo &&
 puak && dang && 
 餺pˤak飥tʰˤak
 puak && thak && 
-培bˤə;bˤɔɣ塿ʀˤɔɣ
-buöi;bú && lú && 
+㟝bˤɔɣ塿ʀˤɔɣ
+bú && lú && 
 䴺bˤɔɣ𪌘tʰˤɔɣ
 bú && thú && 
 婄bˤə;bˤɔɣ;pʰˤɔɣ𡝦nˤɔɣ
@@ -258,8 +262,6 @@ bräng && puk &&
 üyk && bo;phrök;buk;puk && 
 獛pˤɔk鉛ɣlʷɛn
 puk && jvän && 
-𪖈pˤɔk𪔿pʰˤɔk
-puk && phuk && 
 鏷bˤok𨬕
 bok &&  && 
 䗱bˤɔk;bˤok蠃ʀʷˤal;ʀʷˤalɣ
@@ -270,8 +272,6 @@ buk;bok && suk &&
 tshang && kräng && 
 䟃stʰˤəp;stʰˤəm𧽼ɣlˤəm
 tshöp;tshöm && döm && 
-䀂hˤan𥂫sdˤan
-qan && dzan && 
 𡎻;sdʀˤɛn;sdʀɛn門mˤən
 dzrän;dzcrän;dzcyän && muon && 
 莽mˤoɣ;mˤaɣ;mˤaŋɣ蒼stʰˤaŋɣ;stʰˤaŋ
@@ -282,8 +282,6 @@ ngö́m;khym;khým;khyä́m && tshö́m;sö́m &&
 tshàn && làn && 
 蠐sdøl;sdˤøl螬sdˤo
 dzi;dziei && dzau && 
-髝ʀˤo;ʀˤoh髞sˤoh
-lau;làu && sàu && 
 𠹊stʰˤoɣ𡂕ʀˤoɣ
 tsháu && láu && 
 愺stʰˤoɣ恅ʀˤoɣ
@@ -320,8 +318,6 @@ dzcreng;dzcräng && üäng;xweng &&
 dzcreng && nreng && 
 鏳sdʀˤɛŋ鎗stʰʀˤaŋ
 dzcreng && tschräng && 
-蠪ʀˤɔŋ虰tˤɛŋ;tʰʀɛŋ;dʀˤəŋ蟻ŋʀalɣ
-lung && tieng;tchiäng;dcreng && ngyḯ && 
 䆵dʀˤɛŋ𥥈hʀʷˤaŋh;hʀʷˤɛŋ
 dcreng && qwä̀ng;qweng && 
 碅磳stˤəŋ;sdʀəŋ
@@ -388,6 +384,8 @@ dzcrau && jyang &&
 xöm;xö́m && tschre && 
 㼮skʰʀˤɛl㼽skʰʀaŋɣ;sʀaŋɣ
 tschre && tschyáng;scyáng && 
+鬼kʷəlɣ芆stʰʀˤɛl
+küë́i && tschre && 
 茈sdɛ;stɛɣ;sdʀˤɛ葫ɣˤa;xˤa
 dziï;tsiḯ;dzcre && xo;ho && 
 𪗶sdʀˤɛ𪘲ŋʀˤɛ
@@ -532,8 +530,8 @@ dcröng && khröng &&
 dzcräm && dzcröng && 
 愴stʰʀaŋh;stʰʀaŋɣ恍kʷˤaŋ
 tschyàng;tschyáng && kuang && 
-虺xʷˤəl;xʀʷˤəl;xʷəlɣ尵dʷˤəl;dʀʷˤəl
-huöi;hwäi;hüë́i && duöi;dcwäi && 
+𡯥xʷˤəl;xʀʷˤəl尵dʷˤəl;dʀʷˤəl
+huöi;hwäi && duöi;dcwäi && 
 鳻bən;pʀˤan鶞ʀxʷən
 büën;pran && tchüyn && 
 𦚧kʰlʷənɣ䏰nʷənh
@@ -542,8 +540,6 @@ tsjhvín && njvìn &&
 tshiei && qreng && 
 麡sdˤøl;sdʀˤøl;stˤøl狼ʀˤaŋ
 dziei;dzcräi;tsiei && lang && 
-蝤sto;sdo蠐sdøl;sdˤøl
-tsyu;dzyu && dzi;dziei && 
 𧙞skʰɛk膝søt
 tshiäk && sit && 
 𪒑skʰˤɛk𪒄mˤɛk
@@ -564,8 +560,6 @@ dziäu && ngieu &&
 lieu && dziäu;dzcrau && 
 僬støh;sdø;stø僥ŋˤø
 tsiä̀u;dziäu;tsiäu && ngieu && 
-㴥stʰøh㴂tʰˤam
-tshiä̀u && tham && 
 𪑊stʰøh䵴ɣləŋh
 tshiä̀u && jỳng && 
 桾kʷən櫏stʰɛn
@@ -584,8 +578,6 @@ döm && mra &&
 tshièn;tshiä̀ng && lièn && 
 嬮hamh;ham;hap嬱stʰamh
 qiä̀m;qiäm;qiäp && tshiä̀m && 
-趔ʀɛt趄stʰʷa
-liät && tshyo && 
 鵁kʀˤo鶄stʰˤɛŋ;stɛŋ
 krau && tshieng;tsiäng && 
 蜻stʰˤɛŋ;stɛŋ蜓dˤɛŋ;dˤɛŋɣ;dˤøŋɣ
@@ -602,6 +594,8 @@ mièng && tshieng;tshièng &&
 tshyu && sjiï && 
 次stʰølh蟗stʰo
 tshì && tshyu && 
+蝤sto;sdo蠐sdøl;sdˤøl
+tsyu;dzyu && dzi;dziei && 
 嵯stʰʀɛl;sdˤal峨ŋˤal
 tschyï;dzö && ngö && 
 銼stʰʷˤalh;sdʷˤal;stʷˤal;sdʷˤal𨰠ʀʷˤal
@@ -678,8 +672,8 @@ töp && qöp &&
 xöp && döp && 
 馺sxˤəp𩣯glˤəp
 söp && döp && 
-𠉤glˤəp儑ŋˤap;ŋˤəmh;ŋˤəp
-döp && ngap;ngö̀m;ngöp && 
+儑ŋˤap;ŋˤəmh;ŋˤəp𠉤glˤəp
+ngap;ngö̀m;ngöp && döp && 
 菈ʀˤəp𦾽glˤəp
 löp && döp && 
 䗘kˤap𧌏dˤəp
@@ -746,8 +740,6 @@ këk && tëk &&
 thap && tëng && 
 𧀧mˤəŋh𧄼tˤəŋh
 më̀ng && të̀ng && 
-踜ʀˤəŋh蹬dˤəŋh
-lë̀ng && dë̀ng && 
 㱥ʀəŋ;ʀˤəŋh𣩟dˤəŋh
 lyng;lë̀ng && dë̀ng && 
 倰ʀˤəŋ僜dˤəŋh;dˤəŋh;tʰʀəŋ
@@ -784,6 +776,10 @@ lieng && tiek &&
 tiek && liek && 
 馬mʀˤaɣ𩷎dˤɛk
 mrá && diek && 
+嘀咕
+ &&  && 
+弴tʷˤən;tˤø弓kʷəŋ
+tuon;tieu && kyung && 
 𦶌tˤø葫ɣˤa;xˤa
 tieu && xo;ho && 
 𩾗stø;tˤø鷯ʀøh;ʀˤø
@@ -800,8 +796,6 @@ tièu && qiéu;qrau &&
 dö;dan;tien && xiei && 
 𩬑tˤɛm鬑ʀˤɛm;ʀam
 tiem && liem;liäm && 
-䩇tʀˤɛm;tˤɛm𩈜tʷˤəl
-tcräm;tiem && tuöi && 
 蝘hanɣ;hˤɛnɣ蜒lɛn
 qyón;qién && jiän && 
 㶘ɣlˤɛmɣ淊gˤəmɣ;hʀˤəm;hʀˤəmh;ɣlamɣ
@@ -856,6 +850,8 @@ bieng && diéng;dièn &&
 dieng;diéng;dién && muk && 
 鹿ʀˤɔk茤
 luk &&  && 
+哆tˤalɣ;tˤalh;tʀˤalh;tʰʀˤal;tʰalɣ;tʰaɣ;tʰəh嗦
+tö́;tö̀;tcrà;tchra;tsjhiḯ;tsjhyá;tsjhỳ &&  && 
 瀢ɣlʷˤəlɣ;ɣlʷəlɣ𣵻ɣlˤalɣ
 duö́i;jví && dö́ && 
 活gʷˤat;kʷˤat莌xlʷˤat;ɣlʷˤat
@@ -888,8 +884,6 @@ múng;më̀ng && túng &&
 tùng && tshyong;song;sùng;syong && 
 佔tˤɛm侸tˤɔ
 tiem && tu && 
-僂ʀɔɣ;ʀˤɔ;ʀˤɔh侸tˤɔ
-lüó;lu;lù && tu && 
 𩮷tˤɔ𩮶sˤɔ
 tu && su && 
 蝌kʰʷˤal蚪tˤɔɣ
@@ -898,6 +892,8 @@ khuö && tú &&
 tú && sú && 
 獨dˤɔk梪dˤɔh
 duk && dù && 
+餖dˤɔh飣tˤɛŋh
+dù && tièng && 
 㛒dˤɔh譳nˤɔh;nˤɔh
 dù && nù;nù && 
 䛠tˤɔh譳nˤɔh;nˤɔh
@@ -944,6 +940,10 @@ tschràu && thuan;tuan &&
 tuàn && syu;siäu && 
 毋ma頧tʷˤəl;tʷˤəlɣ
 müo && tuöi;tuö́i && 
+䩇tʀˤɛm;tˤɛm𩈜tʷˤəl
+tcräm;tiem && tuöi && 
+礧ʀʷˤəlɣ;ʀʷˤəlh䃍ɣlʷˤəlh
+luö́i;luö̀i && duö̀i && 
 𨻾ʀʷˤəlɣ𡑈tʷˤəlɣ
 luö́i && tuö́i && 
 頛ʀʷˤəlɣ頧tʷˤəl;tʷˤəlɣ
@@ -956,12 +956,16 @@ luö́i && tuö́i &&
 küì;tuö́i && nguòn && 
 陮ɣlʷˤəlɣ隗ŋʷˤəlɣ
 duö́i && nguö́i && 
+鍊ʀˤønh𨯝ɣlʷˤəlɣ
+lièn && duö́i && 
 黮xlˤəmɣ;ɣlˤəmɣ䨴ɣlʷˤəth
 thö́m;dö́m && duö̀i && 
 䨢ɣlˤəmɣ䨴ɣlʷˤəth
 dö́m && duö̀i && 
 𩪁kʷˤəlh䯟ɣlʷˤəlh
 kuö̀i && duö̀i && 
+餛ɣʷˤən飩dʷˤən
+xuon && duon && 
 混ɣʷˤənɣ沌dʷˤən;dʷˤənɣ;dʀʷanɣ
 xuón && duon;duón;dcüä́n && 
 倱ɣʷˤənɣ伅
@@ -1006,14 +1010,16 @@ phüáng && püët;phüë̀i;phüët &&
 qyë́i;qö̀i && phüë̀i && 
 𧌘bəlh𧔥ɣlʷəl;ɣlʷəlh
 büë̀i && jvi;jvì && 
-鼣bath鼠xlʷaɣ
-büö̀j && sjyó && 
+蘆ʀa;ʀˤa䉬path
+lyo;lo && püö̀j && 
 猦pəm𤝕mˤoɣ
 pyung && mú && 
 猦pəm母mˤoɣ
 pyung && mú && 
 偓hʀˤɔk㒥pʰoŋ
 qrök && phyung && 
+嶐𡾿
+ &&  && 
 𣯻pən毭dˤɔh
 püën && dù && 
 吩咐pɔ
@@ -1036,6 +1042,10 @@ büën;büë́n && qüën;qüë́n;qüon &&
 phüo && xrám && 
 䓵pʰɔ萮lɔ
 phüo && jüo && 
+珷maɣ玞pa
+müó && püo && 
+碔maɣ砆
+müó &&  && 
 鳺pa鴀pə;pəɣ
 püo && pyu;pyú && 
 夫ba;pa不pə;pəɣ;pət
@@ -1112,27 +1122,31 @@ kàm;krä̀m && thàm &&
 kau && lau && 
 咎kˤo;goɣ繇lø;lo;dʀoh
 kau;gyú && jiäu;jyu;dcyù && 
-𪁜ʀˤaŋ鷎kˤo
+𪁜ʀˤaŋ鷱kˤo
 lang && kau && 
+桔kˤɛt;gˤɛt槔kˤo
+kiet;xiet && kau && 
 女nʀaɣ;nʀah𥓖kˤoɣ
 nyó;nyò && káu && 
+疙ŋət瘩
+ngyët &&  && 
+虼蚤stˤoɣ
+ && tsáu && 
 𥉔kʀˤɛŋɣ䁅mʀˤaŋh;mʀˤɛŋɣ
 kréng && mrä̀ng;mréng && 
 牂stˤaŋ牁kˤal
 tsang && kö && 
 㗻kʷˤal;gʷˤal唆sxʷˤal
 kuö;xuö && suö && 
+蝸kʀʷˤɛl;kʀʷˤal牛ŋʷə
+kwe;kwa && ngyu && 
 猓kʷˤalɣ𤡮nɛn
 kuö́ && njiän && 
-猓kʷˤalɣ玀
-kuö́ &&  && 
 蜾kʷˤalɣ蠃ʀʷˤal;ʀʷˤalɣ
 kuö́ && luö;luö́ && 
 䈓kˤat䉈sxˤat;sxˤanɣ
 kat && sat;sán && 
 轇kʀˤo輵kˤat
-krau && kat && 
-㶀kʀˤo㵧kˤat
 krau && kat && 
 閤kˤəp閭ʀa
 köp && lyo && 
@@ -1152,6 +1166,8 @@ ngo && kung;tsjyong &&
  &&  && 
 髸kɔŋ鬆skʰɔŋ;sxˤoŋ;sxˤɔŋh;sxɔŋ
 kyong && tshyong;song;sùng;syong && 
+孑kʀat孓kʷat;kʷət
+kiät && küot;küët && 
 輁gɔŋ;kɔŋɣ軸dʀok
 gyong;kyóng && dcyuk && 
 從stʰɔŋ;sdɔŋ;sdɔŋh𨹁gˤɔŋ;kˤɔŋh
@@ -1164,6 +1180,8 @@ ku && luk &&
 küó;ku;kú && khý && 
 薢kʀˤə;kʀˤɛɣ;kʀˤɛh茩kˤɔɣ
 kräi;kré;krè && kú && 
+岣kɔ;kˤɔɣ嶁ʀˤɔɣ;ʀɔ;ʀɔɣ
+küo;kú && lú;lüo;lüó && 
 句gɔ;kˤɔ;kɔh;kˤɔh當klˤaŋ;klˤaŋh
 güo;ku;küò;kù && tang;tàng && 
 怐kʰˤɔkh;kɔkh;kˤɔkh;xˤɔh愗mˤɔkh
@@ -1184,8 +1202,6 @@ pò && kuk &&
 kuk && suk && 
 枸kɔɣ;kˤɔ;kˤɔɣ榾kʷˤət
 küó;ku;kú && kuot && 
-蝸kʀʷˤɛl;kʀʷˤal牛ŋʷə
-kwe;kwa && ngyu && 
 歄kʀʷˤɛl𣢉ŋʀʷˤal
 kwe && ngwa && 
 籰ɣʷak䈑kʀʷˤalɣ
@@ -1208,6 +1224,8 @@ kvet;güi && kuang &&
 kvet;hvet && kuang && 
 芵kʷˤɛt茪kʷˤaŋ
 kvet && kuang && 
+東tˤɔŋ莞gʀʷˤanɣ;kʷˤan;gʷˤan
+tung && xwán;kuan;xuan && 
 䒷kʷˤat蔞ʀɔ;ʀˤɔ;ʀɔɣ
 kuat && lüo;lu;lüó && 
 𦸈kʷˤat𧁾ʀˤɔ
@@ -1244,8 +1262,14 @@ küèj && jièj &&
 kuon && luon && 
 㱎kʷˤən于ɣʷa
 kuon && üo && 
+錕kʷˤən;kʷˤənɣ鋘ŋˤa;ɣʀʷˤa
+kuon;kuón && ngo;xwa && 
+錕kʷˤən;kʷˤənɣ鋙ŋa;ŋaɣ
+kuon;kuón && ngyo;ngyó && 
 猑kʷˤən蹄dˤøl
 kuon && diei && 
+𣣠ɣˤɔh㰺ɣʀˤa
+xù && xra && 
 顢mˤan頇ŋˤanh;ŋˤat;xˤan
 muan && ngàn;ngat;han && 
 欴ʀˤaŋ㰠xˤaŋ
@@ -1280,7 +1304,7 @@ xö́m;ngräm && ngak &&
 tsjit && xàn && 
 焄xʷən蒿xˤo
 hüën && hau && 
-䜰xˤo䜮ʀˤo;ʀˤø
+𧯌xˤo䜮ʀˤo;ʀˤø
 hau && lau;lieu && 
 豪ɣˤo豬tʀa
 xau && tcyo && 
@@ -1292,7 +1316,7 @@ lang && xöi &&
 lang && xöi && 
 榽gˤɛ;gʀˤɛ橀xˤəɣ;xˤɛ
 xiei;xre && hö́i;hiei && 
-竪dɔɣ𥩲gˤəɣ
+豎dɔɣ𥩲gˤəɣ
 dzjüó && xö́i && 
 赫xʀˤak茲skə
 hräk && tsy && 
@@ -1314,6 +1338,8 @@ xat && üo &&
 muat && zjiät;xat && 
 𠗂gˤak凙glˤak
 xak && dak && 
+癨xʷˤak亂ʀʷˤanh
+huak && luàn && 
 鑊ɣʷˤak鐸glˤak
 xuak && dak && 
 𩂹ɣlʷɛk䨥ɣʷˤak;klɛk
@@ -1370,8 +1396,6 @@ xu && jüo;jiäu &&
 xrè && xù && 
 䞀ɣˤɔh𧷡ʀˤɔh
 xù && lù && 
-𣣠ɣˤɔh㰺ɣʀˤa
-xù && xra && 
 𣤋ʀˤɔh㰯tʰˤɔh;xˤɔh
 lù && thù;hù && 
 𧫞ʀˤɔh詬xˤɔh;kʰˤɔh;kˤɔɣ
@@ -1390,8 +1414,6 @@ diei;diei && xo &&
 thiéi;diei && xo && 
 𪖋𪕱ɣˤa
  && xo && 
-葫ɣˤa;xˤa蘆ʀa;ʀˤa
-xo;ho && lyo;lo && 
 瓠ɣˤa;ɣˤah𤬜ʀˤa
 xo;xò && lo && 
 衚衕ɣlˤɔŋh;ɣlˤɔŋ
@@ -1434,6 +1456,8 @@ xwàn;xwan && üon &&
 bàng;bang && xuang && 
 粻tʀaŋ餭ɣʷˤaŋ
 tcyang && xuang && 
+癀ɣʷˤaŋ疸tˤanɣ;tˤanh
+xuang && tán;tàn && 
 彷bˤaŋ;pʰaŋɣ徨ɣʷˤaŋ
 bang;phüáng && xuang && 
 女nʀaɣ;nʀah媓ɣʷˤaŋ
@@ -1442,6 +1466,8 @@ nyó;nyò && xuang &&
 bang && xuang && 
 撗目mok
  && myuk && 
+休xo;xɔɣ崲
+hyu;hüó &&  && 
 硫ʀo磺
 lyu &&  && 
 盤bˤan桓ɣʷˤan
@@ -1460,6 +1486,8 @@ tháng && huáng &&
 muán && xuán && 
 䝹hʷˤanɣ𧶲tʷˤanɣ
 quán && tuán && 
+莞gʀʷˤanɣ;kʷˤan;gʷˤan爾nˤølɣ;nɛlɣ
+xwán;kuan;xuan && niéi;njiḯ && 
 漫mˤanh漶ɣʷˤanh
 muàn && xuàn && 
 睕hʷanɣ;hʷˤanh;hʷˤat䀓ɣʷˤanh
@@ -1468,6 +1496,10 @@ qüón;quàn;quat && xuàn &&
 siḯ && huàn && 
 無ma槵ɣʀʷˤanh
 müo && xwàn && 
+虺xʷˤəl;xʀʷˤəl;xʷəlɣ尵dʷˤəl;dʀʷˤəl
+huöi;hwäi;hüë́i && duöi;dcwäi && 
+崴hʀʷˤəl㠢gʷˤəlɣ
+qwäi && xuö́i && 
 𥘄hʷət䃶gʀʷˤəl
 qüët && xwäi && 
 𧱘ŋʀʷˤəth𧱳xʀʷˤəth
@@ -1476,8 +1508,6 @@ mrä̀i && hwä̀i &&
 hüyk && hwäk && 
 漰pʰˤəŋ湱xʀʷˤɛk;xʀʷˤak
 phëng && hwek;hwäk && 
-漍kʀʷˤək湱xʀʷˤɛk;xʀʷˤak
-kwek && hwek;hwäk && 
 㗲ɣʀʷˤɛk嘖skʀˤɛk;skʀˤak;sgʀˤɛk
 xwek && tscrek;tscräk;dzcrek && 
 䎕xʀʷˤaŋ;xʀʷˤɛŋ𦑌xʷək;xʀʷˤək
@@ -1488,10 +1518,12 @@ küë́i && xuëk &&
 byí;phiḯ;bi && hvi && 
 觜stɛ;stʷɛ;stʷɛɣ蠵ɣlʷɛ;ɣʷˤɛ
 tsiï;tsvï;tsvḯ && jvï;xvei && 
+子skəɣ巂gʷˤɛ
+tsý && xvei && 
 觜stɛ;stʷɛ;stʷɛɣ觿ɣʷˤɛ;xʷɛ
 tsiï;tsvï;tsvḯ && xvei;hvï && 
-俳bʀˤəl佪ɣʷˤəl
-bräi && xuöi && 
+徘bˤəl徊ɣʷˤəl
+buöi && xuöi && 
 茴ɣʷˤəl香xaŋ
 xuöi && hyang && 
 𦞙tʷˤəlɣ;xʷˤəlɣ䏨tʷˤəlɣ
@@ -1510,8 +1542,6 @@ tsì && hvi;hvì;hvï;svi &&
 xvèi && ko && 
 𥏙kʰʷath䂕xʷath
 khüö̀j && hüö̀j && 
-餛ɣʷˤən飩dʷˤən
-xuon && duon && 
 餫ɣʷənh;ɣʷˤən飩dʷˤən
 üë̀n;xuon && duon && 
 惛xʷˤən;xʷˤənɣ;xʷˤənh懣mˤanɣ;mˤənɣ;mˤənh
@@ -1522,6 +1552,8 @@ xuón;hüëi;xuon && xuang &&
 qyï;qyḯ && nyḯ && 
 天tʰˤøŋ䧇həl
 thien && qyëi && 
+嫛hˤɛ婗ŋˤɛ
+qiei && ngiei && 
 𣕁ŋˤɛ;hˤɛ㯕sxˤɛ
 ngiei;qiei && siei && 
 萎hʀʷɛlh;hʀʷɛl䔟lɛl
@@ -1530,6 +1562,10 @@ qüï̀;qüï && jiï &&
 liem && jiï && 
 扊lamɣ扅lɛl
 jiä́m && jiï && 
+逶hʀʷɛl迆ɣlɛlɣ;ɣlɛl
+qüï && jiḯ;jiï && 
+委hʀʷɛl;hʀʷɛlɣ迤
+qüï;qüḯ &&  && 
 歋lɛl歈lɔ;lˤɔ
 jiï && jüo;du && 
 𠐀lɛl𢋅lo;lɔ
@@ -1538,10 +1574,6 @@ jiï && jyu;jüo &&
 jiï && jüo;du && 
 螔sɛl;lɛl蝓lɔ
 siï;jiï && jüo && 
-委hʀʷɛl;hʀʷɛlɣ蛇ɣlɛl;ŋlal;xlˤal
-qüï;qüḯ && jiï;zjya;thö && 
-委hʀʷɛl;hʀʷɛlɣ虵lalɣ;ɣlɛl;ŋlal
-qüï;qüḯ && jyá;jiï;zjya && 
 鵕sxʷənh䴊ŋʀal
 svìn && ngyï && 
 嵎ŋɔ峓løl
@@ -1558,8 +1590,6 @@ scra;scrà && jiä̀n;ziä̀n;ji &&
 diei;ji && jièj && 
 㽃pʰˤan㼢ɣlə
 phuan && jy && 
-墨mˤək台xlˤə;ɣlə
-mëk && thöi;jy && 
 盱xʷa眙ɣlə;ʀxəh
 hüo && jy;tchỳ && 
 猗hʀal;hʀalɣ狔nʀalɣ
@@ -1578,7 +1608,7 @@ xö́i;khöi && jý;zý &&
 qyë́i;qö̀i && hyëi;hyë́i && 
 靉həlɣ;hˤəth霼xəlɣ;xəth
 qyë́i;qö̀i && hyë́i;hyë̀i && 
-埤bɛ堄ŋˤɛɣ;ŋˤɛh
+埤bɛ堄ŋˤɛɣ;ŋˤɛh 裨晲
 biï && ngiéi;ngièi && 
 𣈯㒾xlɛlh;ɣlɛlh
  && sjiï̀;jiï̀ && 
@@ -1590,6 +1620,8 @@ qiï̀ && nyó;nyò &&
 qỳ && njy && 
 唭kʰəh㘈ŋək;ŋəh
 khỳ && ngyk;ngỳ && 
+窺kʰʷɛl視dølɣ;dølh
+khvï && dzjí;dzjì && 
 枍hˤɛh栺kløl;ŋˤɛh
 qièi && tsji;ngièi && 
 婉hʷanɣ嫕hˤɛh;hˤɛth
@@ -1686,6 +1718,8 @@ miä́u && jiä́u &&
 khyä̀u && ngyä̀u && 
 礉kʰʀˤø;kʰʀˤøh磽ŋʀˤøh;kʰˤøɣ;kʰʀˤø
 khrau;khràu && ngràu;khiéu;khrau && 
+橪nɛnɣ;hˤɛn支klɛ
+njiä́n;qien && tsjiï && 
 胭hˤɛn脂kløl
 qien && tsji && 
 閼hˤat;hat;hʀan;hˤɛn氏klɛ;glɛɣ;skɛŋ
@@ -1714,8 +1748,8 @@ dzcrä́n && ngran;ngyä́n &&
 ngyä́m && ngüo;ngyong && 
 𡹮hʀamɣ嵫skə
 qyä́m && tsy && 
-俺hʀamh;hɛmh𠆲ŋɛmɣ
-qyä̀m;qyö̀m && ngyö́m && 
+掩hʀamɣ𠆲ŋɛmɣ
+qyä́m && ngyö́m && 
 曼manh;mˤan延lɛnh;lɛn
 müòn;muan && jiä̀n;jiän && 
 蔓manh;mˤan莚lɛnh;lɛn
@@ -1726,16 +1760,22 @@ liä́m;liä̀m && jiä̀m &&
 qyö̀m && khú && 
 琅ʀˤaŋ邪ɣla;sɣa
 lang && jya;zya && 
-莫mˤak邪ɣla;sɣa
-mak && jya;zya && 
-邪ɣla;sɣa𢋅lo;lɔ
-jya;zya && jyu;jüo && 
 琅ʀˤaŋ琊
 lang &&  && 
 琅ʀˤaŋ瑘ɣla
 lang && jya && 
 鏌mˤak釾ɣla
 mak && jya && 
+鏌mˤak鋣
+mak &&  && 
+鏌mˤak鎁ɣla
+mak && jya && 
+揶揄lˤɔɣ;lˤɔ;lo;lɔ
+ && dú;du;jyu;jüo && 
+捓揄lˤɔɣ;lˤɔ;lo;lɔ
+ && dú;du;jyu;jüo && 
+擨lal歈lɔ;lˤɔ
+jya && jüo;du && 
 斜ɣla;sɣa谷ɣlɔk;kˤɔk;ʀˤɔk
 jya;zya && jyok;kuk;luk && 
 伽倻
@@ -1766,10 +1806,12 @@ qin &&  &&
 qin;qien &&  && 
 絪høn縕hʷənɣ;hʷənh;hʷˤən;hʷən
 qin && qüë́n;qüë̀n;quon;qüën && 
+鸚hʀˤɛŋ鵡maɣ
+qreng && müó && 
 姚lø莖hʀˤɛŋ;ɣʀˤɛŋ
 jiäu && qreng;xreng && 
-螢ɣʷˤɛŋ火xʷˤalɣ蟲dʀoŋ;dʀoŋh
-xveng && huö́ && dcyung;dcyùng && 
+蘡hɛŋ薁hok
+qiäng && qyuk && 
 屵ŋˤat;ŋanɣ磭tʰøk;ŋʀənɣ;ŋøk
 ngat;ngyón && tsjhyak;ngýn;ngyak && 
 蚯kʰʷə蚓lønɣ
@@ -1784,14 +1826,10 @@ qiéng && miéng &&
 miéng;qrä̀ng;qiéng && mieng;miéng && 
 濎tˤɛŋɣ濙hʷˤɛŋɣ
 tiéng && qvéng && 
-瀅hʷˤɛŋh濙hʷˤɛŋɣ
-qièng && qvéng && 
 潭ɣləmɣ;ɣlˤəm𤄶ɣløk
 jím;döm && jyak && 
 汀tʰˤɛŋ;tʰˤɛŋh瀅hʷˤɛŋh
 thieng;thièng && qièng && 
-𩔝kʰʀəmh𩒻ŋʀəm
-khỳm && ngym && 
 䫴ɣʀəmh;gʀəmɣ齘gʀˤɛth
 ỳm;gým && xrä̀i && 
 鸑ŋʀˤok鷟sdʀˤok
@@ -1826,8 +1864,6 @@ jyong && njyong &&
 jyong && tsjyok;duk;dcrök && 
 蠑ɣʀʷɛŋ螺ʀʷˤal
 üäng && luö && 
-蠑ɣʀʷɛŋ螈
-üäng &&  && 
 慫sɔŋɣ慂ɣlɔŋɣ
 syóng && jyóng && 
 慫sɔŋɣ恿ɣlɔŋɣ
@@ -1856,7 +1892,7 @@ qiú && liu;giú;giu &&
 jyù;dcyuk && muk && 
 浩kˤəp;gˤoɣ油lo;loh
 köp;xáu && jyu;jyù && 
-𪖛kʰoh鼼ŋˤøh;ŋoh
+𪖛kʰoh𪖐ŋˤøh;ŋoh
 khyù && ngièu;ngyù && 
 袈kʀˤa裟sʀˤal
 kra && scra && 
@@ -1868,6 +1904,8 @@ kra && ngra &&
 kra && ngrà;ngra && 
 跏kʀˤal趺pa;pɔ
 kra && püo;püo && 
+蟼kʀɛŋ;kʀɛŋɣ;kʀˤa蟆mʀˤa
+kyäng;kyä́ng;kra && mra && 
 𦙺kʀˤalh䐒tʀˤal;tʀˤalh
 krà && tcra;tcrà && 
 鴶kʀˤɛt鵴kok;gok
@@ -1890,6 +1928,10 @@ bröng;phröng && kröng;hröng &&
 mrö́ng;mröng && hrö́ng;krö́ng && 
 秦sdøŋ𦫶kʀˤo;kʀˤo;ko
 dzin && krau;krau;kyu && 
+轇kʀˤo轕kˤat
+krau && kat && 
+㶀kʀˤo㵧kˤat
+krau && kat && 
 𥹜kʀˤo𥺝to
 krau && tsjyu && 
 䘨kˤøɣ𧘈ʀˤøɣ
@@ -1902,6 +1944,10 @@ liéu && gyä́u &&
 kräm && krä̀i && 
 蛤kˤəp蚧kʀˤɛth
 köp && krä̀i && 
+𣘖kan子skəɣ
+kyon && tsý && 
+𢳚kan子skəɣ
+kyon && tsý && 
 黎ʀˤøl靬kan;kʀˤən;kʰˤanh;kʰˤan
 liei && kyon;krän;khàn;khan && 
 驪ʀˤøl;ʀɛl靬kan;kʀˤən;kʰˤanh;kʰˤan
@@ -1920,8 +1966,6 @@ sjiäk && kra;kyö &&
 kiät;khit;kit;gyt && kyot && 
 桔kˤɛt;gˤɛt梗kʀˤaŋɣ
 kiet;xiet && krä́ng && 
-桔kˤɛt;gˤɛt槔kˤo
-kiet;xiet && kau && 
 𣚃kˤøt槔kˤo
 kiet && kau && 
 拮køt;kˤøt据ka
@@ -1990,20 +2034,24 @@ kvéng && niéng &&
 giù && khiù;hyùng && 
 苴stʷa;stʰʷa;stʷaɣ;sdʀˤa𦱅ka
 tsyo;tshyo;tsyó;dzcra && kyo && 
-岣kɔ;kˤɔɣ嶁ʀˤɔɣ;ʀɔ;ʀɔɣ
-küo;kú && lú;lüo;lüó && 
 鯃ŋˤa鮈kɔ
 ngo && küo && 
 磫stɔŋ𥗫gɔ;kɔ
 tsyong && güo;küo && 
+枸kɔɣ;kˤɔ;kˤɔɣ櫞ɣlʷɛn
+küó;ku;kú && jvän && 
 粔gaɣ籹nʀaɣ
 gyó && nyó && 
 萵hʷˤal苣gaɣ
 quö && gyó && 
+駏gaɣ驉xa
+gyó && hyo && 
 苦kʰˤaɣ;kʰˤah𦼫gaɣ;ga
 khó;khò && gyó;gyo && 
 蒟kɔh;kɔɣ醬staŋh
 küò;küó && tsyàng && 
+鴶kʀˤɛt𪁁gok
+krät && gyuk && 
 鴶kʀˤɛt𪈓kok
 krät && kyuk && 
 䗇gok鼀stʰok
@@ -2018,8 +2066,6 @@ kyḯ && küët;küèj &&
 khüot;küët && diek && 
 屈kʷət;kʰʷət産
 küët;khüët &&  && 
-屈kʷət;kʰʷət狄dˤɛk
-küët;khüët && diek && 
 菤kʀʷɛnɣ耳nəɣ
 küä́n && njý && 
 西sˤøl捲kʀʷɛnɣ;kʀʷɛnh;gʀʷɛn
@@ -2064,8 +2110,6 @@ khàng && lang;làng &&
 khàng;khräng && lang && 
 栲kʰˤoɣ栳ʀˤoɣ
 kháu && láu && 
-𥬯䇭
- &&  && 
 䯪kʰˤoɣ;kʰˤoh䫨ŋˤo;ŋˤoh
 kháu;khàu && ngau;ngàu && 
 㱾gˤəɣ;kʰˤə㱼xˤə
@@ -2088,8 +2132,6 @@ khö́m;khöp && ngöp &&
 khap && tang && 
 崆kʰˤɔŋ;kʰʀˤɔŋ;kʰˤɔŋ巄ʀˤɔŋ
 khung;khröng;khung && lung && 
-崆kʰˤɔŋ;kʰʀˤɔŋ;kʰˤɔŋ峒ɣlˤɔŋh;ɣlˤɔŋ
-khung;khröng;khung && dùng;dung && 
 倥kʰˤɔŋ;kʰˤɔŋh;kʰˤɔŋɣ侗xlˤɔŋ;xlˤɔŋɣ;dˤɔŋ
 khung;khùng;khúng && thung;thúng;dung && 
 涳nʀˤɔŋ;kʰʀˤɔŋ;kʰˤɔŋ濛mˤɔŋ;mˤɔŋɣ
@@ -2128,12 +2170,10 @@ khüang && njyang &&
 khüang && nräng;njyang && 
 䯑kʰʷˤaŋ䯖ʀˤaŋ
 khuang && lang && 
-𡰠ʀʷˤalh;ʀʷɛl;ʀʷˤɛn𡰝gʀʷɛn;gʀʷˤɛn
-luö̀;lvï;lwän && güän;gwän && 
+𡰟𡰝gʀʷɛn;gʀʷˤɛn
+ && güän;gwän && 
 䡉kʰʷˤaŋɣ;kʰˤaŋɣ𨋕ŋaŋh
 khuáng;kháng && ngyàng && 
-蛞kʰʷˤat蝓lɔ
-khuat && jüo && 
 鮭kʷˤɛ;kʰʷˤɛ;kʷˤɛ;gʀˤɛ陽laŋ
 kvei;khvei;kvei;xre && jyang && 
 藈kʰˤøl菇kˤa
@@ -2159,8 +2199,6 @@ tcrá && nrá &&
 藞ʀʷˤaɣ䕢
 lrá &&  && 
 喇叭
- &&  && 
-喇嘛
  &&  && 
 撥pˤat攋ʀˤat
 puat && lat && 
@@ -2220,20 +2258,24 @@ láng && tháng &&
 khö́m;ham && lö́m && 
 蒗ʀˤaŋh蕩dˤaŋɣ;tʰˤaŋh
 làng && dáng;thàng && 
+坱hˤaŋɣ㚂nˤaŋh
+qáng && nàng && 
 諵nʀˤəm;nʀˤəmh謏sˤɔh;sˤɔɣ;sˤøɣ;sʀok
 nräm;nrä̀m && sù;sú;siéu;scyuk && 
 鳭tʀˤø䴃nʀˤø
 tcrau && nrau && 
 𥗰nʀˤo砂sʀˤal
 nrau && scra && 
-𣲿nʀˤo沙sʀˤal;sʀˤah
-nrau && scra;scrà && 
+𣳦sˤølh沙sʀˤal;sʀˤah
+sièi && scra;scrà && 
 硇nʀˤo;nʀˤo砂sʀˤal
 nrau;nrau && scra && 
 顤xʀˤø;ŋˤø;ŋˤøh顟ʀˤø;ʀˤɛ
 hrau;ngieu;ngièu && lieu;lrau && 
 㗦ʀˤo嘈sdˤo
 lau && dzau && 
+髝ʀˤo;ʀˤoh髞sˤoh
+lau;làu && sàu && 
 𨦭ʀˤo鑪ʀˤa
 lau && lo && 
 懊hˤokh;hˤoɣ;hok憹nˤoŋ
@@ -2264,6 +2306,8 @@ dziéi;dzi && nreng &&
 qreng && nreng && 
 倰ʀˤəŋ儯glˤəŋ
 lëng && dëng && 
+踜ʀˤəŋh蹬dˤəŋh
+lë̀ng && dë̀ng && 
 𪂈ɣlam𪅆ʀɛl
 jiäm && liï && 
 江kʀˤɔŋ蘺ʀɛl
@@ -2308,8 +2352,6 @@ nyuk && nyi &&
 nyuk && nyi && 
 呢nʀəl喃nʀˤəm
 nyi && nräm && 
-嫛hˤɛ婗ŋˤɛ
-qiei && ngiei && 
 狻sxʷˤan猊ŋˤɛ
 suan && ngiei && 
 𠆵ŋˤɛ㑮ɣʷˤən;ŋʷˤən
@@ -2362,8 +2404,6 @@ miek && liek &&
 khiei;xiei && liek && 
 崱sdʀək屴ʀək
 dzcyk && lyk && 
-鵧bˤɛŋ;bøl鷑
-bieng;bi &&  && 
 岦ʀəp岌ŋʀəp
 lip && ngyp && 
 戢stʀəp孨skʀʷanh;klʷɛnɣ;nʀəp
@@ -2372,8 +2412,6 @@ tscyp && tscüä̀n;tsjvä́n;nyp &&
 tsip && nyp && 
 蜣kʰaŋ蜋ʀˤaŋ;ʀaŋ
 khyang && lang;lyang && 
-輼輬ʀaŋ車ka;kʰla
- && lyang && kyo;tsjhya && 
 魍maŋɣ魎ʀaŋɣ
 müáng && lyáng && 
 蛧maŋɣ蜽ʀaŋɣ
@@ -2392,8 +2430,6 @@ tsiäu && liä̀u;lieu &&
 tieu && lieu && 
 潦ʀˤø;ʀˤoɣ;ʀˤoh倒tˤoɣ;tˤoh
 lieu;láu;làu && táu;tàu && 
-潦ʀˤø;ʀˤoɣ;ʀˤoh草stʰˤoɣ
-lieu;láu;làu && tsháu && 
 𥗀ʀˤøɣ𢁕tˤøɣ
 liéu && tiéu && 
 𤁸ʀˤøɣ澥gʀˤɛɣ
@@ -2442,6 +2478,8 @@ liet && khiet;kiet;xiet &&
 lu;lú && lièi;liet && 
 蜻stʰˤɛŋ;stɛŋ蛚ʀɛt
 tshieng;tsiäng && liät && 
+趔ʀɛt趄stʰʷa
+liät && tshyo && 
 儠ʀap𠎷sxˤap
 liäp && sap && 
 䃳ʀap崨sgap
@@ -2484,8 +2522,8 @@ lieng && xweng &&
 nieng;nièng && kvet && 
 叮tˤɛŋ嚀nˤɛŋ
 tieng && nieng && 
-嚶hʀˤɛŋ嚀nˤɛŋ
-qreng && nieng && 
+檸nʀˤaŋɣ檬mˤɔŋ
+nrä́ng && mung && 
 㱥ʀəŋ;ʀˤəŋh殑gəŋ;gəŋɣ;gəŋh
 lyng;lë̀ng && gyng;gýng;gỳng && 
 箖ʀəm箊ha
@@ -2516,8 +2554,12 @@ büo;püo && lyu &&
 byu && lyu && 
 𪆱ʀo𩿀dʀoŋh
 lyu && dcyùng && 
+逗dˤɔh;dʀɔh遛ʀo
+dù;dcüò && lyu && 
 觩gʀo䚧ʀo
 giu && lyu && 
+石dak窌pʰʀˤɔh;ʀˤɛ;ʀoh
+dzjiäk && phràu;lrau;lyù && 
 宿sok;sokh留ʀoh;ʀo
 syuk;syù && lyù;lyu && 
 祝tokh;tok𥛅ʀoh
@@ -2542,14 +2584,24 @@ muö́ && lö́ &&
 muö́ && lö́ && 
 𠻡ʀˤalɣ哆tˤalɣ;tˤalh;tʀˤalh;tʰʀˤal;tʰalɣ;tʰaɣ;tʰəh
 lö́ && tö́;tö̀;tcrà;tchra;tsjhiḯ;tsjhyá;tsjhỳ && 
+妸hˤal;hˤalɣ娜nˤalɣ
+qö;qö́ && nö́ && 
+𧙃hˤalɣ袲tʰɛlɣ;lɛl;nˤalɣ
+qö́ && tsjhiḯ;jiï;nö́ && 
+㫊hˤalɣ𣃽
+qö́ &&  && 
+𣘨hˤalɣ橠nˤalɣ
+qö́ && nö́ && 
 䃕ʀˤøk確kʰʀˤøk
 lrök && khrök && 
 啅tʀˤøk𡁆ʀˤøk
 tcrök && lrök && 
-瓔hɛŋ珞ʀˤak
-qiäng && lak && 
 駱ʀˤak駝ɣlˤal
 lak && dö && 
+馲ʀˤak;tʀˤak;tʰˤak駝ɣlˤal
+lak;tcräk;thak && dö && 
+𩧐ʀˤak;tʰˤak駝ɣlˤal
+lak;thak && dö && 
 鴝kˤɔ;gɔ鵅kʀˤak;ʀˤak
 ku;güo && kräk;lak && 
 㰚ʀɛl𣛗ʀˤak
@@ -2562,12 +2614,8 @@ khuak && luöi;lak &&
 phuak &&  && 
 䎊ʀˤak䎅pʰˤak
 lak && phuak && 
-嶐𡾿
- &&  && 
 窟kʰʷˤət窿ʀoŋ
 khuot && lyung && 
-穹kʰoŋ窿ʀoŋ
-khyung && lyung && 
 豐pʰoŋ霳ʀoŋ
 phyung && lyung && 
 朦mˤɔŋ朧ʀˤɔŋ
@@ -2576,12 +2624,12 @@ mung && lung &&
 mung;múng && lung;lúng && 
 矇mˤɔŋ矓
 mung &&  && 
+巃ʀˤɔŋ;ʀˤɔŋɣ嵸stˤɔŋɣ;stˤɔŋ
+lung;lúng && tsúng;tsung && 
 㦀bˤɔŋ憹nˤoŋ
 bung && nong && 
 曈dˤɔŋ;tʰˤɔŋ;tʰˤɔŋɣ曨ʀˤɔŋ;ʀˤɔŋɣ
 dung;thung;thúng && lung;lúng && 
-巃ʀˤɔŋ;ʀˤɔŋɣ嵸stˤɔŋɣ;stˤɔŋ
-lung;lúng && tsúng;tsung && 
 𢤱ʀˤɔŋɣ悷ʀˤøth
 lúng && lièi && 
 儱ʀɔŋh;ʀˤɔŋɣ侗xlˤɔŋ;xlˤɔŋɣ;dˤɔŋ
@@ -2608,8 +2656,6 @@ lu;lù && dzu;dzù &&
 lù && lyo;lo && 
 鏉sˤɔh;sʀoh;sˤɔ𨫒ʀˤɔh
 sù;scyù;su && lù && 
-𨫒ʀˤɔh楱stʰˤɔh;sdˤɔh
-lù && tshù;dzù && 
 轆ʀˤɔk轤ʀˤa
 luk && lo && 
 㪆tˤølɣ㪭ʀˤa
@@ -2646,6 +2692,8 @@ quot;quon && nuot &&
 quan;qwät;kuàn && nö̀m;nöp;nwat && 
 團dʷˤan圞ʀʷˤan
 duan && luan && 
+𡰠ʀʷˤalh;ʀʷɛl;ʀʷˤɛn𡰝gʀʷɛn;gʀʷˤɛn
+luö̀;lvï;lwän && güän;gwän && 
 䐯ʀʷˤɛl膗sgʀʷˤɛl
 lwäi && dzcwäi && 
 㟪hʷəl𡿔ʀʷəl
@@ -2654,8 +2702,6 @@ qüëi && lvi &&
 lvi && tsó && 
 轠ʀʷˤəl;ʀʷəlɣ轤ʀˤa
 luöi;lví && lo && 
- 礧ʀʷˤəlɣ;ʀʷˤəlh䃍ɣlʷˤəlh
- && luö́i;luö̀i && duö̀i && 
 𡻭ʀʷəlɣ㠑sgʷˤəlɣ;sgʷəlɣ
 lví && dzuö́i;dzví && 
 䣂ʀʷˤəlɣ;ʀʷˤəlh陽laŋ
@@ -2678,8 +2724,8 @@ quö́i && nuö́i &&
 dzjỳ;dcý && luö̀i && 
 𡔇ʀʷˤəlh塊kʰʷˤəlh
 luö̀i && khuö̀i && 
-礧ʀʷˤəlɣ;ʀʷˤəlh䃍ɣlʷˤəlh
-luö́i;luö̀i && duö̀i && 
+䈁ʀʷən子skəɣ
+lvin && tsý && 
 囫圇
  &&  && 
 畽tʰʷˤaŋɣ;tʰʷˤənɣ㤻ʀʷˤənɣ
@@ -2689,10 +2735,6 @@ lù && lyo;lo &&
 棕stˤɔŋ櫚ʀa
 tsung && lyo && 
 茹nʷah;nʷa;nʷaɣ藘ʀa
-njyò;njyo;njyó && lyo && 
-菴hʀam;hˤəm䕡ʀa
-qyäm;qöm && lyo && 
-茹nʷah;nʷa;nʷaɣ䕡ʀa
 njyò;njyo;njyó && lyo && 
 浘məlɣ𤁵ʀa
 müë́i && lyo && 
@@ -2706,8 +2748,6 @@ gyo && nyo &&
 lüo;lu;lüó && hau && 
 𥈈xɔ瞜ʀɔ;ʀˤɔ
 hüo && lüo;lu && 
-瞴mɔ;mɔɣ瞜ʀɔ;ʀˤɔ
-müo;müó && lüo;lu && 
 屬tɔk;dɔk;dɔkh鏤ʀˤɔh;ʀɔ
 tsjyok;dzjyok;dzjüò && lù;lüo && 
 痀kɔ瘻ʀɔ;ʀˤɔh
@@ -2730,6 +2770,8 @@ miei && mra &&
 mra && xra && 
 𩔶mʀˤal䫗ɣʀˤa;ɣʀˤal
 mra && xra;xra && 
+蛨mʀˤak蚱stʀˤak
+mräk && tscräk && 
 五ŋˤaɣ㟌mʀˤɔŋ
 ngó && mröng && 
 饅mˤan頭dˤɔ
@@ -2754,8 +2796,10 @@ làn && muàn &&
 mrau && tsjhi && 
 酕mˤo醄dˤo
 mau && dau && 
-𪄀bˤan𪃑
-buan &&  && 
+𩍃mʀˤɛ鞵gʀˤɛ
+mre && xre && 
+虴tʀˤak蛨mʀˤak
+tcräk && mräk && 
 馲ʀˤak;tʀˤak;tʰˤak𩢷mʀˤak
 lak;tcräk;thak && mräk && 
 𤜤tʀˤak㹮mʀˤak
@@ -2822,6 +2866,8 @@ miï && lieng &&
 miä́u && miḯ;niéi;miï && 
 醭pʰˤɔk䤍mˤøl
 phuk && miei && 
+莢kˤɛp蒾
+kiep &&  && 
 骫hʀʷalɣ骳mʀalɣ
 qüḯ && myḯ && 
 薔sdaŋ;sxʀək蘼mʀɛl;mʀɛlɣ
@@ -2852,14 +2898,22 @@ muat;miet && kvet;jvit;zjvit &&
 miet && krät;xiet && 
 鷦stø䳟mʀaŋ
 tsiäu && myäng && 
-榠mˤɛŋ楂sdʀˤa
-mieng && dzcra && 
+榠mˤɛŋ𣙁
+mieng &&  && 
+溟mˤɛŋ;mˤɛŋɣ濛mˤɔŋ;mˤɔŋɣ
+mieng;miéng && mung;múng && 
+螟mˤɛŋ蛾ŋˤal;ŋʀalɣ
+mieng && ngö;ngyḯ && 
 蓂mˤɛk;mˤɛŋ莢kˤɛp
 miek;mieng && kiep && 
 黽møŋɣ;mʀˤəŋɣ;mɛnɣ池ɣlˤal;ʀgal
 mín;mréng;miä́n && dö;dcyï && 
 澠møŋɣ;ŋləŋ池ɣlˤal;ʀgal
 mín;zjyng && dö;dcyï && 
+䐇mønɣ合kˤəp;gˤəp
+mín && köp;xöp && 
+溟mˤɛŋ;mˤɛŋɣ涬ɣˤɛŋɣ
+mieng;miéng && xiéng && 
 嫫mˤa母mˤoɣ
 mo && mú && 
 𨡭mˤa;mo䤅lˤɔ;lˤa
@@ -2868,12 +2922,14 @@ mo;myu && du;do &&
 nöm && mo;müo && 
 膜mˤak;mˤa拜pʀˤɛth
 mak;mo && prä̀i && 
-慈sgə峔mˤaɣ山sʀˤɛn
-dzy && mó && scrän && 
+什gləp麽
+dzjip &&  && 
+甚gləmɣ;gləmh麽
+dzjím;dzjìm &&  && 
+懡mˤalɣ㦬ʀˤalɣ
+muö́ && lö́ && 
 𩑷mˤat䫘ɣˤat;xˤat
 muat && xat;hat && 
-瀎mˤat;mˤɛt泧xʷat;ɣʷat;xʷˤat
-muat;miet && hüot;üot;huat && 
 妺mˤat嬉xə;xəh
 muat && hy;hỳ && 
 𠇱mˤat㒓tʰˤat
@@ -2886,34 +2942,24 @@ phuat && muat &&
 myu && mú && 
 蝤sto;sdo蛑mo
 tsyu;dzyu && myu && 
-䖦tʷɛt蟱
-tsjvät &&  && 
 踇mˤoɣ偶ŋˤɔh;ŋˤɔɣ
 mú && ngù;ngú && 
+鸚hʀˤɛŋ䳇mˤoɣ;maɣ
+qreng && mú;müó && 
 苜mok蓿sok
 myuk && syuk && 
 艒mˤək;mˤɔk;mˤok;mˤok䑿sok
 mëk;muk;mok;mok && syuk && 
 萺mok;mˤok𦸚sdap
 myuk;mok && zip && 
-媕hʀamɣ;hˤəm;hˤəp婀
-qyä́m;qöm;qöp &&  && 
 婀娜nˤalɣ
  && nö́ && 
-騀ŋˤalɣ騼ʀˤɔk
-ngö́ && luk && 
+老ʀˤoɣ撾ʀkʷˤal
+láu && tcwa && 
 砐ŋˤəp硪ŋˤal;ŋˤalɣ
 ngöp && ngö;ngö́ && 
-妸hˤal;hˤalɣ娜nˤalɣ
-qö;qö́ && nö́ && 
 娿hˤal;hˤalɣ娜nˤalɣ
 qö;qö́ && nö́ && 
-𧙃hˤalɣ袲tʰɛlɣ;lɛl;nˤalɣ
-qö́ && tsjhiḯ;jiï;nö́ && 
-㫊hˤalɣ𣃽
-qö́ &&  && 
-𣘨hˤalɣ橠nˤalɣ
-qö́ && nö́ && 
 婐hʷˤalɣ;kʀʷˤal㛂ŋʷˤalɣ;nʷˤalɣ
 quö́;kwa && nguö́;nuö́ && 
 倭hʷˤal;hʷˤalɣ;hʀʷal墮xʷɛl;ɣlʷˤalɣ;xlʷˤalɣ
@@ -2934,40 +2980,42 @@ qap && tsyang &&
 jväng;qweng;hwäng && nreng && 
 崆kʰˤɔŋ;kʰʀˤɔŋ;kʰˤɔŋ㟅ŋˤɔŋ;ŋʀˤɔŋ;ʀˤɔŋ
 khung;khröng;khung && ngung;ngröng;lung && 
+歐hˤɔ;hˤɔɣ陽laŋ
+qu;qú && jyang && 
+剾hˤɔ;kʰˤɔ㓱lˤɔ
+qu;khu && du && 
 妑pʰʀˤa頭dˤɔ
 phra && du && 
-琵bøl琶bʀˤa
-bi && bra && 
 枇bøl;pølɣ;bølh杷bʀˤah;bʀˤɛh;bʀˤa
 bi;pí;bì && brà;brè;bra && 
-帕pʰʀˤah;mʀˤat斯sxɛ卡
-phrà;mrat && siï &&  && 
+琵bøl琶bʀˤa
+bi && bra && 
 番pˤal;pˤalh;pʰˤan;pʰan;ban禺ŋɔ;ŋɔh
 puö;puö̀;phuan;phüon;büon && ngüo;ngüò && 
 蹣bˤan;mˤan跚sˤan
 buan;muan && san && 
 磻bˤan溪kʰˤɛ
 buan && khiei && 
-媻bˤan;bˤal姍sˤan
-buan;buö && san && 
+𪄀bˤan𪃑
+buan &&  && 
 𤠍bˤan狐ɣˤa
 buan && xo && 
-彷bˤaŋ;pʰaŋɣ徉ɣlaŋ
-bang;phüáng && jyang && 
 阿hˤal房bˤaŋ;baŋ
 qö && bang;büang && 
 螃pˤaŋɣ;pˤaŋh;bˤaŋ蟹gʀˤɛɣ
 páng;pàng;bang && xré && 
 䛌dˤo譁xʀʷˤa
 dau && hwa && 
+澎pʰʀˤaŋ;bʀˤaŋ湃pʰʀˤɛth
+phräng;bräng && phrä̀i && 
 憺lˤamɣ;lˤamh怕pʰʀˤah;pʰʀˤak
 dám;dàm && phrà;phräk && 
 澹dˤam;dˤamɣ;dˤamh泊bˤak
 dam;dám;dàm && buak && 
 髬pʰʀə髵nʀə
 phyi && njy && 
-徘bˤəl徊ɣʷˤəl
-buöi && xuöi && 
+俳bʀˤəl佪ɣʷˤəl
+bräi && xuöi && 
 匉pʰʀˤøŋ訇ɣʷˤɛn;xʀˤøŋ
 phreng && xven;hweng && 
 髼bˤɔŋ鬆skʰɔŋ;sxˤoŋ;sxˤɔŋh;sxɔŋ
@@ -2982,48 +3030,36 @@ buon && kyu &&
 páng;bräng && nräng;njyang && 
 𩡕bʀˤaŋ馞pʰˤət;bˤət
 bräng && phuot;buot && 
-輣bʀˤaŋ;bʀˤøŋ軋hʀˤɛt
-bräng;breng && qrät && 
 鬅bˤəŋ鬙sˤəŋ
 bëng && sëng && 
-𢾱pʰøl𢼹pʰˤa
-phi && pho && 
 𪄆pʰˤøl鵊kʀˤəp
 phiei && kräp && 
-郫bɛ;bʀɛ;bʀˤɛ都tˤa
-biï;byï;bre && to && 
 蚍bøl蜉bo
 bi && byu && 
 𩶯魮bøl
  && bi && 
 崥bˤɛ;pɛɣ崹dˤɛ
 biei;piḯ && diei && 
+苤藍ʀˤam
+ && lam && 
 睥pʰˤɛh睨ŋˤɛh
 phièi && ngièi && 
-鷝pøt;pʰøt鶋ka
-pit;phit && kyo && 
+稫pʰøk𥟔stʀək
+phyk && tscyk && 
 螵bø;pʰø蛸sø;sʀˤø
 biäu;phiäu && siäu;scrau && 
-縹pʰøɣ緲
-phiä́u &&  && 
-漂pʰø;pʰøh亮ʀaŋh
-phiäu;phiä̀u && lyàng && 
 潎pʰɛth;pʰɛt洌ʀɛt;ʀɛth
 phièj;phiät && liät;lièj && 
 㛹bɛn娟hʷɛn
 biän && qvän && 
-𧍻䗠sɣʷɛn
- && zvän && 
+𧍲bɛn䗠sɣʷɛn
+biän && zvän && 
 繽pʰøn紛pʰən
 phin && phüën && 
 砏pʰʀən;pʀən;pʰən磤hənɣ
 phyn;pyn;phüën && qyë́n && 
 蘋bøn果kʷˤalɣ
 bin && kuö́ && 
-苹bʀɛŋ果kʷˤalɣ
-byäng && kuö́ && 
-䶄bˤɛŋ𪕌ʀˤɛŋ
-bieng && lieng && 
 淜bəŋ滂pʰˤaŋ
 byng && phang && 
 㵗bəŋ㶔bʀˤəth
@@ -3032,8 +3068,6 @@ byng && brä̀i &&
 phuö && dö && 
 番pˤal;pˤalh;pʰˤan;pʰan;ban兒ŋˤɛ;ŋˤɛ;nɛ
 puö;puö̀;phuan;phüon;büon && ngiei;ngiei;njiï && 
-番pˤal;pˤalh;pʰˤan;pʰan;ban陽laŋ
-puö;puö̀;phuan;phüon;büon && jyang && 
 鄱bˤal陽laŋ
 buö && jyang && 
 蔢bˤal䓾sˤal
@@ -3048,20 +3082,26 @@ tsau && phuak &&
 phuak && tsyo;tshyo;tsyó;dzcra && 
 𩚭bˤɔ饇hɔh
 bu && qüò && 
-匍bˤa;bˤa匐bok;bˤək，匍bˤa;bˤa伏bəkh;bok
-bo;bo && byuk;bëk &&  && bo;bo && byù;byuk && 
+𢾱pʰøl𢼹pʰˤa
+phi && pho && 
+匍bˤa匐bok;bˤək
+bo && byuk;bëk && 
+匍bˤa伏bəkh;bok
+bo && byù;byuk && 
 荹bˤa;bˤah攎ʀˤa
 bo;bò && lo && 
 菩bəɣ;bˤøɣ;bˤa;bˤək提dˤɛh;dɛ;dˤɛ
 byú;bö́i;bo;bëk && dièi;dzjiï;diei && 
 葡萄dˤo
  && dau && 
+瀑bˤøkh;bˤøk布pˤah
+bàu;buk && pò && 
+𪖈pˤɔk𪔿pʰˤɔk
+puk && phuk && 
 㤍kʰʀˤo㤉kʰʀˤa
 khrau && khra && 
 㝞hʀˤa𡤫kʰʀˤa
 qra && khra && 
-跁bʀˤaɣ;bʀˤah跒kʰʀˤaɣ
-brá;brà && khrá && 
 𧩶kʰʀˤalh詬xˤɔh;kʰˤɔh;kˤɔɣ
 khrà && hù;khù;kú && 
 䁁ʀaŋh𥇉kʰaŋh
@@ -3100,8 +3140,6 @@ khiä́n && siän;siä́n &&
 khyä́m && dcým;ngyä́m && 
 嵰kʰʀamɣ嶮ŋʀamɣ;xʀamɣ
 khyä́m && ngyä́m;hyä́m && 
-遣kʰɛnɣ;kʰɛnh車ka;kʰla
-khiä́n;khiä̀n && kyo;tsjhya && 
 𠏃hʷal𠋧xlʷal
 qüö && khyö && 
 猰kʀˤat;hʀˤɛt;kʰˤɛt犺kʰˤaŋh
@@ -3140,6 +3178,8 @@ lim && gym &&
 gym && lu && 
 𩒣kʰɛmɣ;sgʀəmɣ𩖄kʰʀəmɣ
 khyö́m;dzcým && khým && 
+𩔝kʰʀəmh𩒻ŋʀəm
+khỳm && ngym && 
 芎kʰoŋ藭goŋ
 khyung && gyung && 
 𦭭gɔŋ蓂mˤɛk;mˤɛŋ
@@ -3166,8 +3206,6 @@ gyëi;khyï && khyo &&
 khüo && ngüo && 
 芙ba蕖ga
 büo && gyo && 
-蒗ʀˤaŋh蕖ga
-làng && gyo && 
 蘧ga;gʷa麥mʀˤək
 gyo;güo && mrek && 
 㯫ga枯kʰˤa
@@ -3180,10 +3218,6 @@ güo && jyok &&
 ku;güo && jyok && 
 冤hʷan句gɔ;kˤɔ;kɔh;kˤɔh
 qüon && güo;ku;küò;kù && 
-須sɔ句gɔ;kˤɔ;kɔh;kˤɔh
-süo && güo;ku;küò;kù && 
-句gɔ;kˤɔ;kɔh;kˤɔh町tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;tʰˤøŋɣ
-güo;ku;küò;kù && thiéng;thieng;diéng;thién && 
 蚼gɔ;xˤɔɣ蛘ɣlaŋ;ɣlaŋɣ
 güo;hú && jyang;jyáng && 
 䠑kʰʷɛɣ踽kʷaɣ;kʰʷaɣ
@@ -3218,8 +3252,6 @@ puan;buan;pran && njyak;njya;njyá &&
 küò;küó && njyak && 
 楉nak榴ʀo
 njyak && lyu && 
-𣯼sɔk㲨
-syok &&  && 
 香xaŋ葇no;noɣ
 hyang && njyu;njyú && 
 鶝pək;bøk鶔no
@@ -3232,8 +3264,6 @@ njyo && lyo &&
 tsjüo && nu;njüo && 
 嚅nɔ唲hʀˤɛ;nɛ
 njüo && qre;njiï && 
-囁nap;tap嚅nɔ
-njiäp;tsjiäp && njüo && 
 顳nap顬nɔ
 njiäp && njüo && 
 郟kʀˤəp鄏nɔk
@@ -3242,8 +3272,6 @@ kräp && njyok &&
 tsjyok && njyok && 
 𥞃kʰlʷɛlh䄲nʷɛlh
 tsjhvï̀ && njvï̀ && 
-跋bˤat躠sˤat
-buat && sat && 
 喝hʀˤath;xˤat𠱡sʀˤath;sˤat
 qràj;hat && scràj;sat && 
 媕hʀamɣ;hˤəm;hˤəp㚫sxˤəp
@@ -3278,7 +3306,7 @@ sit;scyt && scüyt &&
 scým && screk && 
 㒊sʀəp譶ʀgəp;glˤəp
 scyp && dcyp;döp && 
-襳sam;sʀam;sʀɛm襹sʀalh;sʀɛl
+襳sxam;sxʀam;sxʀɛm襹sʀalh;sʀɛl
 siäm;scyäm;scym && scyï̀;scyï && 
 㼬ɣʀˤɛŋɣ㼳sʀɛŋɣ
 xréng && scyä́ng && 
@@ -3300,12 +3328,14 @@ thö̀m;sjiä́m && jyak &&
 xrám;xrä́m && scräm;scrám;scrä́m && 
 鄯glɛnɣ;glɛnh善glɛnɣ
 dzjiä́n;dzjiä̀n && dzjiä́n && 
+蠨sˤø蛸sø;sʀˤø
+sieu && siäu;scrau && 
 宜ŋʀal𣝒daɣ
 ngyï && dzjyá && 
 苣gaɣ蕂xləŋh
 gyó && sjỳng && 
-蒴sʀˤɔk𧃔dʀˤɔk
-scrök && dcrök && 
+蒴sʀˤɔk藋dˤøh
+scrök && dièu && 
 㩋sˤøɣ;sok;sʀok;sˤø;sˤøh𦋞sʀˤøk
 siéu;syuk;scyuk;sieu;sièu && scrök && 
 儵slok爚sløk;løk
@@ -3322,6 +3352,8 @@ sji && kyu &&
 dzjy;dzjỳ && lö && 
 鍮tʰˤɔ鉐dak
 thu && dzjiäk && 
+褲kʰˤah褶dˤɛp;dəp;sdap
+khò && diep;dzjip;zip && 
 𦺗xlʷa;xlʷa蔀bˤɔɣ;pʰˤɔɣ
 sjyo;sjyo && bú;phú && 
 𧑓xlʷaɣ蝜bəɣ
@@ -3344,15 +3376,13 @@ syuk && scyang &&
 scyáng;scyang;löi && kyu && 
 賱hʷənɣ賰slʷənɣ
 qüë́n && sjvín && 
-木mˤɔk樨
-muk &&  && 
 提dˤɛh;dɛ;dˤɛ撕sxˤɛ
 dièi;dzjiï;diei && siei && 
 痠sxʷˤan㾷sɛl;sˤøl
 suan && siï;siei && 
 䒜𧀬søt
  && sit && 
-簨sxønɣ𥰝sxək
+簨sxønɣ𥰝sək
 svín && syk && 
 颯sxˤəp飁sdap
 söp && zip && 
@@ -3366,14 +3396,14 @@ jiäm && zip;zvèj &&
 khò && diep;dzjip;zip && 
 忀saŋ徉ɣlaŋ
 syang && jyang && 
-蟰sok;sˤø蛸sø;sʀˤø
-syuk;sieu && siäu;scrau && 
 橚sok;sˤø槮sˤəmɣ;stʰʀəm;sʀəm;sʀəmɣ
 syuk;sieu && sö́m;tschym;scym;scým && 
 逍sø遙lø
 siäu && jiäu && 
 䔑ɣla;sɣa蒿xˤo
 jya;zya && hau && 
+蹩bˤøt𨇨sˤøt
+biet && siet && 
 瀎mˤat;mˤɛt㴽sˤɛt
 muat;miet && siet && 
 蹀dˤɛp躞sxˤɛp
@@ -3398,6 +3428,8 @@ piäng && sieng &&
 syu && lyuk && 
 婆bˤal娑sˤal;sˤalɣ
 buö && sö;sö́ && 
+䓾sˤal蔢bˤal
+sö && buö && 
 𩊮sˤal;sʀˤal鞄bʀˤo;pʰʀˤok;bʀˤoɣ;bʀˤokh
 sö;scra && brau;phrök;bráu;bràu && 
 桫sˤal欏ʀˤal
@@ -3412,8 +3444,6 @@ suö && dièi;diei &&
 söp && sö;sö́ && 
 裾ka𧜠sʀʷət
 kyo && scüyt && 
-有ɣʷəɣ;ɣʷəh娀soŋ氏klɛ;glɛɣ;skɛŋ
-yú;yù && syung && tsjiï;dzjiḯ;tsiäng && 
 惺sɛŋɣ;sˤɛŋ忪tɔŋ
 siä́ng;sieng && tsjyong && 
 蜙sxɔŋ蝑sxah;sxʷa
@@ -3440,6 +3470,10 @@ kyuk;gyuk && tshyù &&
 tsiet;tsit;tsyk && scyuk && 
 鷫sok鷞sʀaŋɣ;sʀaŋ;ʀˤə
 syuk && scyáng;scyang;löi && 
+蟰sok;sˤø蛸sø;sʀˤø
+syuk;sieu && siäu;scrau && 
+𣯼sɔk㲨
+syok &&  && 
 勃bˤət窣sʷˤət
 buot && suot && 
 鵓bˤət𪅄sʷˤət
@@ -3462,6 +3496,8 @@ jyang && zvì &&
  && müo && 
 捫mˤən搎sʷˤən
 muon && suon && 
+少sløɣ;sløh選sxʷɛnɣ;sxʷɛnh
+sjiä́u;sjiä̀u && svä́n;svä̀n && 
 㰬sxøn㰭xʷa;xɔ
 svin && hüo;hüo && 
 𪀠sɣøn䳦xʷan;sxʷɛn
@@ -3476,6 +3512,8 @@ tsiäng && siï &&
 tsjim && siek;siï && 
 蜤sɛ螽toŋ
 siï && tsjyung && 
+螺ʀʷˤal螄sxʀøl
+luö && scyi && 
 相saŋ;saŋh楒sə
 syang;syàng && sy && 
 罘bo;bə罳sə
@@ -3484,18 +3522,18 @@ byu;byu && sy &&
 lò &&  && 
 駓pʰʀə騃ɣʀəɣ;ŋʀˤəɣ
 phyi && zcý;ngrä́i && 
+佅mʀˤath㒓tʰˤat
+mràj && that && 
 𧪦tʰˤap𧪞kˤap;gˤap;sxʷət
 thap && kap;xap;svit && 
-邋ʀˤap;ʀap遢tʰˤap，𩧆𩥑tʰˤap
-lap;liäp && thap &&  &&  && thap && 
+𩧆𩥑tʰˤap
+ && thap && 
 擹tʰˤan蒱bˤa
 than && bo && 
 𦧴dˤɛn;tʰˤan𦧝tʰˤɛn
 dien;than && thien && 
 搫bˤan;bˤal㨏xlˤan
 buan;buö && than && 
-闛ɣlˤaŋ;xlˤaŋ闔gˤap
-dang;thang && xap && 
 盪dˤaŋɣ;tʰˤaŋ;tʰˤaŋh突tʰʷˤət;dʷˤət
 dáng;thang;thàng && thuot;duot && 
 蛈tʰˤøt蝪tʰˤaŋ
@@ -3504,6 +3542,8 @@ thiet && thang &&
 hyuk;tchyuk;dcyuk && thang && 
 濫ʀˤamh;ɣʀˤamɣ𦸁xlˤam
 làm;xrám && tham && 
+㴥stʰøh㴂tʰˤam
+tshiä̀u && tham && 
 唐ɣlˤaŋ突tʰʷˤət;dʷˤət
 dang && thuot;duot && 
 搪ɣlˤaŋ突tʰʷˤət;dʷˤət
@@ -3528,8 +3568,12 @@ dang && dö̀i;dièi &&
 dang && njỳ && 
 馣hˤəm𩡝ɣlˤəm
 qöm && döm && 
-澹dˤam;dˤamɣ;dˤamh臺dˤə
-dam;dám;dàm && döi && 
+曭xlˤaŋɣ莽mˤoɣ;mˤaɣ;mˤaŋɣ
+tháng && mú;mó;máng && 
+𣎲xlˤaŋɣ莽mˤoɣ;mˤaɣ;mˤaŋɣ
+tháng && mú;mó;máng && 
+矘xlˤaŋɣ䁳mˤaŋɣ
+tháng && máng && 
 倜xlˤøk儻xlˤaŋɣ;xlˤaŋh
 thiek && tháng;thàng && 
 戃xlˤaŋɣ慌xʷˤaŋɣ
@@ -3574,8 +3618,6 @@ dang && diei &&
 dang && diei && 
 趧dˤɛ婁ʀɔ;ʀˤɔ
 diei && lüo;lu && 
-趧dˤɛ赽kʷˤɛt
-diei && kvet && 
 寧nˤɛŋ𢝹tʰˤøth
 nieng && thièi && 
 𣬸dˤø㲖sˤø
@@ -3594,6 +3636,8 @@ thién && huán;thuán &&
 thién && thuán && 
 町tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;tʰˤøŋɣ畽tʰʷˤaŋɣ;tʰʷˤənɣ
 thiéng;thieng;diéng;thién && thuán;thuón && 
+豎dɔɣ蚕tʰˤɛnɣ
+dzjüó && thién && 
 僣tʰˤɛt侻tʰʷˤat
 thiet && thuat && 
 蝶tʰˤɛp;dˤɛp𧌏dˤəp
@@ -3610,16 +3654,12 @@ qüï;qüḯ && dö;thö &&
 qüï &&  && 
 逶hʀʷɛl迱ɣlˤal
 qüï && dö && 
-落ʀˤak拓tʰˤak;tak
-lak && thak;tsjiäk && 
 落ʀˤak魄xlˤak;pʰʀˤak
 lak && thak;phräk && 
-馲ʀˤak;tʀˤak;tʰˤak駝ɣlˤal
-lak;tcräk;thak && dö && 
 𨂫xlˤak弛xlɛlɣ
 thak && sjiḯ && 
-矺tʰˤak;tʀˤək;tˤap鼠xlʷaɣ
-thak;tcrek;tap && sjyó && 
+崆kʰˤɔŋ;kʰʀˤɔŋ;kʰˤɔŋ峒ɣlˤɔŋh;ɣlˤɔŋ
+khung;khröng;khung && dùng;dung && 
 洪gˤɔŋ洞ɣlˤɔŋh;ɣlˤɔŋ
 xung && dùng;dung && 
 洚kʀˤɔŋh;gˤɔŋ;gˤoŋ;gʀˤoŋ洞ɣlˤɔŋh;ɣlˤɔŋ
@@ -3642,8 +3682,6 @@ buak && tho &&
 do;dcra && jyang && 
 於hˤa;ha菟tʰˤah;dˤa
 qo;qyo && thò;do && 
-菟tʰˤah;dˤa裘gʷə
-thò;do && gyu && 
 烏hˤa䖘dˤa
 qo && do && 
 簢mʀənɣ筡ʀxʷa;ɣlˤa
@@ -3658,6 +3696,14 @@ thuk && tshyu &&
 thuö̀i;thuot && huot && 
 鸛kʷˤanh鷒dʷˤan;tʷɛn
 kuàn && duan;tsjvän && 
+町tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;tʰˤøŋɣ疃tʰʷˤaŋɣ
+thiéng;thieng;diéng;thién && thuán && 
+町tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;tʰˤøŋɣ𤲫tʰʷˤaŋɣ
+thiéng;thieng;diéng;thién && thuán && 
+𧨩xlˤɛmɣ䜝
+thiém &&  && 
+悿xlˤɛmɣ𢣎
+thiém &&  && 
 牛ŋʷə藬xlʷˤəl
 ngyu && thuöi && 
 牛ŋʷə蘈ɣlʷˤəl
@@ -3688,34 +3734,22 @@ qo && dzëk &&
 qo && jyuk && 
 盤bˤan盓hˤa
 buan && qo && 
-蚅hʀˤɛk螐hˤa蠋dʀɔk;tɔk
-qrek && qo && dcyok;tsjyok && 
 𦶀hˤa蓲hɔ;hˤɔ;kʰo;hɔh
 qo && qüo;qu;khyu;qüò && 
 鴮hˤa鸅ʀgˤak
 qo && dcräk && 
+瞴mɔ;mɔɣ瞜ʀɔ;ʀˤɔ
+müo;müó && lüo;lu && 
 鼄tʀɔ蝥mɔ;mʀˤo;mo;mɔh
 tcüo && müo;mrau;myu;müò && 
 琨kʷˤən㻍ŋˤa
 kuon && ngo && 
 琨kʷˤən珸ŋˤa
 kuon && ngo && 
-錕kʷˤən;kʷˤənɣ鋘ŋˤa;ɣʀʷˤa
-kuon;kuón && ngo;xwa && 
-錕kʷˤən;kʷˤənɣ鋙ŋa;ŋaɣ
-kuon;kuón && ngyo;ngyó && 
 齟sdʀʷaɣ齬ŋa;ŋaɣ;ŋˤa
 dzcyó && ngyo;ngyó;ngo && 
 梧ŋˤa桐ɣlˤɔŋ
 ngo && dung && 
-珷maɣ玞pa
-müó && püo && 
-碔maɣ砆
-müó &&  && 
-鸚hʀˤɛŋ鵡maɣ
-qreng && müó && 
-鸚hʀˤɛŋ䳇mˤoɣ;maɣ
-qreng && mú;müó && 
 仵ŋˤaɣ作stˤak;stˤakh;stˤalh
 ngó && tsak;tsò;tsö̀ && 
 喑hʀəm;hˤəm;hʀəmh噁hˤakh
@@ -3726,12 +3760,12 @@ güët;ngüët && müët &&
 müët;myt && myuk && 
 硉ʀʷˤət兀ŋʷˤət
 luot && nguot && 
-兀ŋʷˤət臬ŋˤɛt
-nguot && ngiet && 
 杌ŋʷˤət隉ŋˤɛt
 nguot && ngiet && 
-𠨜ŋʷˤət臲ŋˤɛt;ŋˤɛt，卼ŋʷˤət臲ŋˤɛt;ŋˤɛt
-nguot && ngiet;ngiet &&  && nguot && ngiet;ngiet && 
+𠨜ŋʷˤət臲ŋˤɛt
+nguot && ngiet && 
+卼ŋʷˤət臲ŋˤɛt
+nguot && ngiet && 
 畖hʀʷˤa留ʀoh;ʀo
 qwa && lyù;lyu && 
 䯞kʰʀʷˤal𩨾ŋʀʷˤal
@@ -3752,11 +3786,11 @@ qwäi && nguö́i;nguöi &&
 qwäi;xuö́i && quö && 
 溛瀤gʀʷˤəl
  && xwäi && 
-蒯kʰʀʷˤəlh𩔀ŋʀʷˤəlh
-khwä̀i && ngwä̀i && 
-逶hʀʷɛl迆ɣlɛlɣ;ɣlɛl
-qüï && jiḯ;jiï && 
+蒯kʰʀʷˤəlh顡ŋəlh;ŋʷˤəlɣ;ʀkʷˤəlh
+khwä̀i && ngyë̀i;nguö́i;tcwä̀i && 
 蜲hʀʷɛl;hʀʷɛlɣ蛇ɣlɛl;ŋlal;xlˤal
+qüï;qüḯ && jiï;zjya;thö && 
+委hʀʷɛl;hʀʷɛlɣ蛇ɣlɛl;ŋlal;xlˤal
 qüï;qüḯ && jiï;zjya;thö && 
 倭hʷˤal;hʷˤalɣ;hʀʷal遲dʀøl
 quö;quö́;qüï && dcyi && 
@@ -3770,8 +3804,6 @@ tsvï && ngüï &&
  && jvï && 
 磈hʷəlɣ;kʰʷˤəlɣ硊ŋʀʷɛlɣ
 qüë́i;khuö́i && ngüḯ && 
-𥳣sdʷˤath䇻
-dzuàj &&  && 
 𥓔hʷˤəlɣ磊ʀʷˤəlɣ
 quö́i && luö́i && 
 萎hʀʷɛlh;hʀʷɛl蕤nʷəl
@@ -3848,24 +3880,20 @@ jiä̀m && jyò &&
 qyuk;yú && lý && 
 噢hɔɣ;hok咿høl
 qüó;qyuk && qi && 
-蘡hɛŋ薁hok
-qiäng && qyuk && 
 鸀tɔk;dˤɔk;dʀˤɔk鳿ŋɔk
 tsjyok;duk;dcrök && ngyok && 
 濩ɣʷˤak;ɣˤakh;hʀʷak澤ʀgˤak
 xuak;xò;qüäk && dcräk && 
 獨dˤɔk𤞞ɣlɔk;kˤɔk
 duk && jyok;kuk && 
-吐tʰˤah;tʰˤaɣ谷ɣlɔk;kˤɔk;ʀˤɔk渾ɣʷˤən;ɣʷˤənɣ
-thò;thó && jyok;kuk;luk && xuon;xuón && 
 灪hʷət滃hˤɔŋɣ
 qüët && qúng && 
-灪hʷət䃶gʀʷˤəl
-qüët && xwäi && 
 棘kək蒬hʷan
 kyk && qüon && 
 五ŋˤaɣ阮ŋʷanɣ;ŋʷan
 ngó && ngüón;ngüon && 
+蠑ɣʀʷɛŋ螈
+üäng &&  && 
 蠑ɣʀʷɛŋ蚖ŋʷan;ŋʷˤan
 üäng && ngüon;nguan && 
 鶢ɣʷan居ka;kə
@@ -3900,6 +3928,8 @@ hräp && hu &&
  && siep && 
 䜶gʀˤoŋ䝄sʀˤoŋ
 xröng && scröng && 
+栙gʀˤoŋ䉶sʀˤoŋ
+xröng && scröng && 
 慃hʀˤɔŋɣ𢞡xʀˤɔŋɣ
 qrö́ng && hrö́ng && 
 猲xˤat;xat;獢xʀø
@@ -3912,6 +3942,8 @@ tsjhi && hrau &&
 xrau && thieu;dau && 
 嬥dˤø;dˤøɣ;dˤøh;dʀˤøk嬈xˤøh;nøɣ;nˤøɣ
 dieu;diéu;dièu;dcrök && hièu;njiä́u;niéu && 
+娎xʀat;xˤøh㛍xˤɛp;kʰˤɛp;xʀamɣ
+hyät;hièu && hiep;khiep;hyä́m && 
 㰰xʀˤəp㰨xʀˤɛ
 hräp && hre && 
 䓳ɣˤənɣ;ɣʀˤəl菔bək;bˤək
@@ -3922,6 +3954,8 @@ kré;krè;xré;xrè && dcré;dcyḯ &&
 xré && dcré;dcyḯ && 
 𦤬xʀˤath𦤧dʀˤath
 hràj && dcràj && 
+蓒xan芋ɣʷa;ɣʷah
+hyon && üo;üò && 
 㾰ɣˤa㾾xˤɛm
 xo && hiem && 
 䵌xˤɛm姁xɔɣ;xɔh;xɔ;gɔ
@@ -3944,8 +3978,6 @@ hyón && puak;phuak;püò &&
 liäm;liä́m;liä̀m;hyä́m && jvín && 
 㛍xˤɛp;kʰˤɛp;xʀamɣ姱kʰʀʷˤa
 hiep;khiep;hyä́m && khwa && 
-睍ɣˤɛnɣ睆ɣʀʷˤanɣ
-xién && xwán && 
 覱stʀˤamh㒈xʀˤamh
 tscràm && hràm && 
 𦪬xat艎ɣʷˤaŋ
@@ -3968,8 +4000,6 @@ diei;tiei && diei;xiei &&
 tièm;tièn && hyì && 
 贔bʀəth屓xʀəth
 byì && hyì && 
-肸xət;xʀət蠁xaŋɣ;xaŋh
-hyët;hyt && hyáng;hyàng && 
 丁tʀˤɛŋ;tˤɛŋ蛵xˤɛŋ
 tcreng;tieng && hieng && 
 𩈉klˤəmh𩈡xɛŋh
@@ -3980,8 +4010,6 @@ xrök && khrök &&
 hyu && syk && 
 鵂xo鶹ʀo
 hyu && lyu && 
-駏gaɣ驉xa
-gyó && hyo && 
 雩xɔ;ɣɔ婁ʀɔ;ʀˤɔ
 hüo;üo && lüo;lu && 
 姁xɔɣ;xɔh;xɔ;gɔ媮lɔ;tʰˤɔ
@@ -4034,10 +4062,10 @@ xwät && dcräk &&
 dzak;dzcrek;dziäk && ko && 
 𩔳skʀˤɛk頗pʰˤalɣ;pʰˤal;pʰˤalh
 tscrek && phuö́;phuö;phuö̀ && 
+𦟜skʀˤɛk子skəɣ
+tscrek && tsý && 
 𡸦sdʀək嶷ŋə;ŋək
 dzcyk && ngy;ngyk && 
-稫pʰøk𥟔stʀək
-phyk && tscyk && 
 鰞hˤa鱡sdˤək
 qo && dzëk && 
 木mˤɔk𦽒sdˤək
@@ -4062,8 +4090,6 @@ tcra;tcrá && nra &&
 tsya;tscrá && ngrà && 
 痄stʀˤaɣ疨xʀˤa
 tscrá && hra && 
-痄stʀˤaɣ腮
-tscrá &&  && 
 哆tˤalɣ;tˤalh;tʀˤalh;tʰʀˤal;tʰalɣ;tʰaɣ;tʰəh㕦ɣʀʷˤalh
 tö́;tö̀;tcrà;tchra;tsjhiḯ;tsjhyá;tsjhỳ && xwà && 
 䐒tʀˤal;tʀˤalh䏧nʀˤalh
@@ -4106,6 +4132,8 @@ mrá && dzcràn;dzcrán &&
 dzcrä́m && dzcrök && 
 鶻gʷˤət;gʀʷˤət;kʷˤət鵃tʀˤo;tø;tʀo;tˤøɣ
 xuot;xwät;kuot && tcrau;tsjiäu;tcyu;tiéu && 
+菬tøɣ;sdø子skəɣ
+tsjiä́u;dziäu && tsý && 
 笊stʀˤoɣ;stʀˤoh籬ʀɛl
 tscráu;tscràu && liï && 
 𢁬stʀˤoɣ頭dˤɔ
@@ -4114,8 +4142,6 @@ tscráu && du &&
 byäng && tsjiät && 
 謺tap讘nap
 tsjiäp && njiäp && 
-婢bɛɣ鮿tʀap魚ŋa
-biḯ && tcyäp && ngyo && 
 鷓takh鴣kˤa
 tsjyà && ko && 
 佂tɛŋ伀tɔŋ
@@ -4126,8 +4152,14 @@ tsjiäng && tsjyong &&
 tsjim && zim && 
 駗tʀən;tənɣ驙dˤan;tʀan
 tcyn;tsjín && dan;tcyän && 
+侲klən;klənh子skəɣ
+tsjin;tsjìn && tsý && 
+蒴sʀˤɔk𧃔dʀˤɔk
+scrök && dcrök && 
 龍ʀɔŋ𩑂dʀˤɔk
 lyong && dcrök && 
+䖦tʷɛt蟱
+tsjvät &&  && 
 𧖀tʀʷat蟊mo
 tcüät && myu && 
 蔠toŋ葵ɣøl
@@ -4162,6 +4194,8 @@ tcyi;tiei && dö;dcyï &&
 tsjiḯ && jyo && 
 䘢tʀaɣ𧛢tʀɛlɣ
 tcyó && tcyḯ && 
+茋tølɣ蒻nøk
+tsjí && njyak && 
 踶dʀɛɣ;dˤɛh跂kʰɛɣ;kʰɛh;gɛ
 dcyḯ;dièi && khvḯ;khiï̀;giï && 
 遠ɣʷanɣ;ɣʷanh䓌təh
@@ -4172,6 +4206,8 @@ dciäk && dcyok &&
 dciäk && dcyok;tsjyok && 
 𢕚tʀək滴tˤɛk
 tcyk && tiek && 
+譅sʀəp譶ʀgəp;glˤəp
+scyp && dcyp;döp && 
 藷tʷa;dʷah蔗takh
 tsjyo;dzjyò && tsjyà && 
 礛kʀˤam䃴tʷa
@@ -4208,6 +4244,8 @@ khöm;khyö̀m;khyöm;gym && tcüï &&
 tcüï̀ && nüï̀ && 
 蒺sdøt藜ʀˤøl
 dzit && liei && 
+𧎿sdøt蜊ʀøl
+dzit && li && 
 噈stok𠹋sdøt
 tsyuk && dzit && 
 楖støt;stək;stʀøt栗ʀøt
@@ -4246,6 +4284,8 @@ liéng;lieng && tsiäng &&
 siï && tsiäng && 
 汫sgˤɛŋɣ濙hʷˤɛŋɣ
 dziéng && qvéng && 
+眳mɛŋɣ;mˤɛŋɣ睜sdɛŋɣ
+miä́ng;miéng && dziä́ng && 
 確kʰʀˤøk鑿stˤak;sdˤokh;sdˤak;sdˤɔk
 khrök && tsak;dzáu;dzak;dzuk && 
 岝sdʀˤak;sdˤak㟧ŋˤak
@@ -4260,6 +4300,8 @@ púng;búng && tsúng &&
 tschrök;tscyu && ngu;ngüo && 
 艆ʀˤaŋ䑼stʀo
 lang && tscyu && 
+𨫒ʀˤɔh楱stʰˤɔh;sdˤɔh
+lù && tshù;dzù && 
 踧dˤøk;stok踖sdak;stak;stʰøk
 diek;tsyuk && dziäk;tsiäk;tshyak && 
 蝍stˤøt;støt;skək𧑙stok
@@ -4278,8 +4320,12 @@ dzuot && nguot &&
 dzuot && nguot && 
 蜿hʷan;hʷˤan;hʷanɣ蟤skʀʷan
 qüon;quan;qüón && tscüän && 
+嶊skʷˤəlɣ嶉skʷəlɣ;skʷəl;skʷəlɣ
+tsuö́i && tsví;tsvi;tsví && 
 檇skʷəlh;skʷəl;sgʷˤəl李ʀəɣ
 tsvì;tsvi;dzuöi && lý && 
+𥳣sdʷˤath䇻
+dzuàj &&  && 
 𡸨stɔ嵎ŋɔ
 tsüo && ngüo && 
 陬stˤɔ;stʀo;stɔ隅ŋɔ

@@ -130,6 +130,8 @@ pröng && pröng &&
 puan;buan;pran && pran && 
 班pʀˤan𤦦pʀˤan般pˤan;bˤan;pʀˤan
 pran && pran && puan;buan;pran && 
+鳻bən;pʀˤan斑pʀˤan+鳩ko”
+büën;pran && pran &&  && kyu &&  && 
 螌pʀˤan斑pʀˤan+蝥mɔ;mʀˤo;mo;mɔh”
 pran && pran &&  && müo;mrau;myu;müò &&  && 
 斑pʀˤan辬pʀˤan
@@ -268,9 +270,9 @@ buö̀i && puö̀i;buö̀i &&
 brä̀i &&  && 
 備bʀəh俻bʀəh𤰇bʀəh𤰈bʀəh
 byì && byì && byì && byì && 
-犕bʀəkh鞴bˤah;bok;bʀəkh
+犕bʀəh鞴bˤah;bok;bʀokh
 byì && bò;byuk;byì && 
-鞴bˤah;bok;bʀəkh絥bok;bʀəkh𩎓bʀəkh
+鞴bˤah;bok;bʀokh絥bok;bʀokh𩎓bʀokh
 bò;byuk;byì && byuk;byì && byì && 
 贔bʀəth奰bʀəth𡚤bʀəth
 byì && byì && byì && 
@@ -670,8 +672,8 @@ tshau;tshàu;sú &&  &&
 dzau && dzau && 
 槽sdˤo;stˤo漕sdˤo;stˤo;sdˤoh
 dzau;tsau && dzau;tsau;dzàu && 
-嘈sdˤo䏆sdø;sdˤo
-dzau && dziäu;dzau && 
+嘈sdˤo䏆sdø;sdˤo髞sˤoh
+dzau && dziäu;dzau && sàu && 
 草stʰˤoɣ艸stʰˤoɣ
 tsháu && tsháu && 
 懆stʰˤoɣ慅stʰˤoɣ;sˤo;sˤø
@@ -842,7 +844,7 @@ tsjhiä̀m && tsjhiäm;tsjhiä̀m &&
 tschrau;tschràu && tschrau && 
 鈔stʰʀˤo;stʰʀˤoh抄stʰʀˤo;stʰʀˤoh
 tschrau;tschràu && tschrau;tschràu && 
-䰫stʰʀˤo;sdʀˤoɣ訬stʰʀˤo;møɣ
+䰫skʰʀˤo;sgʀˤoɣ訬stʰʀˤo;møɣ中古始通
 tschrau;dzcráu && tschrau;miä́u && 
 鼂dʀø晁dʀø
 dcyäu && dcyäu && 
@@ -920,10 +922,10 @@ tchiä̀ng && tchiäng;tchiä̀ng;tcrä̀ng && tchiä̀ng &&
 tchyak;tchrök && tchrök;tchràu && 
 戳㪬dʀˤɔk;tʰʀˤɔk
  && dcrök;tchrök && 
-娖stʰʀˤɔk娕stʰʀˤɔk
+娖skʰʀˤɔk娕stʰʀˤɔk
 tschrök && tschrök && 
-齪stʰʀˤɔk𪘏stʰʀok;stʰʀˤɔk齱stʰʀˤɔk;stʀo
-tschrök && tschyuk;tschrök && tschrök;tscyu && 
+齪stʰʀˤɔk𪘏stʰʀok;stʰʀˤɔk齱stʰʀˤɔk;stʀo娕stʰʀˤɔk
+tschrök && tschyuk;tschrök && tschrök;tscyu && tschrök && 
 綽tʰøk繛tʰøk婥tʰøk
 tsjhyak && tsjhyak && tsjhyak && 
 㲋tʰʀak𤟭tʰʀak
@@ -1686,8 +1688,8 @@ tiek;tièu && tiek;tièu &&
 diek && diek;dcräk && 
 翟dˤɛk;dʀˤak狄dˤɛk
 diek;dcräk && diek && 
-覿ɣlˤøk;ɣlˤɔk𧠫ɣlˤøk
-diek;duk && diek && 
+覿ɣlˤɔk;lˤɔk;lˤøk𧠫lˤøk
+duk;duk;diek && diek && 
 笛lˤøk篴dʀok;lˤøk
 diek && dcyuk;diek && 
 糴dˤɛk籴dˤɛk
@@ -1934,7 +1936,7 @@ dok;dö̀i && dok &&  &&
 dok && dàu;dok && 
 𧝴tˤok裻tˤok;sˤok𧛔tˤokh;tˤok𧞶tˤok
 tok && tok;sok && tàu;tok && tok && 
-突tʰʷˤət;dʷˤət𡿮tʰʷˤət;dʷˤət
+突tʰʷˤət;dʷˤət𡿮xlʷˤət;ɣlʷˤət
 thuot;duot && thuot;duot && 
 堗dʷˤət突tʰʷˤət;dʷˤət
 duot && thuot;duot && 
@@ -2288,11 +2290,11 @@ byú;byuk && byuk &&
 phyuk;byuk && pyuk && 
 澓bok洑bok
 byuk && byuk && 
-箙bok鞴bˤah;bok;bʀəkh𩋟bok
+箙bok鞴bˤah;bok;bʀokh𩋟bok
 byuk && bò;byuk;byì && byuk && 
 𥨍pʰok;bok㙏pʰok
 phyuk;byuk && phyuk && 
-絥bok;bʀəkh𩊙bok鞴bˤah;bok;bʀəkh𩎧bok
+絥bok;bʀokh𩊙bok鞴bˤah;bok;bʀokh𩎧bok
 byuk;byì && byuk && bò;byuk;byì && byuk && 
 匐bok;bˤək伏bəkh;bok
 byuk;bëk && byù;byuk && 
@@ -3748,9 +3750,9 @@ jiän &&  && jiän;jiä̀n;ziä̀n &&
 jvän && jvän && 
 鹽ɣlam;ɣlamh塩ɣlam
 jiäm;jiä̀m && jiäm && 
-閻sɣam;lam閆䦲tʰamh;lam
+閻sɣam;ɣlam閆䦲tʰamh;lam
 ziäm;jiäm &&  && tsjhiä̀m;jiäm && 
-檐lam簷lam櫩lam𣡞lam壛lam閻sɣam;lam
+檐lam簷lam櫩lam𣡞lam壛lam閻sɣam;ɣlam
 jiäm && jiäm && jiäm && jiäm && jiäm && ziäm;jiäm && 
 𧇱ŋʀˤəm麙ŋʀˤəm㺂ŋʀˤəm羬gʀam;ŋʀˤəm
 ngräm && ngräm && ngräm && gyäm;ngräm && 
@@ -4004,11 +4006,11 @@ jyak && jyak &&
 jyak && jyak && 
 鑰løk𨷲løk
 jyak && jyak && 
-瀹løk𩱲løk
+瀹løk𩱲ɣløk
 jyak && jyak && 
-𤅢løk𩱲løk𤄶ɣløk
+𤅢løk𩱲ɣløk𤄶ɣløk
 jyak && jyak && jyak && 
-爚sløk;løk𩱲løk
+爚sløk;løk𩱲ɣløk
 sjyak;jyak && jyak && 
 籥løk龠løk
 jyak && jyak && 
@@ -4634,9 +4636,9 @@ güët && güët && güët &&
 güot;güët && güët;ngüët && güët && 
 堀kʰʷˤət;gʷət掘gʷat;gʷət
 khuot;güët && güot;güët && 
-涓kʷˤɛn蠲kʷˤɛn
+涓kʷˤɛn蠲kˤøŋ 真部合并後始通
 kven && kven && 
-蠲kʷˤɛn焆hʀat;hʷˤɛt;kʷˤɛn
+蠲kˤøŋ焆hʀat;hʷˤɛt;kʷˤɛn 真部合并後始通
 kven && qyät;qvet;kven && 
 畎kˤønɣ𡿨kˤønɣ𤰝kˤønɣ
 kvén && kvén && kvén && 
@@ -5042,7 +5044,7 @@ lam;làm && hám;khàm;làm &&
 làm && lam;làm && làm;xrám && 
 鐃nʀˤø撓xˤø;nʀˤoɣ;xˤo
 nrau && hieu;nráu;hau && 
-譊nʀˤo呶nʀˤo
+譊nʀˤo呶nʀˤo中古始通
 nrau && nrau && 
 𥗰nʀˤo𣲿nʀˤo硇nʀˤo;nʀˤo
 nrau && nrau && nrau;nrau && 
@@ -6082,7 +6084,7 @@ muöi &&  &&
 myí && myí && myí && 
 浼mˤəlɣ潣mˤəlɣ;mʀənɣ
 muö́i && muö́i;mýn && 
-媚mʀəlh魅mʀəth
+媚mʀəlh魅mʀəth 中古始通
 myì && myì && 
 魅mʀəth鬽mʀəth
 myì && myì && 
@@ -6492,8 +6494,6 @@ ngú && ngù;ngú &&
 ngú;ngüo &&  && 
 嘔hˤɔ;hˤɔɣ歐hˤɔ;hˤɔɣ
 qu;qú && qu;qú && 
-琶bʀˤa爬bʀˤa
-bra && bra && 
 帕pʰʀˤah;mʀˤat帊pʰʀˤah
 phrà;mrat && phrà && 
 叭𨋐pʰʀˤət𥐙pʰʀˤət
@@ -6614,8 +6614,8 @@ bräng;brä̀ng && bräng &&
 bräng && bräng;breng && 
 歕pʰˤən;pʰˤənh噴pʰˤən;pʰˤənh
 phuon;phuòn && phuon;phuòn && 
-帔pʰʀɛl;pʀɛlhpi1ɣʷat;xʷˤath;tʀˤɛŋ;tˤɛŋ;tˤɛŋɣ;tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;hˤa;hˤah;ɣʷa;kʀˤo;kʰˤɔkh;kɔkh;kˤɔkh;ŋˤath;sløŋ;nˤəmh;nʷɛth;mˤɛŋ;;kʰah;kʰah;kʰa;tˤoh;tøɣ;døh;tʰø;pʰøl;bʀølɣ;pʰalɣ;pʰˤøl;bøl;bøt;sɛl;stʰʀˤɛl;stʰʀˤal;stʰʀɛl;stʰʀˤəl;stʰʀˤɛlh;sdʀˤalɣ;stal;sdˤal;stʰˤəp;stʰˤəm;stʰˤəmh;stʰʀəm;sˤəmɣ;sʀəm;ɣˤaɣ;ʀam;ʀamɣ;ʀgəmɣ;ŋʀamɣ;klˤəp;ʀˤəp;kʰˤəm;kʰlam;xˤɛm;xʀˤəmɣ;ŋˤəmɣ;ŋʀəm;ŋlˤɛmɣ;nʀˤəmɣ;ŋˤəp;ɣlɔk;kˤɔk;ɣʷən;kʰəŋ;hʷəl;xøl;kˤan;gˤanh;kˤanɣ;kˤanh;ŋˤanh;ŋˤat;ŋˤɛn;ŋˤɛnh;ŋˤɛn;ŋʀˤək;hʀˤø;kʀˤɔŋɣ;bˤøɣ;kʀˤɛt;kʰˤath;kʀˤɛt;gˤɛt;kʰˤɛt;ŋˤɛt;gˤɛth;kʰˤaŋɣ;gˤaŋ;kʷˤaŋ;stʰˤəmɣ;stˤəm;ɣlˤɔk;mˤɔŋ;glˤəm;klˤəmɣ;klˤamɣ;ʀgəm;ʀgəmh;ʀkəmɣ;təŋɣ;pʀˤan;hʷˤɛt;kʷˤɛt;pʀˤa;bʀˤah;bʀˤɛh;gɛ;klɛ;kʀɛɣ;pʰˤaŋɣ;pˤaŋɣ;pˤaŋh;bˤaŋ;paŋ;paŋh;kˤəth;kʰʀˤɛn;kʰʀˤan;dˤɛ;dˤɛɣ;klɛ;glɛɣ;pˤak;stˤaŋ;xʀˤa;kʷaŋɣ;gʷaŋɣ;sˤal;sʷˤal;sʀˤal;gˤøn;dˤɛŋ;dˤɛŋɣ;sdʀˤakh;sdak;stʰʀak;sdak;støt;stək;stʰʷa;stʰaɣ;stʷa;stʰʷa;stʷaɣ;stʷa;stʰʷa;stʀʷa;sta;sdʀˤa;stˤaŋɣ;sdʀʷa;stʀˤak;stʀˤakh;hʷˤal;kʰʷˤal;kʰʷˤət;hˤath;hˤat;hʀath;hʀˤath;kʰʀath;kʰʀˤat;tʀˤɛm;dʀˤɛmh;tˤɛm;tˤɛmh;tʰˤɛm;tʰˤɛp;tʀɛm;pʰʀˤɔh;ʀˤɛ;ɣˤa;ɣˤal;hʀal;kʰʀal;haŋ;hˤaŋɣ;hʀˤɔŋ;ɣlˤal;ɣlˤal;xlʷˤal;xal;ɣlˤal;ɣlɛl;ŋlal;nˤølɣ;nˤøl;nˤølh;bʀɛŋ;tˤanɣ;tˤanh;dˤanɣ;dˤan;ʀgʷət;tʰˤɛk;dˤɛp;sdʀˤəp;lɛth;kʰˤəmɣ;kʰʀˤəm;stʰˤɛŋ;stʰˤøŋh;lo;loh;tʰʀo;slɔ;lɔ;tʰˤɔ;lˤɔ;lˤɔɣ;lˤɔ;kˤap;hʀˤap;hɛmh;ʀxøŋ;sxah;pʀˤak;pʰʀˤah;mɔ;løn;tʰˤak;xlʷɛth;xlˤə;ɣləh;ɣlə;ɣlˤə;ɣlˤəɣ;ɣləɣ;lˤəɣ;hˤəɣ;hˤə;ɣʀəɣ;tˤɛp;path;hʀˤø;hʀˤəth;kʰʀˤəh;tʰˤo;tʰˤø;kʀat;kʰøt;køt;kˤøt;kʀˤɛt;gʀˤɛt;kʰʀˤɛt;klˤaŋ;xʷan;kʷˤɛh;ŋʀˤə;tˤalɣ;tˤalh;dalɣ;dal;døl;dˤøk;sdˤøk;skʰakh;ʀxˤak;sxˤakh;kˤøl;kløl;ɣʷˤɛn;ɣʷˤən;sgʀˤɛk;sʀˤək;sdɛ;;ɣlaŋ;ɣlaŋɣ;nˤɔɣ;nʀə;nˤɛp;tʀøt;tʰʀøth;kʰˤənɣ;kʰʀˤənɣ;ŋən;ŋʀən;ŋˤən;ɣˤənɣ;bˤan;kˤan;kʰʷəl;ɣlə;sʀɛl;ʀˤølh;glˤa;ʀgˤa;ʀgʷa;ɣlʷa;mˤan;manh;manɣ;ʀˤøl;ŋˤa;dʀaɣ;xˤɛp;kʰˤɛp;hanɣ;tʰʷˤəlɣ;hʀˤɛŋ;kˤɛŋh;xəl;dɛt;tɛt;dɛth;ʀˤo;ʀˤaŋ;klənh;sgʀən;hˤəp;lo;sdo;pˤal;pˤalh;ŋəɣ;ŋə;ŋək;hʀˤaɣ;hˤalɣ;hʀˤɛ;pˤɛ;bʀˤɛkh;bˤɛ;pɛ;bɛ;pˤɛŋɣ;mø;tʷˤat;tʀʷəl;tʷɛt;stˤɛn;stʀˤɛnɣ;stɛnɣ;stɛnh;stˤɛn;tʰʷˤaŋɣ;sˤɛk;kʀəmh;hʷˤalɣ;kʷˤɛŋɣ;xlˤamɣ;ɣlˤəmɣ;stʀˤɛŋ;tək;gˤəmɣ;gˤəmh;gʀˤəmh;kʰʀʷˤəth;gʷˤəth;kʷəth;kʰʀʷˤəlh;ʀxak;klʷɛt;ʀˤəmɣ;ʀˤəmh;ʀˤath;ɣʀˤa;sˤɔɣ;ɣlˤəm;ɣʀˤamh;xˤø;xˤøh;sgʀˤɛn;skʀʷanh;tˤɛk;tʀˤak;tʰˤɛkh;tʰʀɛkh;stʰˤə;kʷˤɛt;kʰʷˤɛt;sɣʷən;ŋlʷənɣ;kʰʷˤəlɣ;tʀˤək;mˤat;mˤɛt;mˤɛt;stˤak;stʰaŋ;ʀˤɛmɣ;tap;sdap;nøk;ŋˤo;ŋʀˤø;ɣʀˤək;skˤɛn;sgˤɛn;sʀˤɛt;dap;hˤa;tˤøn;sˤak;dʀok;ʀˤønh;xˤak;xˤɔk;xˤok;gˤoɣ;xʀø;xʀˤø;kʀøɣ;xʀˤaŋ;xaŋɣ;ʀˤɛk;ɣlok;hʀʷˤaŋɣ;ʀˤɔɣ;ʀɔ;ʀɔɣ;stˤoɣ;sdʀˤø;sdˤam;ʀˤøɣ;ʀˤoɣ;ʀˤø;ʀoh;kˤøɣ;mo;mʀo;mʀoh;tˤalɣ;tˤalh;dˤanɣ;dˤanh;dˤan;kəlɣ;tˤəŋh;stʰøk;mˤak;mˤaŋɣ;ŋʀʷˤath;kʰlʷˤalɣ;xʷɛl;ɣlʷˤalɣ;ʀˤɛn;stˤoɣ;stʰø;ʀgˤak;ɣlak;ɣlˤakh;bˤɛkh;kʰˤɛk;xlˤɛk;kʰʀˤək;xʀʷˤək;lɔ;xˤamɣ;kʰˤamh;xʀʷˤan;tʀøth;sdˤølɣ;sdˤøl;ʀˤap;ʀap;tʀəŋ;ʀˤɛk;ʀʷˤəl;ʀʷˤəl;nˤaŋ;ŋˤøth;xʀɛl;xʀɛlh;ʀɔŋh;kʰˤɛ;gˤɛ;sdʀˤamh;ɣʀʷˤək;tˤɔh;tʀoh;tˤɔɣ;tˤɔh;tʰˤəmh;bʀˤø;pʰˤo;stˤanh;sdʷˤan;sdˤanh;sxˤəp;ɣʀˤap;klap;sɛl披pʰʀɛlɣ;pʰʀɛl
-phyï;pyï̀ &&  &&  && üot;huàj;tcreng;tieng;tiéng;thiéng;thieng;diéng;qo;qò;üo;krau;khù;küò;kù;ngàj;sjin;nö̀m;njvèj;mieng;khyö;khyò;khyò;khyo;tàu;tsjiä́u;dzjiä̀u;tsjhiäu;phi;byí;phiḯ;phiei;bi;bit;siï;tschre;tschra;tschyï;tschräi;tschrè;dzcrá;tsya;dzö;tshöp;tshöm;tshö̀m;tschym;sö́m;scym;xó;liäm;liä́m;dcým;ngyä́m;töp;löp;khöm;tsjhiäm;hiem;hrä́m;ngö́m;ngym;niém;nrä́m;ngöp;jyok;kuk;üën;khyng;qüëi;hi;kan;xàn;kán;kàn;ngàn;ngat;ngien;ngièn;ngien;ngrek;qrau;krö́ng;bö́i;krät;khàj;krät;xiet;khiet;ngiet;xièi;kháng;xang;kuang;tshö́m;tsöm;duk;mung;döm;tö́m;tám;dcym;dcỳm;tcým;tsjýng;pran;qvet;kvet;pra;brà;brè;giï;tsjiï;kyḯ;pháng;páng;pàng;bang;püang;püàng;kö̀i;khrän;khran;diei;diéi;tsjiï;dzjiḯ;puak;tsang;hra;küáng;güáng;sö;suö;scra;xien;dieng;diéng;dzcrà;dziäk;tschyäk;dziäk;tsit;tsyk;tshyo;tshyá;tsyo;tshyo;tsyó;tsyo;tshyo;tscyo;tsya;dzcra;tsáng;dzcyo;tscräk;tscrà;quö;khuö;khuot;qàj;qat;qyèj;qràj;khyèj;khrat;tcräm;dcrä̀m;tiem;tièm;thiem;thiep;tcym;phràu;lrau;xo;xö;qyï;khyï;qyang;qáng;qröng;dö;dö;thuö;hiï;dö;jiï;zjya;niéi;niei;nièi;byäng;tán;tàn;dán;dan;dcüyt;thiek;diep;dzcräp;jièj;khö́m;khräm;tshieng;tshièn;jyu;jyù;tchyu;sjüo;jüo;thu;du;dú;du;kap;qrap;qyö̀m;tchyn;syà;präk;phrà;müo;jin;thak;sjvèj;thöi;jỳ;jy;döi;dö́i;jý;jö́i;qö́i;qöi;zcý;tiep;püö̀j;qrau;qràj;khrä̀i;thau;thieu;kiät;khit;kit;kiet;krät;xrät;khrät;tang;hüon;kvèi;ngräi;tö́;tö̀;dzjiḯ;dzjiï;dzjiei;diek;dziek;tshyà;tchräk;sò;kiei;tsji;xven;xuon;dzcrek;screk;dziï;sö̀;jyang;jyáng;nú;njy;niep;tcyt;tchyì;khón;khrä́n;ngyën;ngyn;ngon;xón;buan;kan;khüëi;jy;scyï;lièi;do;dcra;dcyo;jyo;muan;müòn;müón;liei;ngo;dcyó;hiep;khiep;qyón;thuö́i;qreng;kièng;hyëi;dzjiät;tsjiät;dzjièj;lau;lang;tsjìn;dzcyn;qöp;jyu;dzyu;puö;puö̀;ngý;ngy;ngyk;qrá;qö́;qre;piei;brè;biei;piï;biï;piéng;miäu;tuat;tcüi;tsjvät;tsien;tscrä́n;tsiä́n;tsiä̀n;tsien;thuán;siek;kỳm;quö́;kvéng;thám;dö́m;tscreng;tsjyk;xö́m;xö̀m;xrä̀m;khwä̀i;xuö̀i;küë̀i;khwä̀i;tchyak;tsjvät;lö́m;lö̀m;làj;xra;sú;döm;xràm;hieu;hièu;dzcrän;tscüä̀n;tiek;tcräk;thièi;tchyèj;tshöi;kvet;khvet;zvin;zjvín;khuö́i;tcrek;muat;miet;miet;tsak;tshyang;liém;tsjiäp;zip;njyak;ngau;ngrau;xrek;tsien;dzien;scrät;dzjiäp;qo;tien;sak;dcyuk;lièn;hak;huk;hok;xáu;hyäu;hrau;kyä́u;hräng;hyáng;liek;jyuk;qwä́ng;lú;lüo;lüó;tsáu;dzcrau;dzam;liéu;láu;lieu;lyù;kiéu;myu;miu;miù;tö́;tö̀;dán;dàn;dan;kyë́i;të̀ng;tshyak;mak;máng;mràj;thuö́;hvï;duö́;lrän;tsáu;tshiäu;dcräk;jiäk;dò;bièi;khiek;thiek;khrek;hwek;jüo;hám;khàm;hwan;tcyì;dziéi;dziei;lap;liäp;tcyng;liek;luöi;luöi;nang;ngièi;hyï;hyï̀;lyòng;khiei;xiei;dzcràm;xwek;tù;tcyù;tú;tù;thö̀m;brau;phau;tsàn;dzuan;dzàn;söp;xrap;tsjiäp;siï && phyḯ;phyï && 
+帔pʰʀɛl;pʀɛlh披pʰʀɛlɣ;pʰʀɛl
+phyï;pyï̀ &&  &&  && 
 鮍pʰʀɛl披pʰʀɛlɣ;pʰʀɛl
 phyï && phyḯ;phyï && 
 披pʰʀɛlɣ;pʰʀɛl帔pʰʀɛl;pʀɛlh
@@ -6636,12 +6636,10 @@ phi && piei;phi && phi;biï;bì &&
 phiei;piï && phiei;bi && 
 疲bʀɛl罷bʀɛl;bʀˤɛlɣ;bʀɛlɣ
 byï && byï;bré;byḯ && 
-䴽bɛ𪌈bøl;bɛ
-biï && bi;biï && 
-埤bɛ陴bɛ
-biï && biï && 
 陴bɛ𩫫bɛ
 biï && biï && 
+䴽bɛ𪌈bøl;bɛ
+biï && bi;biï && 
 蜱bɛ;mø𧓎bɛ
 biï;miäu && biï && 
 螷bɛ;bʀˤəŋɣ蠯bɛ;bʀˤɛ;bʀˤəŋɣ
@@ -6654,14 +6652,12 @@ bi && bi;pí;bì;pì;bit &&
 bi;bì && liei;ly &&  && biei &&  && 
 貔bøl豼bøl
 bi && bi && 
-膍bˤøl;bøl肶bøl毗bøl
-biei;bi && bi && bi && 
+膍bˤøl;bøl肶bøl
+biei;bi && bi && 
 蚍bøl𧖈bøl
 bi && bi && 
 鼙bˤɛ鞞bˤɛ;pɛɣ;pɛ;pˤɛŋɣ
 biei && biei;piḯ;piï;piéng && 
-椑bˤɛ;pɛ;bˤɛk;bɛk㼰bˤɛ
-biei;piï;biek;biäk && biei && 
 諀pʰɛɣ吡bøt;pʰɛɣ
 phiḯ && bit;phiḯ && 
 庀pʰalɣ䚹pʰalɣ
@@ -6672,10 +6668,8 @@ phyï;pyï̀ && pyï;phyï̀ &&
 phì && phüë̀i;phì && 
 媲pʰˤølh䠘pʰˤølh
 phièi && phièi && 
-辟bɛkh;pʰɛk;pɛk;bɛk僻pʰˤɛk;pʰɛk
-biï̀;phiäk;piäk;biäk && phiek;phiäk && 
-劈pʰˤɛk䤨pʰˤɛk
-phiek && phiek && 
+僻pʰˤɛk;pʰɛk辟bɛkh;pʰɛk;pɛk;bɛk
+phiek;phiäk && biï̀;phiäk;piäk;biäk && 
 揊pʰøk𢾇pʰøk
 phyk && phyk && 
 稫pʰøk㽬pʰøk
@@ -6686,18 +6680,12 @@ phyk;byk && phyk && phyù;phyuk;phyk && phyk &&
 phiäu;phiä̀u &&  && phiäu;phiä̀u && phiäu;phiä̀u;biä́u && phiäu;piäu && phiäu && 
 嘌pʰø嫖pʰø;pʰøh
 phiäu && phiäu;phiä̀u && 
-𪅃pʰø飄bø;pʰø
-phiäu && biäu;phiäu && 
-飄bø;pʰø旚pʰø𩙒pʰø翲pʰø;pʰøh
-biäu;phiäu && phiäu && phiäu && phiäu;phiä̀u && 
-彯pʰø;pʰøh飄bø;pʰø
-phiäu;phiä̀u && biäu;phiäu && 
+飄bø;pʰø旚pʰø𩙒pʰø
+biäu;phiäu && phiäu && phiäu && 
 𣞈bø螵bø;pʰø
 biäu && biäu;phiäu && 
 皫pʰøɣ顠bøɣ;pʰøɣ犥pʰø;pʰøɣ麃bʀˤø;pʰʀøɣ
 phiä́u && biä́u;phiä́u && phiäu;phiä́u && brau;phyä́u && 
-剽bø;pʰøh僄pʰø;pʰøh
-biäu;phiä̀u && phiäu;phiä̀u && 
 僄pʰø;pʰøh嫖pʰø;pʰøh慓pʰø;pʰøh;bøɣ
 phiäu;phiä̀u && phiäu;phiä̀u && phiäu;phiä̀u;biä́u && 
 勡pʰøh剽bø;pʰøh
@@ -6706,46 +6694,32 @@ phiä̀u && biäu;phiä̀u &&
  && phiet && 
 𢠳pʰˤɛt憋pʰɛt;pɛt
 phiet && phiät;piät && 
-㾫pʰɛn偏pʰɛnh;pʰɛn
-phiän && phiä̀n;phiän && 
-駢bˤøŋ軿bˤɛŋ;bˤøŋ
-bien && bieng;bien && 
-骿bˤøŋ胼bˤøŋ
-bien && bien && 
-跰bˤøŋ;pʀˤaŋh蹁pˤɛn;bˤɛn
-bien;prä̀ng && pien;bien && 
 琕bˤøn玭bˤøn;bøn𧓍蠙bøn;bˤøn
 bien && bien;bin &&  && bin;bien && 
-胼bˤøŋ駢bˤøŋ
-bien && bien && 
-𧍻𧍲bɛn
- && biän && 
-㸤pʰˤɛnh片pʰˤɛnh
-phièn && phièn && 
 騙騗pʰɛnh
  && phiä̀n && 
 繽pʰøn𩰝pʰøn
 phin && phin && 
 竮pʰˤɛŋ;bˤɛŋ𢓳
 phieng;bieng &&  && 
-俜pʰˤɛŋ;pʰɛŋh +甹pʰˤɛŋ”竛+竮pʰˤɛŋ;bˤɛŋ”
-phieng;phiä̀ng &&  &&  && phieng &&  &&  &&  && phieng;bieng &&  && 
+俜pʰˤɛŋ;pʰɛŋh竛+竮pʰˤɛŋ;bˤɛŋ”
+phieng;phiä̀ng &&  &&  && phieng;bieng &&  && 
+甹pʰˤɛŋ俜pʰˤɛŋ;pʰɛŋh
+phieng && phieng;phiä̀ng && 
 𢖊pʰˤɛŋ俜pʰˤɛŋ;pʰɛŋh
 phieng && phieng;phiä̀ng && 
 薲bøn蘋bøn
 bin && bin && 
-嬪bøn頻bøn
-bin && bin && 
-𧓍蠙bøn;bˤøn玭bˤøn;bøn
- && bin;bien && bien;bin && 
+𧓍玭bˤøn;bøn蠙bøn;bˤøn
+ && bien;bin && bin;bien && 
 顰bøn嚬bøn
 bin && bin && 
 貧bʀən𡧋bʀən𧭹bøn
 byn && byn && bin && 
 苹bʀɛŋ蘋bøn
 byäng && bin && 
-瓶bˤɛŋ缾bˤɛŋ𤲒bˤɛŋ
-bieng && bieng && bieng && 
+瓶bˤɛŋ缾bˤɛŋ
+bieng && bieng && 
 荓bˤɛŋ屏pɛŋɣ;pɛŋ;bˤɛŋ
 bieng && piä́ng;piäng;bieng && 
 萍bˤɛŋ蓱bˤɛŋ
@@ -6764,20 +6738,12 @@ puö;puö̀;phuan;phüon;büon && buö &&  && jyang &&  &&
 buö && buö &&  && sö;sö́ &&  && 
 𩕏bˤal皤bˤan;bˤal;pˤal
 buö && buan;buö;puö && 
-叵pʰˤalɣ頗pʰˤalɣ;pʰˤal;pʰˤalh
-phuö́ && phuö́;phuö;phuö̀ && 
-頗pʰˤalɣ;pʰˤal;pʰˤalh叵pʰˤalɣ
-phuö́;phuö;phuö̀ && phuö́ && 
 璞pʰʀˤɔk㺪pʰʀˤɔk
 phrök && phrök && 
 朴pʰʀˤɔk樸bˤa;pʰʀˤɔk;bˤɔk;pˤɔk
 phrök && bo;phrök;buk;puk && 
-攴pʰˤɔk;pʰʀˤɔk㩧bʀˤɔk;pʰʀˤɔk
-phuk;phrök && brök;phrök && 
 圤pʰʀˤɔk墣pʰˤɔk;pʰʀˤɔk
 phrök && phuk;phrök && 
-𢯸pʰˤat鏺pʰˤat𨂩pʰˤat
-phuat && phuat && phuat && 
 醱𨡩pʰˤat
  && phuat && 
 潑𣸍pʰˤat
@@ -7102,8 +7068,6 @@ giu;gyu && gyu &&
  && khyo && 
 袪kʰa祛
 khyo &&  && 
-祛　qü1ɣʷat;xʷˤath;tʀˤɛŋ;tˤɛŋ;tˤɛŋɣ;tʰˤɛŋɣ;tʰˤɛŋ;dˤɛŋɣ;hˤa;hˤah;ɣʷa;kʀˤo;kʰˤɔkh;kɔkh;kˤɔkh;ŋˤath;sløŋ;nˤəmh;nʷɛth;mˤɛŋ;;kʰah;kʰah;kʰa;tˤoh;tøɣ;døh;tʰø;pʰøl;bʀølɣ;pʰalɣ;pʰˤøl;bøl;bøt;sɛl;stʰʀˤɛl;stʰʀˤal;stʰʀɛl;stʰʀˤəl;stʰʀˤɛlh;sdʀˤalɣ;stal;sdˤal;stʰˤəp;stʰˤəm;stʰˤəmh;stʰʀəm;sˤəmɣ;sʀəm;ɣˤaɣ;ʀam;ʀamɣ;ʀgəmɣ;ŋʀamɣ;klˤəp;ʀˤəp;kʰˤəm;kʰlam;xˤɛm;xʀˤəmɣ;ŋˤəmɣ;ŋʀəm;ŋlˤɛmɣ;nʀˤəmɣ;ŋˤəp;ɣlɔk;kˤɔk;ɣʷən;kʰəŋ;hʷəl;xøl;kˤan;gˤanh;kˤanɣ;kˤanh;ŋˤanh;ŋˤat;ŋˤɛn;ŋˤɛnh;ŋˤɛn;ŋʀˤək;hʀˤø;kʀˤɔŋɣ;bˤøɣ;kʀˤɛt;kʰˤath;kʀˤɛt;gˤɛt;kʰˤɛt;ŋˤɛt;gˤɛth;kʰˤaŋɣ;gˤaŋ;kʷˤaŋ;stʰˤəmɣ;stˤəm;ɣlˤɔk;mˤɔŋ;glˤəm;klˤəmɣ;klˤamɣ;ʀgəm;ʀgəmh;ʀkəmɣ;təŋɣ;pʀˤan;hʷˤɛt;kʷˤɛt;pʀˤa;bʀˤah;bʀˤɛh;gɛ;klɛ;kʀɛɣ;pʰˤaŋɣ;pˤaŋɣ;pˤaŋh;bˤaŋ;paŋ;paŋh;kˤəth;kʰʀˤɛn;kʰʀˤan;dˤɛ;dˤɛɣ;klɛ;glɛɣ;pˤak;stˤaŋ;xʀˤa;kʷaŋɣ;gʷaŋɣ;sˤal;sʷˤal;sʀˤal;gˤøn;dˤɛŋ;dˤɛŋɣ;sdʀˤakh;sdak;stʰʀak;sdak;støt;stək;stʰʷa;stʰaɣ;stʷa;stʰʷa;stʷaɣ;stʷa;stʰʷa;stʀʷa;sta;sdʀˤa;stˤaŋɣ;sdʀʷa;stʀˤak;stʀˤakh;hʷˤal;kʰʷˤal;kʰʷˤət;hˤath;hˤat;hʀath;hʀˤath;kʰʀath;kʰʀˤat;tʀˤɛm;dʀˤɛmh;tˤɛm;tˤɛmh;tʰˤɛm;tʰˤɛp;tʀɛm;pʰʀˤɔh;ʀˤɛ;ɣˤa;ɣˤal;hʀal;kʰʀal;haŋ;hˤaŋɣ;hʀˤɔŋ;ɣlˤal;ɣlˤal;xlʷˤal;xal;ɣlˤal;ɣlɛl;ŋlal;nˤølɣ;nˤøl;nˤølh;bʀɛŋ;tˤanɣ;tˤanh;dˤanɣ;dˤan;ʀgʷət;tʰˤɛk;dˤɛp;sdʀˤəp;lɛth;kʰˤəmɣ;kʰʀˤəm;stʰˤɛŋ;stʰˤøŋh;lo;loh;tʰʀo;slɔ;lɔ;tʰˤɔ;lˤɔ;lˤɔɣ;lˤɔ;kˤap;hʀˤap;hɛmh;ʀxøŋ;sxah;pʀˤak;pʰʀˤah;mɔ;løn;tʰˤak;xlʷɛth;xlˤə;ɣləh;ɣlə;ɣlˤə;ɣlˤəɣ;ɣləɣ;lˤəɣ;hˤəɣ;hˤə;ɣʀəɣ;tˤɛp;path;hʀˤø;hʀˤəth;kʰʀˤəh;tʰˤo;tʰˤø;kʀat;kʰøt;køt;kˤøt;kʀˤɛt;gʀˤɛt;kʰʀˤɛt;klˤaŋ;xʷan;kʷˤɛh;ŋʀˤə;tˤalɣ;tˤalh;dalɣ;dal;døl;dˤøk;sdˤøk;skʰakh;ʀxˤak;sxˤakh;kˤøl;kløl;ɣʷˤɛn;ɣʷˤən;sgʀˤɛk;sʀˤək;sdɛ;;ɣlaŋ;ɣlaŋɣ;nˤɔɣ;nʀə;nˤɛp;tʀøt;tʰʀøth;kʰˤənɣ;kʰʀˤənɣ;ŋən;ŋʀən;ŋˤən;ɣˤənɣ;bˤan;kˤan;kʰʷəl;ɣlə;sʀɛl;ʀˤølh;glˤa;ʀgˤa;ʀgʷa;ɣlʷa;mˤan;manh;manɣ;ʀˤøl;ŋˤa;dʀaɣ;xˤɛp;kʰˤɛp;hanɣ;tʰʷˤəlɣ;hʀˤɛŋ;kˤɛŋh;xəl;dɛt;tɛt;dɛth;ʀˤo;ʀˤaŋ;klənh;sgʀən;hˤəp;lo;sdo;pˤal;pˤalh;ŋəɣ;ŋə;ŋək;hʀˤaɣ;hˤalɣ;hʀˤɛ;pˤɛ;bʀˤɛkh;bˤɛ;pɛ;bɛ;pˤɛŋɣ;mø;tʷˤat;tʀʷəl;tʷɛt;stˤɛn;stʀˤɛnɣ;stɛnɣ;stɛnh;stˤɛn;tʰʷˤaŋɣ;sˤɛk;kʀəmh;hʷˤalɣ;kʷˤɛŋɣ;xlˤamɣ;ɣlˤəmɣ;stʀˤɛŋ;tək;gˤəmɣ;gˤəmh;gʀˤəmh;kʰʀʷˤəth;gʷˤəth;kʷəth;kʰʀʷˤəlh;ʀxak;klʷɛt;ʀˤəmɣ;ʀˤəmh;ʀˤath;ɣʀˤa;sˤɔɣ;ɣlˤəm;ɣʀˤamh;xˤø;xˤøh;sgʀˤɛn;skʀʷanh;tˤɛk;tʀˤak;tʰˤɛkh;tʰʀɛkh;stʰˤə;kʷˤɛt;kʰʷˤɛt;sɣʷən;ŋlʷənɣ;kʰʷˤəlɣ;tʀˤək;mˤat;mˤɛt;mˤɛt;stˤak;stʰaŋ;ʀˤɛmɣ;tap;sdap;nøk;ŋˤo;ŋʀˤø;ɣʀˤək;skˤɛn;sgˤɛn;sʀˤɛt;dap;hˤa;tˤøn;sˤak;dʀok;ʀˤønh;xˤak;xˤɔk;xˤok;gˤoɣ;xʀø;xʀˤø;kʀøɣ;xʀˤaŋ;xaŋɣ;ʀˤɛk;ɣlok;hʀʷˤaŋɣ;ʀˤɔɣ;ʀɔ;ʀɔɣ;stˤoɣ;sdʀˤø;sdˤam;ʀˤøɣ;ʀˤoɣ;ʀˤø;ʀoh;kˤøɣ;mo;mʀo;mʀoh;tˤalɣ;tˤalh;dˤanɣ;dˤanh;dˤan;kəlɣ;tˤəŋh;stʰøk;mˤak;mˤaŋɣ;ŋʀʷˤath;kʰlʷˤalɣ;xʷɛl;ɣlʷˤalɣ;ʀˤɛn;stˤoɣ;stʰø;ʀgˤak;ɣlak;ɣlˤakh;bˤɛkh;kʰˤɛk;xlˤɛk;kʰʀˤək;xʀʷˤək;lɔ;xˤamɣ;kʰˤamh;xʀʷˤan;tʀøth;sdˤølɣ;sdˤøl;ʀˤap;ʀap;tʀəŋ;ʀˤɛk;ʀʷˤəl;ʀʷˤəl;nˤaŋ;ŋˤøth;xʀɛl;xʀɛlh;ʀɔŋh;kʰˤɛ;gˤɛ;sdʀˤamh;ɣʀʷˤək;tˤɔh;tʀoh;tˤɔɣ;tˤɔh;tʰˤəmh;bʀˤø;pʰˤo;stˤanh;sdʷˤan;sdˤanh;sxˤəp;ɣʀˤap;klap;sɛl袪kʰa
- &&  &&  &&  && üot;huàj;tcreng;tieng;tiéng;thiéng;thieng;diéng;qo;qò;üo;krau;khù;küò;kù;ngàj;sjin;nö̀m;njvèj;mieng;khyö;khyò;khyò;khyo;tàu;tsjiä́u;dzjiä̀u;tsjhiäu;phi;byí;phiḯ;phiei;bi;bit;siï;tschre;tschra;tschyï;tschräi;tschrè;dzcrá;tsya;dzö;tshöp;tshöm;tshö̀m;tschym;sö́m;scym;xó;liäm;liä́m;dcým;ngyä́m;töp;löp;khöm;tsjhiäm;hiem;hrä́m;ngö́m;ngym;niém;nrä́m;ngöp;jyok;kuk;üën;khyng;qüëi;hi;kan;xàn;kán;kàn;ngàn;ngat;ngien;ngièn;ngien;ngrek;qrau;krö́ng;bö́i;krät;khàj;krät;xiet;khiet;ngiet;xièi;kháng;xang;kuang;tshö́m;tsöm;duk;mung;döm;tö́m;tám;dcym;dcỳm;tcým;tsjýng;pran;qvet;kvet;pra;brà;brè;giï;tsjiï;kyḯ;pháng;páng;pàng;bang;püang;püàng;kö̀i;khrän;khran;diei;diéi;tsjiï;dzjiḯ;puak;tsang;hra;küáng;güáng;sö;suö;scra;xien;dieng;diéng;dzcrà;dziäk;tschyäk;dziäk;tsit;tsyk;tshyo;tshyá;tsyo;tshyo;tsyó;tsyo;tshyo;tscyo;tsya;dzcra;tsáng;dzcyo;tscräk;tscrà;quö;khuö;khuot;qàj;qat;qyèj;qràj;khyèj;khrat;tcräm;dcrä̀m;tiem;tièm;thiem;thiep;tcym;phràu;lrau;xo;xö;qyï;khyï;qyang;qáng;qröng;dö;dö;thuö;hiï;dö;jiï;zjya;niéi;niei;nièi;byäng;tán;tàn;dán;dan;dcüyt;thiek;diep;dzcräp;jièj;khö́m;khräm;tshieng;tshièn;jyu;jyù;tchyu;sjüo;jüo;thu;du;dú;du;kap;qrap;qyö̀m;tchyn;syà;präk;phrà;müo;jin;thak;sjvèj;thöi;jỳ;jy;döi;dö́i;jý;jö́i;qö́i;qöi;zcý;tiep;püö̀j;qrau;qràj;khrä̀i;thau;thieu;kiät;khit;kit;kiet;krät;xrät;khrät;tang;hüon;kvèi;ngräi;tö́;tö̀;dzjiḯ;dzjiï;dzjiei;diek;dziek;tshyà;tchräk;sò;kiei;tsji;xven;xuon;dzcrek;screk;dziï;sö̀;jyang;jyáng;nú;njy;niep;tcyt;tchyì;khón;khrä́n;ngyën;ngyn;ngon;xón;buan;kan;khüëi;jy;scyï;lièi;do;dcra;dcyo;jyo;muan;müòn;müón;liei;ngo;dcyó;hiep;khiep;qyón;thuö́i;qreng;kièng;hyëi;dzjiät;tsjiät;dzjièj;lau;lang;tsjìn;dzcyn;qöp;jyu;dzyu;puö;puö̀;ngý;ngy;ngyk;qrá;qö́;qre;piei;brè;biei;piï;biï;piéng;miäu;tuat;tcüi;tsjvät;tsien;tscrä́n;tsiä́n;tsiä̀n;tsien;thuán;siek;kỳm;quö́;kvéng;thám;dö́m;tscreng;tsjyk;xö́m;xö̀m;xrä̀m;khwä̀i;xuö̀i;küë̀i;khwä̀i;tchyak;tsjvät;lö́m;lö̀m;làj;xra;sú;döm;xràm;hieu;hièu;dzcrän;tscüä̀n;tiek;tcräk;thièi;tchyèj;tshöi;kvet;khvet;zvin;zjvín;khuö́i;tcrek;muat;miet;miet;tsak;tshyang;liém;tsjiäp;zip;njyak;ngau;ngrau;xrek;tsien;dzien;scrät;dzjiäp;qo;tien;sak;dcyuk;lièn;hak;huk;hok;xáu;hyäu;hrau;kyä́u;hräng;hyáng;liek;jyuk;qwä́ng;lú;lüo;lüó;tsáu;dzcrau;dzam;liéu;láu;lieu;lyù;kiéu;myu;miu;miù;tö́;tö̀;dán;dàn;dan;kyë́i;të̀ng;tshyak;mak;máng;mràj;thuö́;hvï;duö́;lrän;tsáu;tshiäu;dcräk;jiäk;dò;bièi;khiek;thiek;khrek;hwek;jüo;hám;khàm;hwan;tcyì;dziéi;dziei;lap;liäp;tcyng;liek;luöi;luöi;nang;ngièi;hyï;hyï̀;lyòng;khiei;xiei;dzcràm;xwek;tù;tcyù;tú;tù;thö̀m;brau;phau;tsàn;dzuan;dzàn;söp;xrap;tsjiäp;siï && khyo && 
 胠kʰɛp;kʰah;kʰa阹kʰa
 khyöp;khyò;khyo && khyo && 
 驅kʰɔ;kʰɔh敺kʰɔ
@@ -7490,7 +7454,7 @@ scram;scräm && scram &&
 scrä́n &&  && scrä́n && 
 賞xlaŋɣ償glaŋ;glaŋh
 sjyáng && dzjyang;dzjyàng && 
-𩞧xlaŋɣ𩞃slaŋɣ
+𩞧slaŋɣ𩞃slaŋɣ
 sjyáng && sjyáng && 
 餉xlaŋh饟slaŋ;slaŋɣ;slaŋh
 sjyàng && sjyang;sjyáng;sjyàng && 
@@ -7714,7 +7678,7 @@ sjip && sjip;thöp &&
 sjyó && sjyó && 
 𧑓xlʷaɣ鼠xlʷaɣ+婦bəɣ”
 sjyó && sjyó &&  && byú &&  && 
-𣏗杼dʀaɣ;ŋlʷaɣ
+𣏗杼ʀgaɣ;ŋlʷaɣ
  && dcyó;zjyó && 
 墅glʷaɣ野glʷaɣ;ɣlaɣ
 dzjyó && dzjyó;jyá && 
@@ -8308,7 +8272,7 @@ tham && tham &&
  && tham && 
 彈dˤanh;dˤan撣dˤanh;dˤan;dɛn
 dàn;dan && dàn;dan;dzjiän && 
-唐ɣlˤaŋ啺ɣlˤaŋ𠹔𥏬ɣlˤaŋ
+唐ɣlˤaŋ啺dˤaŋ𠹔𥏬dˤaŋ
 dang && dang &&  && dang && 
 糖ɣlˤaŋ醣糛ɣlˤaŋ餹ɣlˤaŋ
 dang &&  && dang && dang && 
@@ -8330,6 +8294,8 @@ döm;dö́m && dam && döm &&
 döm && döm && 
 蕁glˤəm𧂗燂glˤəm;sgam
 döm &&  && döm;dziäm && 
+澹dˤam;dˤamɣ;dˤamh淡ɣlˤam;ɣlˤamh;ɣlˤamɣ;ɣlamɣ
+dam;dám;dàm && dam;dàm;dám;jiä́m && 
 曭xlˤaŋɣ𣎲xlˤaŋɣ矘xlˤaŋɣ
 tháng && tháng && tháng && 
 醓䏙kʰlˤəmɣ𥁺
@@ -8622,7 +8588,7 @@ do && do && do;dcra &&
 thuk && thuk && 
 突tʰʷˤət;dʷˤət宊tʰʷˤət
 thuot;duot && thuot && 
-𠫓tʰʷˤət𡿮tʰʷˤət;dʷˤət
+𠫓xlʷˤət𡿮xlʷˤət;ɣlʷˤət
 thuot && thuot;duot && 
 䵎tʰʷˤan𪏆tʰʷˤən;tʰʷˤan
 thuan && thuon;thuan && 
@@ -10316,9 +10282,9 @@ tcüó && tcüó &&
 tsjüó &&  && tsjüó;tsjüò && 
 佇dʀaɣ竚dʀaɣ
 dcyó && dcyó && 
-苧dʀaɣ芧dʀaɣ
+苧ʀgaɣ芧ʀgaɣ
 dcyó && dcyó && 
-紵dʀaɣ苧dʀaɣ
+紵dʀaɣ苧ʀgaɣ
 dcyó && dcyó && 
 著dʀa;tʀaɣ;tʀah;tʀak;dʀak宁dʀa;dʀaɣ
 dcyo;tcyó;tcyò;tcyak;dcyak && dcyo;dcyó && 
