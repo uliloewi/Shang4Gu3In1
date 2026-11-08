@@ -12,9 +12,9 @@ class Program
     static readonly Dictionary<string, string> fen1üin4bu4 = new() //分韻部
     {
             { "歌0", "歌"}, { "歌1","罷"},  
-            { "月0", "月"}, { "月1", "列"}, 
+            { "月0", "月"}, { "月1","列"}, 
             { "元0", "元"}, { "元1","仙"},
-            { "真0", "真"}, { "真1","天"},
+            { "真0", "真"}, { "真1","陳"},
             { "葉0", "葉"}, { "葉1","蝶"}, 
             { "談0", "談"}, { "談1","玷"}, 
     };
@@ -66,8 +66,8 @@ class Program
                 while (worksheet.Cells[hang2, 1].StringValue != "")
                 {
                     var stringA = worksheet.Cells[hang2, 0].StringValue;
-                    var piän1min2 = stringA.Substring(stringA.IndexOf("-")+1);
-                    wordApp.Selection.TypeText(piän1min2+ "\n");
+                    var piän1min2 = stringA.Substring(stringA.IndexOf("-")+1).Replace("-", "・");//篇名
+                    wordApp.Selection.TypeText("《"+piän1min2+ "》：\n");
                     hang2++;
                 }
                 //// Werte aus den Zellen B1 und C1 auslesen
