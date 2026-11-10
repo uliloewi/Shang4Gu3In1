@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Aspose.Cells;
+using Aspose.Cells.Drawing;
 using Microsoft.Office.Interop.Word;
 using System;
 using System.Runtime.InteropServices;
@@ -11,6 +12,7 @@ class Program
     const string uen2jän4ja5 = @"D:\MyDocument\音韻學\st sk\探索圓脣無介音W\liänmiän\";
     const string excelFile = "上古韻腳2610121046.xlsx";
     const string wordFile= "Sie3Shu5.docx";
+    const string filePath = "Sie3Shu5.yaml";
     const string di4i5IPA = "bdɣghklmnŋpʀstx";//所有上古音節中允許的第一個IPA
     static readonly Dictionary<string, string> fen1üin4bu4 = new() //分韻部
     {
@@ -26,7 +28,7 @@ class Program
               { "鐸", "ak"}, { "錫", "ɛk"}, { "屋", "ɔk"}, { "職", "ək"}, { "藥", "øk"}, { "覺", "ok"},
               { "陽", "aŋ"}, { "耕", "ɛŋ"}, { "東", "ɔŋ"}, { "蒸", "əŋ"}, { "冬", "oŋ"},
               { "歌", "al"}, { "罷","ɛl"},  { "微", "əl"}, { "脂", "øl"},
-              { "月","at"}, { "列", "ɛt"}, { "物", "ət"}, { "質", "øt"},
+              { "月", "at"}, { "列", "ɛt"}, { "物", "ət"}, { "質", "øt"},
               { "元", "an"}, { "仙","ɛn"}, { "文", "ən"},
               { "真", "øn"}, { "陳","øŋ"},
               { "葉", "ap"}, { "蝶","ɛp"}, { "緝", "əp"},
@@ -38,12 +40,12 @@ class Program
     static async System.Threading.Tasks.Task Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
-        //Application wordAppLuei4 = new Application();
-        //Document docLuei4 = wordAppLuei4.Documents.Add();
-        Du5Chu5Biao3Gä5(excelFile, wordFile);
+        List<string> strings = new List<string>();
+        await Du5Chu5Biao3Gä5(excelFile, strings); 
+
     }
 
-    private static void Du5Chu5Biao3Gä5(string exelFielname, string wordFielname)//讀出表格
+    static async System.Threading.Tasks.Task Du5Chu5Biao3Gä5(string exelFielname, List<string> strings)//讀出表格
     {
         // Pfade zu den Dateien definieren
 
@@ -51,95 +53,54 @@ class Program
         try
         {
 
-            Application wordApp = new Application();
-            Document doc = wordApp.Documents.Add();
-            // 1. Excel-Datei mit Aspose.Cells einlesen
             Workbook workbook = new Workbook(uen2jän4ja5 + exelFielname);
 
             int den3er4shr5 = 0; //等二十表即合并一word
 
             // Durch alle Tabellenblätter der Excel-Datei iterieren
             for (int i = 0; i < workbook.Worksheets.Count; i++)
-            {
-                if (den3er4shr5==19)
-                {
-                    doc.SaveAs2(uen2jän4ja5 + ( 800 + i ) + wordFielname);
-                    Console.WriteLine("Die Daten wurden erfolgreich in das Word-Dokument übertragen!");
-                    if (doc != null)
-                    {
-                        doc.Close(false);
-                        Marshal.ReleaseComObject(doc);
-                    }
-
-                    if (wordApp != null)
-                    {
-                        wordApp.Quit();
-                        Marshal.ReleaseComObject(wordApp);
-                    }
-
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
-                    wordApp = new Application();
-                    doc = wordApp.Documents.Add();
-                    den3er4shr5 = 0;
-                }
+            {               
                 den3er4shr5++;
                 Worksheet worksheet = workbook.Worksheets[i];
 
                 if (worksheet.Name[0] == worksheet.Name[1])
                 {
-                    wordApp.Selection.TypeText($"{worksheet.Name[0]}部韻腳：\n");
-                    Chao1Ie5Biao3(worksheet, wordApp, 1, worksheet.Name[0].ToString());                   
+                   strings.Add($"{worksheet.Name[0]}部韻腳：");
+                    Chao1Ie5Biao3(worksheet,  1, worksheet.Name[0].ToString(),  strings);                   
                 }
                 else if (worksheet.Name[1] == '0')
                 {
-                    wordApp.Selection.TypeText($"{fen1üin4bu4[worksheet.Name]}部（{worksheet.Name[0]}甲）韻腳：\n");
-                    //Chao1Ie5Biao3(worksheet, wordApp, 2, fen1üin4bu4[worksheet.Name]);
+                   strings.Add($"{fen1üin4bu4[worksheet.Name]}部（{worksheet.Name[0]}甲）韻腳：");
+                    Chao1Ie5Biao3(worksheet,  1, worksheet.Name[0].ToString(), strings);
                 }
                 else if (worksheet.Name[1] == '1')
                 {
-                    wordApp.Selection.TypeText($"{fen1üin4bu4[worksheet.Name]}部（{worksheet.Name[0]}乙）韻腳：\n");
-                    //Chao1Ie5Biao3(worksheet, wordApp, 2, fen1üin4bu4[worksheet.Name]);
+                   strings.Add($"{fen1üin4bu4[worksheet.Name]}部（{worksheet.Name[0]}乙）韻腳：");
+                    Chao1Ie5Biao3(worksheet,  1, fen1üin4bu4[worksheet.Name], strings);
                 }
                 else if (worksheet.Name[1] == '混')
                 {
-                    wordApp.Selection.TypeText($"{worksheet.Name[0]}之甲乙部通韻：\n");
+                   strings.Add( $"{worksheet.Name[0]}之甲乙部通韻：" );
                     //Chao1Ie5Biao3(worksheet, wordApp, 3);
                 }
                 else
                 {
-                    wordApp.Selection.TypeText($"{worksheet.Name}二部通韻：\n");
+                   strings.Add( $"{worksheet.Name}二部通韻：" );
                     //Chao1Ie5Biao3(worksheet, wordApp, 4);
                 }
-
-                //// Werte aus den Zellen B1 und C1 auslesen
-                //// (Zeilen- und Spaltenindizes sind 0-basiert: B1 = R0C1, C1 = R0C2)
-                //string cellB1Text = worksheet.Cells[0, 1].StringValue;
-                //string cellC1Text = worksheet.Cells[0, 2].StringValue;
-
-                //// Text in das Word-Dokument schreiben (Ein Text pro Zeile)
-                //wordApp.Selection.TypeText($"Zelle B1: {cellB1Text}");
-                //wordApp.Selection.TypeText($"Zelle C1: {cellC1Text}");
-
-                // Wenn es nicht das letzte Blatt ist, einen Seitenumbruch einfügen
-                //if (i < workbook.Worksheets.Count - 1)
-                //{
-                //    object breakPage = WdBreakType.wdPageBreak;
-                //    wordApp.Selection.InsertBreak(ref breakPage);
-                //}
             }
-
-            // 3. Word-Dokument speichern
-            doc.SaveAs2(uen2jän4ja5 + wordFielname);
+            
+             await File.WriteAllLinesAsync(uen2jän4ja5 + "800" + filePath, strings);
             Console.WriteLine("Die Daten wurden erfolgreich in das Word-Dokument übertragen!");
         }
+
         catch (Exception ex)
         {
             Console.WriteLine($"Ein Fehler ist aufgetreten: {ex.Message}");
         }
     }
 
-    private static void Chao1Ie5Biao3(Worksheet worksheet, Application wordApp, int biao3xin2, string üin4bu4)//抄頁表 表型biao3xin2=1如：魚魚，biao3xin2=2如：月0，biao3xin2=3如：月混，biao3xin2=4如：魚鐸
+    private static void Chao1Ie5Biao3(Worksheet worksheet,  int biao3xin2, string üin4bu4, List<string> strings)//抄頁表 表型biao3xin2=1如：魚魚，biao3xin2=2如：月0，biao3xin2=3如：月混，biao3xin2=4如：魚鐸
     {
         int hang2 = 0;
         while (!(worksheet.Cells[hang2, 1].StringValue == "" && worksheet.Cells[hang2+1, 1].StringValue == "" && worksheet.Cells[hang2 + 2, 1].StringValue == ""))
@@ -148,16 +109,17 @@ class Program
             var piän1min2 = stringA.Substring(stringA.IndexOf("-") + 1).Replace("-", "・");//篇名
             if (!String.IsNullOrWhiteSpace(piän1min2))
             {
-                wordApp.Selection.TypeText("《" + piän1min2 + "》： ");
+                string shr1hang2 = "《" + piän1min2 + "》： ";//詩行
+                
                 Console.WriteLine(piän1min2);
-                //if (piän1min2.Contains("二十五年") && üin4bu4=="宵")
-                //{
+                if (piän1min2.Contains("汝墳") )
+                {
 
-                //}
+                }
                 switch (biao3xin2)//表型
                 {
                     case 1://如：魚魚
-                        Süän3In1(worksheet, wordApp, liou3mang4vin4bu4[üin4bu4], hang2);   
+                        Süän3In1(worksheet, liou3mang4vin4bu4[üin4bu4], hang2, strings, shr1hang2);   
                         //wordApp.Selection.TypeText(worksheet.Cells[hang2, 1].StringValue + "、" + worksheet.Cells[hang2, 2].StringValue + "、" + worksheet.Cells[hang2, 3].StringValue + "、" + worksheet.Cells[hang2, 4].StringValue + "、" + worksheet.Cells[hang2, 5].StringValue + "、" + worksheet.Cells[hang2, 6].StringValue + "\n");
                         break;
                     case 2://如：月0
@@ -177,7 +139,7 @@ class Program
         }
     }
 
-    private static void Süän3In1(Worksheet worksheet, Application wordApp, string üin4bu4,int hang2)//選音
+    private static void Süän3In1(Worksheet worksheet,  string üin4bu4,int hang2, List<string> strings, string shr1hang2)//選音
     {
         try
         {
@@ -205,7 +167,7 @@ class Program
                         }
                         else//是注
                         {
-                            wordApp.Selection.TypeText("注！！！  \n");
+                           strings.Add( stringA + "   注！！！  \n" );
                             break;
                         }
                     }
@@ -228,13 +190,10 @@ class Program
             An4Diao4Süän3In1(üin4jo5zy4, do1go4in1, üin4bu4, "");
             for (int i = 1;i<=üin4jo5zy4.Count;i++)
             {
-
-                wordApp.Selection.TypeText(üin4jo5zy4[i]);
+                shr1hang2+= üin4jo5zy4[i];
                 Console.WriteLine(üin4jo5zy4[i]);
             }
-            wordApp.Selection.TypeText("\n");
-
-
+           strings.Add(shr1hang2);
         }
         catch (Exception ex)
         {
@@ -246,12 +205,10 @@ class Program
     private static void An4Diao4Süän3In1(Dictionary<int, string> üin4jo5zy4, Dictionary<int, List<string>> do1go4in1, string üin4bu4, string shen1diao4uei3)
     {
         try { 
-            //Dictionary<int, List<string>> zy4ho2in1 = new Dictionary<int, List<string>>();//字和音
             if (do1go4in1.All(x => x.Value.Any(y => y.EndsWith(üin4bu4 + shen1diao4uei3))))
             {//每個字都有去聲韻尾
                 for (int i = 1; i <= do1go4in1.Count; i++)
                 {
-                    //zy4ho2in1.Add(i, new List<string> { üin4jo5zy4[i] });
                     string zy4in1 = "";
                     if (do1go4in1[i].Count > 1)
                     {
