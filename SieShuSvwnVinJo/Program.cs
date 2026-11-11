@@ -81,12 +81,12 @@ class Program
                 else if (worksheet.Name[1] == '混')
                 {
                    strings.Add( $"{worksheet.Name[0]}之甲乙部通韻：" );
-                    //Chao1Ie5Biao3(worksheet, wordApp, 3);
+                    Chao1Ie5Biao3(worksheet, 2, fen1üin4bu4[worksheet.Name[0]+"0"] + fen1üin4bu4[worksheet.Name[0] + "1"], strings);
                 }
                 else
                 {
                    strings.Add( $"{worksheet.Name}二部通韻：" );
-                    //Chao1Ie5Biao3(worksheet, wordApp, 4);
+                   Chao1Ie5Biao3(worksheet, 2, worksheet.Name, strings);                   
                 }
             }
             
@@ -107,29 +107,22 @@ class Program
         {
             var stringA = worksheet.Cells[hang2, 0].StringValue;
             var piän1min2 = stringA.Substring(stringA.IndexOf("-") + 1).Replace("-", "・");//篇名
-            if (!String.IsNullOrWhiteSpace(piän1min2))
+            if (!String.IsNullOrWhiteSpace(piän1min2) && worksheet.Cells[hang2, 0].GetStyle().ForegroundColor.Name != "ff595959")//行底色不黑
             {
                 string shr1hang2 = "《" + piän1min2 + "》： ";//詩行
                 
                 Console.WriteLine(piän1min2);
-                if (piän1min2.Contains("汝墳") )
+                if (piän1min2.Contains("外儲右上") && worksheet.Name=="之之" )
                 {
 
                 }
                 switch (biao3xin2)//表型
                 {
-                    case 1://如：魚魚
+                    case 1://單韻 如：魚魚、月0
                         Süän3In1(worksheet, liou3mang4vin4bu4[üin4bu4], hang2, strings, shr1hang2);   
-                        //wordApp.Selection.TypeText(worksheet.Cells[hang2, 1].StringValue + "、" + worksheet.Cells[hang2, 2].StringValue + "、" + worksheet.Cells[hang2, 3].StringValue + "、" + worksheet.Cells[hang2, 4].StringValue + "、" + worksheet.Cells[hang2, 5].StringValue + "、" + worksheet.Cells[hang2, 6].StringValue + "\n");
                         break;
-                    case 2://如：月0
-                        //wordApp.Selection.TypeText(worksheet.Cells[hang2, 1].StringValue + "、" + worksheet.Cells[hang2, 2].StringValue + "、" + worksheet.Cells[hang2, 3].StringValue + "、" + worksheet.Cells[hang2, 4].StringValue + "、" + worksheet.Cells[hang2, 5].StringValue + "、" + worksheet.Cells[hang2, 6].StringValue + "\n");
-                        break;
-                    case 3://如：月混
-                        //wordApp.Selection.TypeText(worksheet.Cells[hang2, 1].StringValue + "、" + worksheet.Cells[hang2, 2].StringValue + "、" + worksheet.Cells[hang2, 3].StringValue + "、" + worksheet.Cells[hang2, 4].StringValue + "、" + worksheet.Cells[hang2, 5].StringValue + "、" + worksheet.Cells[hang2, 6].StringValue + "\n");
-                        break;
-                    case 4://如：魚鐸
-                        //wordApp.Selection.TypeText(worksheet.Cells[hang2, 1].StringValue + "、" + worksheet.Cells[hang2, 2].StringValue + "、" + worksheet.Cells[hang2, 3].StringValue + "、" + worksheet.Cells[hang2, 4].StringValue + "、" + worksheet.Cells[hang2, 5].StringValue + "、" + worksheet.Cells[hang2, 6].StringValue + "\n");
+                    case 2://通韻 如：月混、魚鐸
+                        Tong1Üin4Süän3In1(worksheet, new string[] { üin4bu4[0].ToString(), üin4bu4[1].ToString()}, hang2, strings, shr1hang2);   
                         break;
                     default:
                         break;
@@ -155,6 +148,14 @@ class Program
                 if (!String.IsNullOrWhiteSpace(piän1min2))
                 {
                     stringA = worksheet.Cells[hang2, col].StringValue;
+                    
+
+                    if (worksheet.Cells[hang2, col].GetStyle().Font.Color.Name == "ffffc000")//字色黃
+                    {
+                        strings.Add(stringA + "被標黃   注！！！");
+                        col++;
+                        continue;
+                    }
                     col++;
                     if (String.IsNullOrEmpty(stringA))
                         continue;
@@ -167,7 +168,7 @@ class Program
                         }
                         else//是注
                         {
-                           strings.Add( stringA + "   注！！！  \n" );
+                           strings.Add( stringA + "   注！！！  " );
                             break;
                         }
                     }
@@ -202,11 +203,11 @@ class Program
     }
 
 
-    private static void An4Diao4Süän3In1(Dictionary<int, string> üin4jo5zy4, Dictionary<int, List<string>> do1go4in1, string üin4bu4, string shen1diao4uei3)
+    private static void An4Diao4Süän3In1(Dictionary<int, string> üin4jo5zy4, Dictionary<int, List<string>> do1go4in1, string üin4bu4, string shen1diao4uei3)//按調選音
     {
         try { 
             if (do1go4in1.All(x => x.Value.Any(y => y.EndsWith(üin4bu4 + shen1diao4uei3))))
-            {//每個字都有去聲韻尾
+            {
                 for (int i = 1; i <= do1go4in1.Count; i++)
                 {
                     string zy4in1 = "";
@@ -224,6 +225,106 @@ class Program
                     }
 
                     üin4jo5zy4[i]+=zy4in1;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ein Fehler ist aufgetreten: {ex.Message}");
+        }
+    }
+
+    private static void Tong1Üin4Süän3In1(Worksheet worksheet, string[] üin4bu4, int hang2, List<string> strings, string shr1hang2)//選音
+    {
+        try
+        {
+            Dictionary<int, string> üin4jo5zy4 = new Dictionary<int, string>();//韻腳字，如1.有，2.祀
+            Dictionary<int, List<string>> do1go4in1 = new Dictionary<int, List<string>>();//多個音如1.ɣʷəɣ	、ɣʷəh，2.sɣəɣ
+            Dictionary<int, List<string>> zy4ho2in1 = new Dictionary<int, List<string>>();//字和音
+            int col = 1;
+            int key = 0;
+            while (!(worksheet.Cells[hang2, col].StringValue == "" && worksheet.Cells[hang2, col + 1].StringValue == "" && worksheet.Cells[hang2, col + 2].StringValue == ""))
+            {
+                var stringA = worksheet.Cells[hang2, 0].StringValue;
+                var piän1min2 = stringA.Substring(stringA.IndexOf("-") + 1).Replace("-", "・");//篇名
+                if (!String.IsNullOrWhiteSpace(piän1min2))
+                {
+                    stringA = worksheet.Cells[hang2, col].StringValue;
+                    if (worksheet.Cells[hang2, col].GetStyle().Font.Color.Name == "ffffc000")//字色黃
+                    {
+                        strings.Add(stringA + "被標黃   注！！！");
+                        col++;
+                        continue;
+                    }
+                    col++;
+                    if (String.IsNullOrEmpty(stringA))
+                        continue;
+                    if (!di4i5IPA.Contains(stringA[0]))
+                    {
+                        if (stringA.Length <= 2 || stringA.Contains("（"))//是漢字
+                        {
+                            key++;
+                            üin4jo5zy4.Add(key, stringA);
+                        }
+                        else//是注
+                        {
+                            strings.Add(stringA + "   注！！！  ");
+                            break;
+                        }
+                    }
+                    else//是IPA，做value
+                    {
+                        if (do1go4in1.ContainsKey(key))
+                        {
+                            do1go4in1[key].Add(stringA);
+                        }
+                        else
+                        {
+                            do1go4in1.Add(key, new List<string> { stringA });
+                        }
+
+                    }
+                }
+            }
+            Tong1Üin4An4Diao4Süän3In1(üin4jo5zy4, do1go4in1, üin4bu4, "h");
+            Tong1Üin4An4Diao4Süän3In1(üin4jo5zy4, do1go4in1, üin4bu4, "ɣ");
+            Tong1Üin4An4Diao4Süän3In1(üin4jo5zy4, do1go4in1, üin4bu4, "");
+            for (int i = 1; i <= üin4jo5zy4.Count; i++)
+            {
+                shr1hang2 += üin4jo5zy4[i];
+                Console.WriteLine(üin4jo5zy4[i]);
+            }
+            strings.Add(shr1hang2);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ein Fehler ist aufgetreten: {ex.Message}");
+        }
+    }
+
+    private static void Tong1Üin4An4Diao4Süän3In1(Dictionary<int, string> üin4jo5zy4, Dictionary<int, List<string>> do1go4in1, string[] üin4bu4, string shen1diao4uei3)//通韻按調選音
+    {
+        try
+        {
+            if (do1go4in1.All(x => x.Value.Any(y => y.EndsWith(liou3mang4vin4bu4[üin4bu4[0]] + shen1diao4uei3) || y.EndsWith(liou3mang4vin4bu4[üin4bu4[1]] + shen1diao4uei3))))
+            {
+                for (int i = 1; i <= do1go4in1.Count; i++)
+                {
+                    string zy4in1 = "";
+                    if (do1go4in1[i].Count > 1)
+                    {
+                        foreach (var x in do1go4in1[i])
+                        {
+                            if (üin4bu4.Any(y => x.EndsWith(liou3mang4vin4bu4[y] + shen1diao4uei3)))
+                                zy4in1 += x + "，";
+                        }
+                    }
+                    else
+                    {
+                        zy4in1 += do1go4in1[i][0] + "，";
+                    }
+
+                    üin4jo5zy4[i] += zy4in1;
                 }
             }
         }
